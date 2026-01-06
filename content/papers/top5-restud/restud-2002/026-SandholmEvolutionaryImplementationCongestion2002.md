@@ -1,0 +1,11 @@
+---
+title: "Evolutionary Implementation and Congestion Pricing"
+date: 2002-12-05
+tags: ["Public Econ", "Mechanism Design"]
+---
+
+## Abstract 
+We consider an implementation problem faced by a planner who manages a roadway network. The problem entails both hidden information and hidden actions. We solve the planner's problem by introducing a new class of mechanisms and a new notion of implementation. The mechanisms, called price schemes, attach transfers to the available routes; they do not involve direct revelation. The method of implementation is evolutionary, requiring that players who follow any reasonable myopic adjustment process eventually learn to behave as the planner desires. We show that efficient behaviour can be guaranteed using simple, decentralized price schemes.
+
+
+Tags: ["Public Econ", "Mechanism Design"]

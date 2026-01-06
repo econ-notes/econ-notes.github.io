@@ -1,0 +1,13 @@
+---
+title: "Screening in a Matching Market"
+date: 2001-11-27
+tags: ["Screening", "Information", "Market Structures"]
+---
+
+## Abstract 
+Contract design under incomplete information is often analysed in a bilaterally monopolistic setting. If the informed party's reservation value does not depend on its private information (its type), it is a standard result that the uninformed side offers "low" types distorted contracts to reduce the information rent left to "high" types. 
+
+We challenge this result by embedding contract design in a matching market environment. We consider a market where players meet pairwise and where, in each match, either side may be chosen to make a take-it-or-leave-it offer. As frictions become sufficiently low, we find that the set of equilibria is independent of whether there is complete or incomplete information. In particular, all contracts are free of distortions.
+
+
+Tags: ["Screening", "Information", "Market Structures"]

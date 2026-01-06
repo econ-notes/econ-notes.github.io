@@ -1,0 +1,11 @@
+---
+title: "Structural Change Tests in Tail Behaviour and the Asian Crisis"
+date: 2001-12-04
+tags: ["Econometrics", "Fin", "Tail"]
+---
+
+## Abstract 
+This paper explores tests of the hypothesis that the tail thickness of a distribution is constant over time. Using Hill's conditional maximum likelihood estimator for the tail index of a distribution, tests of tail shape constancy are constructed that allow for an unknown breakpoint. The recursive test is shown to be inconsistent in one direction, and only a one-sided test is recommended. Specifically, the test can be used when the alternative hypothesis is that the tail index decreases over time. A rolling and sequential version of the test is consistent in both directions. The methods are illustrated on recent stock price data for Thailand, Malaysia and Indonesia. The period covers the recent Asian financial crisis and enables us to assess whether breakpoints in domestic asset return distributions are related to known changes in institutional arrangements in the foreign currency markets of these countries.
+
+
+Tags: ["Econometrics", "Fin", "Tail"]

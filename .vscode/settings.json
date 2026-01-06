@@ -1,0 +1,31 @@
+{
+    "cSpell.words": [
+        "hextra",
+        "katex",
+        "optimise",
+        "typeit"
+    ],
+    "material-icon-theme.folders.associations": {
+        "assets": "Src",
+        "archetypes": "Src",
+        "data": "Src",
+        "i18n": "Src",
+        "layouts": "Src",
+        "public": "Src",
+        "static": "Src",
+        "themes": "Src",
+        "hextra": "Src",
+        "docs": "Src",
+        "resources": "Src",
+        "examples": "Src",
+        "images": "Src",
+        ".vscode": "Src",
+        ".github": "Src",
+        "books": "Resource",
+        "papers": "Resource",
+        "programming": "Resource",
+    },
+    "[toml]": {
+        "editor.tabSize": 2,
+    }
+}

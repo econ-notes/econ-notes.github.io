@@ -1,0 +1,11 @@
+---
+title: "Financing Public Goods by Means of Lotteries"
+date: 2000-11-26
+tags: ["Public Goods"]
+---
+
+## Abstract 
+When viewed as taxes, lotteries are routinely criticized as being both inequitable and inefficient. But is this an entirely fair comparison? Frequently lotteries are used in lieu of voluntary contributions by private charities and governments when taxes are not feasible. When heterogeneous individuals with quasi-linear preferences participate in lotteries whose proceeds will be used to fund a public good, we find that, relative to voluntary contributions, wagers in the unique lottery equilibrium (a) increase the provision of the public good, (b) are welfare improving, and (c) provide levels of the public good close to first-best as the lottery prize increases.
+
+
+Tags: ["Public Goods"]

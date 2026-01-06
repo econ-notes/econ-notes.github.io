@@ -1,0 +1,322 @@
+baseURL = 'http://localhost:1313'
+title = "My economics study notes"
+theme = ["FixIt"]
+languageCode = 'en-us'
+
+[menu]
+
+[[menu.main]]
+identifier = "programming"
+parent = ""
+pre = ""
+post = ""
+name = "Programming"
+url = "/programming/"
+title = "Programming"
+weight = 1
+
+[[menu.main]]
+identifier = "general"
+parent = "programming"
+pre = ""
+post = ""
+name = "General"
+url = "/programming/general-notes"
+title = "General"
+weight = 1
+
+[[menu.main]]
+identifier = "latex"
+parent = "programming"
+pre = ""
+post = ""
+name = "LaTex"
+url = "/programming/latex-notes"
+title = "LaTex"
+weight = 2
+
+[[menu.main]]
+identifier = "stata"
+parent = "programming"
+pre = ""
+post = ""
+name = "Stata"
+url = "/programming/stata-notes"
+title = "Stata"
+weight = 3
+
+[[menu.main]]
+identifier = "python"
+parent = "programming"
+pre = ""
+post = ""
+name = "Python"
+url = "/programming/python-notes"
+title = "Python"
+weight = 4
+
+[[menu.main]]
+identifier = "papers"
+parent = ""
+pre = ""
+post = ""
+name = "Papers"
+url = "/papers/"
+title = ""
+weight = 3
+
+[[menu.main]]
+identifier = "tags"
+parent = ""
+pre = ""
+post = ""
+name = "Tags"
+url = "/tags/"
+title = ""
+weight = 3
+
+# [[menu.main]]
+# identifier = "categories"
+# parent = ""
+# pre = ""
+# post = ""
+# name = "Categories"
+# url = "/categories/"
+# title = ""
+# weight = 4
+
+# [[menu.main]]
+# identifier = "archives"
+# parent = ""
+# pre = ""
+# post = ""
+# name = "Archives"
+# url = "/archives/"
+# title = ""
+# weight = 5
+
+[markup]
+_merge = "shallow"
+
+[markup.highlight]
+codeFences = true
+noClasses = false
+anchorLineNos = true
+guessSyntax = true
+lineNos = true
+lineNumbersInTable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [
+  [
+    '\[',
+    '\]'
+  ],
+  [
+    '$$',
+    '$$'
+  ]
+]
+inline = [
+  [
+    '\(',
+    '\)'
+  ],
+  [
+    '$',
+    '$'
+  ]
+]
+
+[taxonomies]
+_merge = "shallow"
+category = "categories"
+tag = "tags"
+collection = "collections"
+
+[params.author]
+name = "Econ Notes"
+email = "econ.learning.resources@gmail.com"
+link = ""
+avatar = ""
+
+[outputFormats.search]
+baseName = "search"
+mediaType = "application/json"
+rel = "search"
+isPlainText = true
+isHTML = false
+permalinkable = true
+
+[outputs]
+_merge = "shallow"
+home = [
+  "html",
+  "rss",
+  "archives",
+  "offline",
+  "search"
+]
+page = [
+  "html",
+  "markdown"
+]
+section = [
+  "html",
+  "rss"
+]
+taxonomy = [ "html" ]
+term = [
+  "html",
+  "rss"
+]
+
+# Search config
+[params.search]
+enable = true
+type = "fuse"
+contentLength = 1000
+placeholder = ""
+maxResultLength = 50
+snippetLength = 30
+highlightTag = "em"
+absoluteURL = false
+
+[params.search.fuse]
+isCaseSensitive = false
+includeScore = true
+minMatchCharLength = 5
+findAllMatches = false
+includeMatches = true
+location = 0
+threshold = 0.6
+distance = 1000
+ignoreLocation = true
+useExtendedSearch = true
+ignoreFieldNorm = false
+
+[params.header.title]
+logo = ""
+name = "My economics study notes"
+pre = ""
+post = ""
+typeit = false
+
+[params.footer]
+enable = true
+copyright = true
+author = true
+since = ""
+gov = ""
+icp = ""
+license = ""
+
+[params.footer.powered]
+enable = true
+hugoLogo = false
+themeLogo = false
+
+[params.section]
+paginate = 1000
+dateFormat = "01-02"
+
+[params.list]
+paginate = 1000
+dateFormat = "01-02"
+
+[params.recentlyUpdated]
+archives = false
+section = false
+list = false
+
+[params.tagcloud]
+enable = true
+min = 15
+max = 40
+peakCount = 10
+orderby = "name"
+
+[params.home.profile]
+enable = true
+title = "My economics study notes"
+
+[params.home.posts]
+enable = false
+
+[params.social]
+GitHub = "econ-notes"
+Email = "econ.learning.resources@gmail.com"
+RSS = false
+
+[params.cookieconsent]
+enable = false
+
+[params.backToTop]
+enable = true
+
+[params.image]
+cacheRemote = false
+optimise = true
+
+[params.codeblock]
+wrapper = true
+mode = "classic"
+wrapperClass = ""
+maxShownLines = 100
+copyable = true
+lineNosToggler = false
+lineWrapToggler = false
+editable = false
+
+[params.page]
+wordCount = false
+readingTime = false
+authorAvatar = false
+pageStyle = "normal"
+collectionList = true
+collectionNavigation = true
+license = ""
+
+[params.page.toc]
+enable = true
+keepStatic = false
+auto = true
+position = "right"
+ordered = true
+startLevel = 2
+endLevel = 6
+
+[params.page.share]
+enable = false
+
+[params.page.heading.number]
+enable = true
+onlyMainSection = false
+
+[params.page.heading.number.format]
+h1 = "{title}"
+h2 = "{h2}. {title}"
+h3 = "{h2}.{h3}. {title}"
+h4 = "{h2}.{h3}.{h4}. {title}"
+h5 = "{h2}.{h3}.{h4}.{h5}. {title}"
+h6 = "{h2}.{h3}.{h4}.{h5}.{h6}. {title}"
+
+[params.page.math]
+enable = true
+type = "katex"
+
+[params.page.math.katex]
+copyTex = true
+throwOnError = false
+errorColor = "#ff4949"
+
+[params.page.related]
+enable = false
+count = 5
+position = [
+  "aside",
+]
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

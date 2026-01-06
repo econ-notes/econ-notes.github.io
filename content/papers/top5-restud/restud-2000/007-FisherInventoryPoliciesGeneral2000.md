@@ -1,0 +1,11 @@
+---
+title: "(S, s) Inventory Policies in General Equilibrium"
+date: 2000-12-24
+tags: ["Macro", "Firms", "Fixed Costs", "ToRead"]
+---
+
+## Abstract 
+We study the aggregate implications of $(S, s)$ inventory policies in a dynamic general equilibrium model with aggregate uncertainty. Firms in the model's retail sector face idiosyncratic demand risk, and $(S, s)$ inventory policies are optimal because of fixed order costs. The distribution of inventory holdings affects the aggregate outcome in two ways: variation in the decision to order and variation in the rate of sale through the pricing decisions of retailers. We find that both mechanisms must operate to reconcile observations that orders are more volatile than, and inventory investment is positively correlated with, sales, while remaining consistent with other salient business cycle characteristics. The model exhibits strong amplification for some shocks and persistence to a limited extent.
+
+
+Tags: ["Macro", "Firms", "Fixed Costs", "ToRead"]

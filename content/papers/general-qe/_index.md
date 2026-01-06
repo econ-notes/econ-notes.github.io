@@ -1,0 +1,4 @@
+---
+title: 'Quantitative Economics'
+date: '2025-12-16'
+---

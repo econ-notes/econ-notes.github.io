@@ -1,0 +1,11 @@
+---
+title: "Strategic Ignorance as a Self-Disciplining Device"
+date: 2000-12-06
+tags: ["Behavioral Econ", "Time Inconsistency"]
+---
+
+## Abstract 
+We analyse the decision of an agent with time-inconsistent preferences to consume a good that exerts an externality on future welfare. The extent of the externality is initially unknown, but may be learned via a costless sampling procedure. We show that when the agent cannot commit to future consumption and learning decisions, incomplete learning may occur on a Markov perfect equilibrium path of the resulting intra-personal game. In such a case, each agent's incarnation stops learning for some values of the posterior distribution of beliefs and acts under self-restricted information. This conduct is interpreted as strategic ignorance. All equilibria featuring this property strictly Pareto dominate the complete learning equilibrium for any posterior distribution of beliefs.
+
+
+Tags: ["Behavioral Econ", "Time Inconsistency"]

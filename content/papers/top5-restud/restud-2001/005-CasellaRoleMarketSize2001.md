@@ -1,0 +1,11 @@
+---
+title: "The Role of Market Size in the Formation of Jurisdictions"
+date: 2001-12-26
+tags: ["Political Econ", "Public Goods"]
+---
+
+## Abstract 
+Administrative and political reorganization is being actively debated even in the mature, stable economies of Western Europe. This paper investigates the possibility that such a reorganization is tied to the integration of economic markets. The paper describes a model where heterogeneous individuals form coalitions for the provision of a public good and shows that the number and composition of these jurisdictions depend on the overall size of the market. The range of economic activities engaged in by jurisdiction members increases when the size of the market increases, and so does the range of their preferences over the public good. The result is a change in the endogenous borders of the jurisdictions, and a reorganization of all coalitions. The optimal number of jurisdictions is unique and increases with market size. In the absence of compensating transfers, however, the decentralized equilibrium need not be optimal and is not unique, although there is no restriction on individuals' ability to coordinate the formation of coalitions. It remains true that a large enough increase in market size will trigger an increase in the number of jurisdictions.
+
+
+Tags: ["Political Econ", "Public Goods"]

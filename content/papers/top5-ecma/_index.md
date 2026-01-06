@@ -1,0 +1,4 @@
+---
+title: 'Econometrica'
+date: '2025-12-22'
+---
