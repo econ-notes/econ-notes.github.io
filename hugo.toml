@@ -3,6 +3,12 @@ title = "My economics study notes"
 theme = ["FixIt"]
 languageCode = 'en-us'
 
+[params.author]
+name = "Econ Notes"
+email = "econ.learning.resources@gmail.com"
+link = ""
+avatar = "/images/avatar.jpg"
+
 [menu]
 
 [[menu.main]]
@@ -133,12 +139,6 @@ _merge = "shallow"
 category = "categories"
 tag = "tags"
 collection = "collections"
-
-[params.author]
-name = "Econ Notes"
-email = "econ.learning.resources@gmail.com"
-link = ""
-avatar = ""
 
 [outputFormats.search]
 baseName = "search"
@@ -271,7 +271,7 @@ editable = false
 [params.page]
 wordCount = false
 readingTime = false
-authorAvatar = false
+authorAvatar = true
 pageStyle = "normal"
 collectionList = true
 collectionNavigation = true

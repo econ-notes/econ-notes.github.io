@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Template: Abbreviated Math Commands - My economics study notes</title><meta name="author" content="Econ Notes">
+<meta name="description" content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 %-- useful commands %!! adjust space for brackets specified with \left and \right \usepackage{mleftright} \mleftright %!! brackets \newcommand{\bc}[1]{\left\lbrace #1 \right\rbrace} \newcommand{\bp}[1]{\left( #1 \right)} \newcommand{\of}[1]{\left( #1 \right)} \newcommand{\bs}[1]{\left[ #1 \right]} \newcommand{\abs}[1]{\left\lvert #1 \right\rvert} \newcommand{\norm}[1]{\left\lVert #1 \right\rVert} \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor} %!! accents \newcommand{\ol}[1]{\overline{#1}} \newcommand{\undl}[1]{\underline{#1}} \newcommand{\wh}[1]{\widehat{#1}} \newcommand{\wt}[1]{\widetilde{#1}} \newcommand{\bds}[1]{\boldsymbol{#1}} \newcommand{\pr}{\prime} %!! convergence symbols \newcommand{\cvginf}[1]{{#1} \rightarrow \infty} \newcommand{\cvg}[2]{{#1} \rightarrow {#2}} %!! derivative symbols \newcommand{\pdfrac}[2]{\frac{\partial\; {#1}}{\partial\; {#2}}} \newcommand{\fdfrac}[2]{\frac{d {#1}}{d {#2}}} %-- operators \usepackage{xparse} %!! logarithm \let\oldln\ln \RenewDocumentCommand{\ln}{g}{\IfNoValueTF{#1}{\oldln}{{\oldln}{\bp{#1}}}} %!! exponential \let\oldexp\exp \RenewDocumentCommand{\exp}{g}{\IfNoValueTF{#1}{\oldexp}{{\oldexp}{\bp{#1}}}} %!! indicator \NewDocumentCommand{\ind}{g}{% \IfNoValueTF{#1}{\operatorname{\mathbb{I}}}% {\mathbb{I}{\bp{#1}}}} %!! trace \NewDocumentCommand{\tr}{g}{% \IfNoValueTF{#1}{\operatorname{tr}}% {{\operatorname{tr}}{\bp{#1}}}} %!! maximum \let\oldmax\max \RenewDocumentCommand{\max}{o g}{% \IfNoValueTF{#2}{\oldmax\IfValueT{#1}{_{#1}}}% {{\oldmax\IfValueT{#1}{_{#1}}}{\bc{#2}}}} %!! argmax \DeclareMathOperator*{\argmax}{argmax} %!! minimum \let\oldmin\min \RenewDocumentCommand{\min}{o g}{% \IfNoValueTF{#2}{\oldmin\IfValueT{#1}{_{#1}}}% {{\oldmin\IfValueT{#1}{_{#1}}}{\bc{#2}}}} %!! argmin \DeclareMathOperator*{\argmin}{argmin} %-- probabilities %!! expectation \NewDocumentCommand{\E}{o g}{% \IfNoValueTF{#2}{\operatorname{\mathbb{E}}\IfValueT{#1}{_{#1}}}% {\mathbb{E}\IfValueT{#1}{_{#1}}{\bs{\,#2\,}}\,}} %!! probability \RenewDocumentCommand{\P}{o g}{% \IfNoValueTF{#2}{\operatorname{\mathbb{P}}\IfValueT{#1}{_{#1}}}% {\mathbb{P}\IfValueT{#1}{_{#1}}{\bs{\,#2\,}}\,}} %!! variance \NewDocumentCommand{\var}{g}{% \IfNoValueTF{#1}{\operatorname{var}}% {{\operatorname{var}}{\bs{\,#1\,}}}} %!! covariance \NewDocumentCommand{\cov}{g}{% \IfNoValueTF{#1}{\operatorname{cov}}% {{\operatorname{cov}}{\bs{\,#1\,}}}} %!! correlation \NewDocumentCommand{\corr}{g}{% \IfNoValueTF{#1}{\operatorname{corr}}% {{\operatorname{corr}}{\bs{\,#1\,}}}} %!! standard deviation \NewDocumentCommand{\sd}{g}{% \IfNoValueTF{#1}{\operatorname{sd}}% {{\operatorname{sd}}{\bs{\,#1\,}}}} %!! standard error \NewDocumentCommand{\se}{g}{% \IfNoValueTF{#1}{\operatorname{se}}% {{\operatorname{se}}{\bs{\,#1\,}}}} %!! convergence symbols \newcommand{\inas}{\overset{a.s.}{\to}} \newcommand{\indist}{\overset{d}{\to}} \newcommand{\inprob}{\overset{p}{\to}} \newcommand{\inrm}{\overset{r.m.}{\to}} \newcommand{\inlp}{\overset{L_p}{\to}} \newcommand{\inlt}{\overset{L_2}{\to}} \newcommand{\inlo}{\overset{L_1}{\to}} \newcommand{\eqdist}{\stackrel{d}{=}} \newcommand{\indep}{\perp\!\!\!\!\perp} \DeclareMathOperator{\plim}{plim} %!! iid symbols \newcommand{\iid}{\mathbin{\overset{iid}{\sim}}} %-- letters %!! Greek letters \def\a{\alpha} \def\b{\beta} \def\c{\chi} \def\d{\delta} \def\D{\Delta} \def\uD{\upDelta} \def\e{\epsilon} \def\ve{\varepsilon} \def\f{\phi} \def\vf{\varphi} \def\F{\Phi} \def\g{\gamma} \def\G{\Gamma} \def\h{\eta} \def\k{\kappa} \def\l{\lambda} \def\L{\Lambda} \def\m{\mu} \def\n{\nu} \def\o{\omega} \def\O{\Omega} \def\vp{\varpi} \def\p{\psi} \def\r{\rho} \def\s{\sigma} \def\vs{\varsigma} \def\S{\Sigma} \def\t{\theta} \def\T{\Theta} \def\vt{\vartheta} \def\U{\Upsilon} \def\x{\xi} \def\X{\Xi} \def\z{\zeta} %!! blackboard letters \def\R{\mathbb{R}} \def\N{\mathbb{N}} \def\Z{\mathbb{Z}} \def\Q{\mathbb{Q}} \def\C{\mathbb{C}} \def\I{\mathbb{I}} %!! caligraphic letters \def\Ac{\mathcal{A}} \def\Bc{\mathcal{B}} \def\Cc{\mathcal{C}} \def\Dc{\mathcal{D}} \def\Ec{\mathcal{E}} \def\Fc{\mathcal{F}} \def\Gc{\mathcal{G}} \def\Hc{\mathcal{H}} \def\Ic{\mathcal{I}} \def\Jc{\mathcal{J}} \def\Kc{\mathcal{K}} \def\Lc{\mathcal{L}} \def\Mc{\mathcal{M}} \def\Nc{\mathcal{N}} \def\Oc{\mathcal{O}} \def\Pc{\mathcal{P}} \def\Qc{\mathcal{Q}} \def\Rc{\mathcal{R}} \def\Sc{\mathcal{S}} \def\Tc{\mathcal{T}} \def\Uc{\mathcal{U}} \def\Vc{\mathcal{V}} \def\Wc{\mathcal{W}} \def\Xc{\mathcal{X}} \def\Yc{\mathcal{Y}} \def\Zc{\mathcal{Z}} %!! boldsymbol letters \def\bdsa{\boldsymbol{a}} \def\bdsb{\boldsymbol{b}} \def\bdsc{\boldsymbol{c}} \def\bdsd{\boldsymbol{d}} \def\bdse{\boldsymbol{e}} \def\bdsf{\boldsymbol{f}} \def\bdsg{\boldsymbol{g}} \def\bdsh{\boldsymbol{h}} \def\bdsi{\boldsymbol{i}} \def\bdsj{\boldsymbol{j}} \def\bdsk{\boldsymbol{k}} \def\bdsl{\boldsymbol{l}} \def\bdsm{\boldsymbol{m}} \def\bdsn{\boldsymbol{n}} \def\bdso{\boldsymbol{o}} \def\bdsp{\boldsymbol{p}} \def\bdsq{\boldsymbol{q}} \def\bdsr{\boldsymbol{r}} \def\bdss{\boldsymbol{s}} \def\bdst{\boldsymbol{t}} \def\bdsu{\boldsymbol{u}} \def\bdsv{\boldsymbol{v}} \def\bdsw{\boldsymbol{w}} \def\bdsx{\boldsymbol{x}} \def\bdsy{\boldsymbol{y}} \def\bdsz{\boldsymbol{z}} %!! boldsymbol letters \def\bdsA{\boldsymbol{A}} \def\bdsB{\boldsymbol{B}} \def\bdsC{\boldsymbol{C}} \def\bdsD{\boldsymbol{D}} \def\bdsE{\boldsymbol{E}} \def\bdsF{\boldsymbol{F}} \def\bdsG{\boldsymbol{G}} \def\bdsH{\boldsymbol{H}} \def\bdsI{\boldsymbol{I}} \def\bdsJ{\boldsymbol{J}} \def\bdsK{\boldsymbol{K}} \def\bdsL{\boldsymbol{L}} \def\bdsM{\boldsymbol{M}} \def\bdsN{\boldsymbol{N}} \def\bdsO{\boldsymbol{O}} \def\bdsP{\boldsymbol{P}} \def\bdsQ{\boldsymbol{Q}} \def\bdsR{\boldsymbol{R}} \def\bdsS{\boldsymbol{S}} \def\bdsT{\boldsymbol{T}} \def\bdsU{\boldsymbol{U}} \def\bdsV{\boldsymbol{V}} \def\bdsW{\boldsymbol{W}} \def\bdsX{\boldsymbol{X}} \def\bdsY{\boldsymbol{Y}} \def\bdsZ{\boldsymbol{Z}} %!! boldsymbol letters \def\Ab{\boldsymbol{A}} \def\Bb{\boldsymbol{B}} \def\Cb{\boldsymbol{C}} \def\Db{\boldsymbol{D}} \def\Eb{\boldsymbol{E}} \def\Fb{\boldsymbol{F}} \def\Gb{\boldsymbol{G}} \def\Hb{\boldsymbol{H}} \def\Ib{\boldsymbol{I}} \def\Jb{\boldsymbol{J}} \def\Kb{\boldsymbol{K}} \def\Lb{\boldsymbol{L}} \def\Mb{\boldsymbol{M}} \def\Nb{\boldsymbol{N}} \def\Ob{\boldsymbol{O}} \def\Pb{\boldsymbol{P}} \def\Qb{\boldsymbol{Q}} \def\Rb{\boldsymbol{R}} \def\Sb{\boldsymbol{S}} \def\Tb{\boldsymbol{T}} \def\Ub{\boldsymbol{U}} \def\Vb{\boldsymbol{V}} \def\Wb{\boldsymbol{W}} \def\Xb{\boldsymbol{X}} \def\Yb{\boldsymbol{Y}} \def\Zb{\boldsymbol{Z}} %!! underlined letters (for vectors) \newcommand{\ua}{\undl{a}} \newcommand{\ub}{\undl{b}} \newcommand{\uc}{\undl{c}} \newcommand{\ux}{\undl{x}} \newcommand{\uy}{\undl{y}} \newcommand{\uz}{\undl{z}} \newcommand{\uX}{\undl{X}} \newcommand{\uQ}{\undl{Q}} \newcommand{\uU}{\undl{U}} \newcommand{\uV}{\undl{V}} %!! underlined greek letters (for vectors) \newcommand{\uga}{\undl{\alpha}} \newcommand{\ugb}{\undl{\beta}} \newcommand{\ugc}{\undl{\chi}} \newcommand{\ugd}{\undl{\delta}} \newcommand{\ugD}{\undl{\Delta}} \newcommand{\uguD}{\undl{\upDelta}} \newcommand{\uge}{\undl{\epsilon}} \newcommand{\ugve}{\undl{\varepsilon}} \newcommand{\ugf}{\undl{\phi}} \newcommand{\ugvf}{\undl{\varphi}} \newcommand{\ugF}{\undl{\Phi}} \newcommand{\ugg}{\undl{\gamma}} \newcommand{\ugh}{\undl{\eta}} \newcommand{\ugl}{\undl{\lambda}} \newcommand{\ugm}{\undl{\mu}} \newcommand{\ugn}{\undl{\nu}} \newcommand{\ugo}{\undl{\omega}} \newcommand{\ugO}{\undl{\Omega}} \newcommand{\ugvp}{\undl{\varpi}} \newcommand{\ugp}{\undl{\psi}} \newcommand{\ugr}{\undl{\rho}} \newcommand{\ugs}{\undl{\sigma}} \newcommand{\ugvs}{\undl{\varsigma}} \newcommand{\ugS}{\undl{\Sigma}} \newcommand{\ugt}{\undl{\theta}} \newcommand{\ugT}{\undl{\Theta}} \newcommand{\ugvt}{\undl{\vartheta}} \newcommand{\ugx}{\undl{\xi}} \newcommand{\ugz}{\undl{\zeta}} ">
+  <meta itemprop="name" content="Template: Abbreviated math commands">
+  <meta itemprop="description" content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 %-- useful commands %!! adjust space for brackets specified with \left and \right \usepackage{mleftright} \mleftright %!! brackets \newcommand{\bc}[1]{\left\lbrace #1 \right\rbrace} \newcommand{\bp}[1]{\left( #1 \right)} \newcommand{\of}[1]{\left( #1 \right)} \newcommand{\bs}[1]{\left[ #1 \right]} \newcommand{\abs}[1]{\left\lvert #1 \right\rvert} \newcommand{\norm}[1]{\left\lVert #1 \right\rVert} \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor} %!! accents \newcommand{\ol}[1]{\overline{#1}} \newcommand{\undl}[1]{\underline{#1}} \newcommand{\wh}[1]{\widehat{#1}} \newcommand{\wt}[1]{\widetilde{#1}} \newcommand{\bds}[1]{\boldsymbol{#1}} \newcommand{\pr}{\prime} %!! convergence symbols \newcommand{\cvginf}[1]{{#1} \rightarrow \infty} \newcommand{\cvg}[2]{{#1} \rightarrow {#2}} %!! derivative symbols \newcommand{\pdfrac}[2]{\frac{\partial\; {#1}}{\partial\; {#2}}} \newcommand{\fdfrac}[2]{\frac{d {#1}}{d {#2}}} %-- operators \usepackage{xparse} %!! logarithm \let\oldln\ln \RenewDocumentCommand{\ln}{g}{\IfNoValueTF{#1}{\oldln}{{\oldln}{\bp{#1}}}} %!! exponential \let\oldexp\exp \RenewDocumentCommand{\exp}{g}{\IfNoValueTF{#1}{\oldexp}{{\oldexp}{\bp{#1}}}} %!! indicator \NewDocumentCommand{\ind}{g}{% \IfNoValueTF{#1}{\operatorname{\mathbb{I}}}% {\mathbb{I}{\bp{#1}}}} %!! trace \NewDocumentCommand{\tr}{g}{% \IfNoValueTF{#1}{\operatorname{tr}}% {{\operatorname{tr}}{\bp{#1}}}} %!! maximum \let\oldmax\max \RenewDocumentCommand{\max}{o g}{% \IfNoValueTF{#2}{\oldmax\IfValueT{#1}{_{#1}}}% {{\oldmax\IfValueT{#1}{_{#1}}}{\bc{#2}}}} %!! argmax \DeclareMathOperator*{\argmax}{argmax} %!! minimum \let\oldmin\min \RenewDocumentCommand{\min}{o g}{% \IfNoValueTF{#2}{\oldmin\IfValueT{#1}{_{#1}}}% {{\oldmin\IfValueT{#1}{_{#1}}}{\bc{#2}}}} %!! argmin \DeclareMathOperator*{\argmin}{argmin} %-- probabilities %!! expectation \NewDocumentCommand{\E}{o g}{% \IfNoValueTF{#2}{\operatorname{\mathbb{E}}\IfValueT{#1}{_{#1}}}% {\mathbb{E}\IfValueT{#1}{_{#1}}{\bs{\,#2\,}}\,}} %!! probability \RenewDocumentCommand{\P}{o g}{% \IfNoValueTF{#2}{\operatorname{\mathbb{P}}\IfValueT{#1}{_{#1}}}% {\mathbb{P}\IfValueT{#1}{_{#1}}{\bs{\,#2\,}}\,}} %!! variance \NewDocumentCommand{\var}{g}{% \IfNoValueTF{#1}{\operatorname{var}}% {{\operatorname{var}}{\bs{\,#1\,}}}} %!! covariance \NewDocumentCommand{\cov}{g}{% \IfNoValueTF{#1}{\operatorname{cov}}% {{\operatorname{cov}}{\bs{\,#1\,}}}} %!! correlation \NewDocumentCommand{\corr}{g}{% \IfNoValueTF{#1}{\operatorname{corr}}% {{\operatorname{corr}}{\bs{\,#1\,}}}} %!! standard deviation \NewDocumentCommand{\sd}{g}{% \IfNoValueTF{#1}{\operatorname{sd}}% {{\operatorname{sd}}{\bs{\,#1\,}}}} %!! standard error \NewDocumentCommand{\se}{g}{% \IfNoValueTF{#1}{\operatorname{se}}% {{\operatorname{se}}{\bs{\,#1\,}}}} %!! convergence symbols \newcommand{\inas}{\overset{a.s.}{\to}} \newcommand{\indist}{\overset{d}{\to}} \newcommand{\inprob}{\overset{p}{\to}} \newcommand{\inrm}{\overset{r.m.}{\to}} \newcommand{\inlp}{\overset{L_p}{\to}} \newcommand{\inlt}{\overset{L_2}{\to}} \newcommand{\inlo}{\overset{L_1}{\to}} \newcommand{\eqdist}{\stackrel{d}{=}} \newcommand{\indep}{\perp\!\!\!\!\perp} \DeclareMathOperator{\plim}{plim} %!! iid symbols \newcommand{\iid}{\mathbin{\overset{iid}{\sim}}} %-- letters %!! Greek letters \def\a{\alpha} \def\b{\beta} \def\c{\chi} \def\d{\delta} \def\D{\Delta} \def\uD{\upDelta} \def\e{\epsilon} \def\ve{\varepsilon} \def\f{\phi} \def\vf{\varphi} \def\F{\Phi} \def\g{\gamma} \def\G{\Gamma} \def\h{\eta} \def\k{\kappa} \def\l{\lambda} \def\L{\Lambda} \def\m{\mu} \def\n{\nu} \def\o{\omega} \def\O{\Omega} \def\vp{\varpi} \def\p{\psi} \def\r{\rho} \def\s{\sigma} \def\vs{\varsigma} \def\S{\Sigma} \def\t{\theta} \def\T{\Theta} \def\vt{\vartheta} \def\U{\Upsilon} \def\x{\xi} \def\X{\Xi} \def\z{\zeta} %!! blackboard letters \def\R{\mathbb{R}} \def\N{\mathbb{N}} \def\Z{\mathbb{Z}} \def\Q{\mathbb{Q}} \def\C{\mathbb{C}} \def\I{\mathbb{I}} %!! caligraphic letters \def\Ac{\mathcal{A}} \def\Bc{\mathcal{B}} \def\Cc{\mathcal{C}} \def\Dc{\mathcal{D}} \def\Ec{\mathcal{E}} \def\Fc{\mathcal{F}} \def\Gc{\mathcal{G}} \def\Hc{\mathcal{H}} \def\Ic{\mathcal{I}} \def\Jc{\mathcal{J}} \def\Kc{\mathcal{K}} \def\Lc{\mathcal{L}} \def\Mc{\mathcal{M}} \def\Nc{\mathcal{N}} \def\Oc{\mathcal{O}} \def\Pc{\mathcal{P}} \def\Qc{\mathcal{Q}} \def\Rc{\mathcal{R}} \def\Sc{\mathcal{S}} \def\Tc{\mathcal{T}} \def\Uc{\mathcal{U}} \def\Vc{\mathcal{V}} \def\Wc{\mathcal{W}} \def\Xc{\mathcal{X}} \def\Yc{\mathcal{Y}} \def\Zc{\mathcal{Z}} %!! boldsymbol letters \def\bdsa{\boldsymbol{a}} \def\bdsb{\boldsymbol{b}} \def\bdsc{\boldsymbol{c}} \def\bdsd{\boldsymbol{d}} \def\bdse{\boldsymbol{e}} \def\bdsf{\boldsymbol{f}} \def\bdsg{\boldsymbol{g}} \def\bdsh{\boldsymbol{h}} \def\bdsi{\boldsymbol{i}} \def\bdsj{\boldsymbol{j}} \def\bdsk{\boldsymbol{k}} \def\bdsl{\boldsymbol{l}} \def\bdsm{\boldsymbol{m}} \def\bdsn{\boldsymbol{n}} \def\bdso{\boldsymbol{o}} \def\bdsp{\boldsymbol{p}} \def\bdsq{\boldsymbol{q}} \def\bdsr{\boldsymbol{r}} \def\bdss{\boldsymbol{s}} \def\bdst{\boldsymbol{t}} \def\bdsu{\boldsymbol{u}} \def\bdsv{\boldsymbol{v}} \def\bdsw{\boldsymbol{w}} \def\bdsx{\boldsymbol{x}} \def\bdsy{\boldsymbol{y}} \def\bdsz{\boldsymbol{z}} %!! boldsymbol letters \def\bdsA{\boldsymbol{A}} \def\bdsB{\boldsymbol{B}} \def\bdsC{\boldsymbol{C}} \def\bdsD{\boldsymbol{D}} \def\bdsE{\boldsymbol{E}} \def\bdsF{\boldsymbol{F}} \def\bdsG{\boldsymbol{G}} \def\bdsH{\boldsymbol{H}} \def\bdsI{\boldsymbol{I}} \def\bdsJ{\boldsymbol{J}} \def\bdsK{\boldsymbol{K}} \def\bdsL{\boldsymbol{L}} \def\bdsM{\boldsymbol{M}} \def\bdsN{\boldsymbol{N}} \def\bdsO{\boldsymbol{O}} \def\bdsP{\boldsymbol{P}} \def\bdsQ{\boldsymbol{Q}} \def\bdsR{\boldsymbol{R}} \def\bdsS{\boldsymbol{S}} \def\bdsT{\boldsymbol{T}} \def\bdsU{\boldsymbol{U}} \def\bdsV{\boldsymbol{V}} \def\bdsW{\boldsymbol{W}} \def\bdsX{\boldsymbol{X}} \def\bdsY{\boldsymbol{Y}} \def\bdsZ{\boldsymbol{Z}} %!! boldsymbol letters \def\Ab{\boldsymbol{A}} \def\Bb{\boldsymbol{B}} \def\Cb{\boldsymbol{C}} \def\Db{\boldsymbol{D}} \def\Eb{\boldsymbol{E}} \def\Fb{\boldsymbol{F}} \def\Gb{\boldsymbol{G}} \def\Hb{\boldsymbol{H}} \def\Ib{\boldsymbol{I}} \def\Jb{\boldsymbol{J}} \def\Kb{\boldsymbol{K}} \def\Lb{\boldsymbol{L}} \def\Mb{\boldsymbol{M}} \def\Nb{\boldsymbol{N}} \def\Ob{\boldsymbol{O}} \def\Pb{\boldsymbol{P}} \def\Qb{\boldsymbol{Q}} \def\Rb{\boldsymbol{R}} \def\Sb{\boldsymbol{S}} \def\Tb{\boldsymbol{T}} \def\Ub{\boldsymbol{U}} \def\Vb{\boldsymbol{V}} \def\Wb{\boldsymbol{W}} \def\Xb{\boldsymbol{X}} \def\Yb{\boldsymbol{Y}} \def\Zb{\boldsymbol{Z}} %!! underlined letters (for vectors) \newcommand{\ua}{\undl{a}} \newcommand{\ub}{\undl{b}} \newcommand{\uc}{\undl{c}} \newcommand{\ux}{\undl{x}} \newcommand{\uy}{\undl{y}} \newcommand{\uz}{\undl{z}} \newcommand{\uX}{\undl{X}} \newcommand{\uQ}{\undl{Q}} \newcommand{\uU}{\undl{U}} \newcommand{\uV}{\undl{V}} %!! underlined greek letters (for vectors) \newcommand{\uga}{\undl{\alpha}} \newcommand{\ugb}{\undl{\beta}} \newcommand{\ugc}{\undl{\chi}} \newcommand{\ugd}{\undl{\delta}} \newcommand{\ugD}{\undl{\Delta}} \newcommand{\uguD}{\undl{\upDelta}} \newcommand{\uge}{\undl{\epsilon}} \newcommand{\ugve}{\undl{\varepsilon}} \newcommand{\ugf}{\undl{\phi}} \newcommand{\ugvf}{\undl{\varphi}} \newcommand{\ugF}{\undl{\Phi}} \newcommand{\ugg}{\undl{\gamma}} \newcommand{\ugh}{\undl{\eta}} \newcommand{\ugl}{\undl{\lambda}} \newcommand{\ugm}{\undl{\mu}} \newcommand{\ugn}{\undl{\nu}} \newcommand{\ugo}{\undl{\omega}} \newcommand{\ugO}{\undl{\Omega}} \newcommand{\ugvp}{\undl{\varpi}} \newcommand{\ugp}{\undl{\psi}} \newcommand{\ugr}{\undl{\rho}} \newcommand{\ugs}{\undl{\sigma}} \newcommand{\ugvs}{\undl{\varsigma}} \newcommand{\ugS}{\undl{\Sigma}} \newcommand{\ugt}{\undl{\theta}} \newcommand{\ugT}{\undl{\Theta}} \newcommand{\ugvt}{\undl{\vartheta}} \newcommand{\ugx}{\undl{\xi}} \newcommand{\ugz}{\undl{\zeta}}">
+  <meta itemprop="datePublished" content="2025-12-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-12-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="699"><meta property="og:url" content="http://localhost:1313/programming/latex-notes/t03-math-package/">
+  <meta property="og:site_name" content="My economics study notes">
+  <meta property="og:title" content="Template: Abbreviated math commands">
+  <meta property="og:description" content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 %-- useful commands %!! adjust space for brackets specified with \left and \right \usepackage{mleftright} \mleftright %!! brackets \newcommand{\bc}[1]{\left\lbrace #1 \right\rbrace} \newcommand{\bp}[1]{\left( #1 \right)} \newcommand{\of}[1]{\left( #1 \right)} \newcommand{\bs}[1]{\left[ #1 \right]} \newcommand{\abs}[1]{\left\lvert #1 \right\rvert} \newcommand{\norm}[1]{\left\lVert #1 \right\rVert} \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor} %!! accents \newcommand{\ol}[1]{\overline{#1}} \newcommand{\undl}[1]{\underline{#1}} \newcommand{\wh}[1]{\widehat{#1}} \newcommand{\wt}[1]{\widetilde{#1}} \newcommand{\bds}[1]{\boldsymbol{#1}} \newcommand{\pr}{\prime} %!! convergence symbols \newcommand{\cvginf}[1]{{#1} \rightarrow \infty} \newcommand{\cvg}[2]{{#1} \rightarrow {#2}} %!! derivative symbols \newcommand{\pdfrac}[2]{\frac{\partial\; {#1}}{\partial\; {#2}}} \newcommand{\fdfrac}[2]{\frac{d {#1}}{d {#2}}} %-- operators \usepackage{xparse} %!! logarithm \let\oldln\ln \RenewDocumentCommand{\ln}{g}{\IfNoValueTF{#1}{\oldln}{{\oldln}{\bp{#1}}}} %!! exponential \let\oldexp\exp \RenewDocumentCommand{\exp}{g}{\IfNoValueTF{#1}{\oldexp}{{\oldexp}{\bp{#1}}}} %!! indicator \NewDocumentCommand{\ind}{g}{% \IfNoValueTF{#1}{\operatorname{\mathbb{I}}}% {\mathbb{I}{\bp{#1}}}} %!! trace \NewDocumentCommand{\tr}{g}{% \IfNoValueTF{#1}{\operatorname{tr}}% {{\operatorname{tr}}{\bp{#1}}}} %!! maximum \let\oldmax\max \RenewDocumentCommand{\max}{o g}{% \IfNoValueTF{#2}{\oldmax\IfValueT{#1}{_{#1}}}% {{\oldmax\IfValueT{#1}{_{#1}}}{\bc{#2}}}} %!! argmax \DeclareMathOperator*{\argmax}{argmax} %!! minimum \let\oldmin\min \RenewDocumentCommand{\min}{o g}{% \IfNoValueTF{#2}{\oldmin\IfValueT{#1}{_{#1}}}% {{\oldmin\IfValueT{#1}{_{#1}}}{\bc{#2}}}} %!! argmin \DeclareMathOperator*{\argmin}{argmin} %-- probabilities %!! expectation \NewDocumentCommand{\E}{o g}{% \IfNoValueTF{#2}{\operatorname{\mathbb{E}}\IfValueT{#1}{_{#1}}}% {\mathbb{E}\IfValueT{#1}{_{#1}}{\bs{\,#2\,}}\,}} %!! probability \RenewDocumentCommand{\P}{o g}{% \IfNoValueTF{#2}{\operatorname{\mathbb{P}}\IfValueT{#1}{_{#1}}}% {\mathbb{P}\IfValueT{#1}{_{#1}}{\bs{\,#2\,}}\,}} %!! variance \NewDocumentCommand{\var}{g}{% \IfNoValueTF{#1}{\operatorname{var}}% {{\operatorname{var}}{\bs{\,#1\,}}}} %!! covariance \NewDocumentCommand{\cov}{g}{% \IfNoValueTF{#1}{\operatorname{cov}}% {{\operatorname{cov}}{\bs{\,#1\,}}}} %!! correlation \NewDocumentCommand{\corr}{g}{% \IfNoValueTF{#1}{\operatorname{corr}}% {{\operatorname{corr}}{\bs{\,#1\,}}}} %!! standard deviation \NewDocumentCommand{\sd}{g}{% \IfNoValueTF{#1}{\operatorname{sd}}% {{\operatorname{sd}}{\bs{\,#1\,}}}} %!! standard error \NewDocumentCommand{\se}{g}{% \IfNoValueTF{#1}{\operatorname{se}}% {{\operatorname{se}}{\bs{\,#1\,}}}} %!! convergence symbols \newcommand{\inas}{\overset{a.s.}{\to}} \newcommand{\indist}{\overset{d}{\to}} \newcommand{\inprob}{\overset{p}{\to}} \newcommand{\inrm}{\overset{r.m.}{\to}} \newcommand{\inlp}{\overset{L_p}{\to}} \newcommand{\inlt}{\overset{L_2}{\to}} \newcommand{\inlo}{\overset{L_1}{\to}} \newcommand{\eqdist}{\stackrel{d}{=}} \newcommand{\indep}{\perp\!\!\!\!\perp} \DeclareMathOperator{\plim}{plim} %!! iid symbols \newcommand{\iid}{\mathbin{\overset{iid}{\sim}}} %-- letters %!! Greek letters \def\a{\alpha} \def\b{\beta} \def\c{\chi} \def\d{\delta} \def\D{\Delta} \def\uD{\upDelta} \def\e{\epsilon} \def\ve{\varepsilon} \def\f{\phi} \def\vf{\varphi} \def\F{\Phi} \def\g{\gamma} \def\G{\Gamma} \def\h{\eta} \def\k{\kappa} \def\l{\lambda} \def\L{\Lambda} \def\m{\mu} \def\n{\nu} \def\o{\omega} \def\O{\Omega} \def\vp{\varpi} \def\p{\psi} \def\r{\rho} \def\s{\sigma} \def\vs{\varsigma} \def\S{\Sigma} \def\t{\theta} \def\T{\Theta} \def\vt{\vartheta} \def\U{\Upsilon} \def\x{\xi} \def\X{\Xi} \def\z{\zeta} %!! blackboard letters \def\R{\mathbb{R}} \def\N{\mathbb{N}} \def\Z{\mathbb{Z}} \def\Q{\mathbb{Q}} \def\C{\mathbb{C}} \def\I{\mathbb{I}} %!! caligraphic letters \def\Ac{\mathcal{A}} \def\Bc{\mathcal{B}} \def\Cc{\mathcal{C}} \def\Dc{\mathcal{D}} \def\Ec{\mathcal{E}} \def\Fc{\mathcal{F}} \def\Gc{\mathcal{G}} \def\Hc{\mathcal{H}} \def\Ic{\mathcal{I}} \def\Jc{\mathcal{J}} \def\Kc{\mathcal{K}} \def\Lc{\mathcal{L}} \def\Mc{\mathcal{M}} \def\Nc{\mathcal{N}} \def\Oc{\mathcal{O}} \def\Pc{\mathcal{P}} \def\Qc{\mathcal{Q}} \def\Rc{\mathcal{R}} \def\Sc{\mathcal{S}} \def\Tc{\mathcal{T}} \def\Uc{\mathcal{U}} \def\Vc{\mathcal{V}} \def\Wc{\mathcal{W}} \def\Xc{\mathcal{X}} \def\Yc{\mathcal{Y}} \def\Zc{\mathcal{Z}} %!! boldsymbol letters \def\bdsa{\boldsymbol{a}} \def\bdsb{\boldsymbol{b}} \def\bdsc{\boldsymbol{c}} \def\bdsd{\boldsymbol{d}} \def\bdse{\boldsymbol{e}} \def\bdsf{\boldsymbol{f}} \def\bdsg{\boldsymbol{g}} \def\bdsh{\boldsymbol{h}} \def\bdsi{\boldsymbol{i}} \def\bdsj{\boldsymbol{j}} \def\bdsk{\boldsymbol{k}} \def\bdsl{\boldsymbol{l}} \def\bdsm{\boldsymbol{m}} \def\bdsn{\boldsymbol{n}} \def\bdso{\boldsymbol{o}} \def\bdsp{\boldsymbol{p}} \def\bdsq{\boldsymbol{q}} \def\bdsr{\boldsymbol{r}} \def\bdss{\boldsymbol{s}} \def\bdst{\boldsymbol{t}} \def\bdsu{\boldsymbol{u}} \def\bdsv{\boldsymbol{v}} \def\bdsw{\boldsymbol{w}} \def\bdsx{\boldsymbol{x}} \def\bdsy{\boldsymbol{y}} \def\bdsz{\boldsymbol{z}} %!! boldsymbol letters \def\bdsA{\boldsymbol{A}} \def\bdsB{\boldsymbol{B}} \def\bdsC{\boldsymbol{C}} \def\bdsD{\boldsymbol{D}} \def\bdsE{\boldsymbol{E}} \def\bdsF{\boldsymbol{F}} \def\bdsG{\boldsymbol{G}} \def\bdsH{\boldsymbol{H}} \def\bdsI{\boldsymbol{I}} \def\bdsJ{\boldsymbol{J}} \def\bdsK{\boldsymbol{K}} \def\bdsL{\boldsymbol{L}} \def\bdsM{\boldsymbol{M}} \def\bdsN{\boldsymbol{N}} \def\bdsO{\boldsymbol{O}} \def\bdsP{\boldsymbol{P}} \def\bdsQ{\boldsymbol{Q}} \def\bdsR{\boldsymbol{R}} \def\bdsS{\boldsymbol{S}} \def\bdsT{\boldsymbol{T}} \def\bdsU{\boldsymbol{U}} \def\bdsV{\boldsymbol{V}} \def\bdsW{\boldsymbol{W}} \def\bdsX{\boldsymbol{X}} \def\bdsY{\boldsymbol{Y}} \def\bdsZ{\boldsymbol{Z}} %!! boldsymbol letters \def\Ab{\boldsymbol{A}} \def\Bb{\boldsymbol{B}} \def\Cb{\boldsymbol{C}} \def\Db{\boldsymbol{D}} \def\Eb{\boldsymbol{E}} \def\Fb{\boldsymbol{F}} \def\Gb{\boldsymbol{G}} \def\Hb{\boldsymbol{H}} \def\Ib{\boldsymbol{I}} \def\Jb{\boldsymbol{J}} \def\Kb{\boldsymbol{K}} \def\Lb{\boldsymbol{L}} \def\Mb{\boldsymbol{M}} \def\Nb{\boldsymbol{N}} \def\Ob{\boldsymbol{O}} \def\Pb{\boldsymbol{P}} \def\Qb{\boldsymbol{Q}} \def\Rb{\boldsymbol{R}} \def\Sb{\boldsymbol{S}} \def\Tb{\boldsymbol{T}} \def\Ub{\boldsymbol{U}} \def\Vb{\boldsymbol{V}} \def\Wb{\boldsymbol{W}} \def\Xb{\boldsymbol{X}} \def\Yb{\boldsymbol{Y}} \def\Zb{\boldsymbol{Z}} %!! underlined letters (for vectors) \newcommand{\ua}{\undl{a}} \newcommand{\ub}{\undl{b}} \newcommand{\uc}{\undl{c}} \newcommand{\ux}{\undl{x}} \newcommand{\uy}{\undl{y}} \newcommand{\uz}{\undl{z}} \newcommand{\uX}{\undl{X}} \newcommand{\uQ}{\undl{Q}} \newcommand{\uU}{\undl{U}} \newcommand{\uV}{\undl{V}} %!! underlined greek letters (for vectors) \newcommand{\uga}{\undl{\alpha}} \newcommand{\ugb}{\undl{\beta}} \newcommand{\ugc}{\undl{\chi}} \newcommand{\ugd}{\undl{\delta}} \newcommand{\ugD}{\undl{\Delta}} \newcommand{\uguD}{\undl{\upDelta}} \newcommand{\uge}{\undl{\epsilon}} \newcommand{\ugve}{\undl{\varepsilon}} \newcommand{\ugf}{\undl{\phi}} \newcommand{\ugvf}{\undl{\varphi}} \newcommand{\ugF}{\undl{\Phi}} \newcommand{\ugg}{\undl{\gamma}} \newcommand{\ugh}{\undl{\eta}} \newcommand{\ugl}{\undl{\lambda}} \newcommand{\ugm}{\undl{\mu}} \newcommand{\ugn}{\undl{\nu}} \newcommand{\ugo}{\undl{\omega}} \newcommand{\ugO}{\undl{\Omega}} \newcommand{\ugvp}{\undl{\varpi}} \newcommand{\ugp}{\undl{\psi}} \newcommand{\ugr}{\undl{\rho}} \newcommand{\ugs}{\undl{\sigma}} \newcommand{\ugvs}{\undl{\varsigma}} \newcommand{\ugS}{\undl{\Sigma}} \newcommand{\ugt}{\undl{\theta}} \newcommand{\ugT}{\undl{\Theta}} \newcommand{\ugvt}{\undl{\vartheta}} \newcommand{\ugx}{\undl{\xi}} \newcommand{\ugz}{\undl{\zeta}}">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="programming">
+    <meta property="article:published_time" content="2025-12-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-23T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Template: Abbreviated math commands">
+  <meta name="twitter:description" content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 %-- useful commands %!! adjust space for brackets specified with \left and \right \usepackage{mleftright} \mleftright %!! brackets \newcommand{\bc}[1]{\left\lbrace #1 \right\rbrace} \newcommand{\bp}[1]{\left( #1 \right)} \newcommand{\of}[1]{\left( #1 \right)} \newcommand{\bs}[1]{\left[ #1 \right]} \newcommand{\abs}[1]{\left\lvert #1 \right\rvert} \newcommand{\norm}[1]{\left\lVert #1 \right\rVert} \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor} %!! accents \newcommand{\ol}[1]{\overline{#1}} \newcommand{\undl}[1]{\underline{#1}} \newcommand{\wh}[1]{\widehat{#1}} \newcommand{\wt}[1]{\widetilde{#1}} \newcommand{\bds}[1]{\boldsymbol{#1}} \newcommand{\pr}{\prime} %!! convergence symbols \newcommand{\cvginf}[1]{{#1} \rightarrow \infty} \newcommand{\cvg}[2]{{#1} \rightarrow {#2}} %!! derivative symbols \newcommand{\pdfrac}[2]{\frac{\partial\; {#1}}{\partial\; {#2}}} \newcommand{\fdfrac}[2]{\frac{d {#1}}{d {#2}}} %-- operators \usepackage{xparse} %!! logarithm \let\oldln\ln \RenewDocumentCommand{\ln}{g}{\IfNoValueTF{#1}{\oldln}{{\oldln}{\bp{#1}}}} %!! exponential \let\oldexp\exp \RenewDocumentCommand{\exp}{g}{\IfNoValueTF{#1}{\oldexp}{{\oldexp}{\bp{#1}}}} %!! indicator \NewDocumentCommand{\ind}{g}{% \IfNoValueTF{#1}{\operatorname{\mathbb{I}}}% {\mathbb{I}{\bp{#1}}}} %!! trace \NewDocumentCommand{\tr}{g}{% \IfNoValueTF{#1}{\operatorname{tr}}% {{\operatorname{tr}}{\bp{#1}}}} %!! maximum \let\oldmax\max \RenewDocumentCommand{\max}{o g}{% \IfNoValueTF{#2}{\oldmax\IfValueT{#1}{_{#1}}}% {{\oldmax\IfValueT{#1}{_{#1}}}{\bc{#2}}}} %!! argmax \DeclareMathOperator*{\argmax}{argmax} %!! minimum \let\oldmin\min \RenewDocumentCommand{\min}{o g}{% \IfNoValueTF{#2}{\oldmin\IfValueT{#1}{_{#1}}}% {{\oldmin\IfValueT{#1}{_{#1}}}{\bc{#2}}}} %!! argmin \DeclareMathOperator*{\argmin}{argmin} %-- probabilities %!! expectation \NewDocumentCommand{\E}{o g}{% \IfNoValueTF{#2}{\operatorname{\mathbb{E}}\IfValueT{#1}{_{#1}}}% {\mathbb{E}\IfValueT{#1}{_{#1}}{\bs{\,#2\,}}\,}} %!! probability \RenewDocumentCommand{\P}{o g}{% \IfNoValueTF{#2}{\operatorname{\mathbb{P}}\IfValueT{#1}{_{#1}}}% {\mathbb{P}\IfValueT{#1}{_{#1}}{\bs{\,#2\,}}\,}} %!! variance \NewDocumentCommand{\var}{g}{% \IfNoValueTF{#1}{\operatorname{var}}% {{\operatorname{var}}{\bs{\,#1\,}}}} %!! covariance \NewDocumentCommand{\cov}{g}{% \IfNoValueTF{#1}{\operatorname{cov}}% {{\operatorname{cov}}{\bs{\,#1\,}}}} %!! correlation \NewDocumentCommand{\corr}{g}{% \IfNoValueTF{#1}{\operatorname{corr}}% {{\operatorname{corr}}{\bs{\,#1\,}}}} %!! standard deviation \NewDocumentCommand{\sd}{g}{% \IfNoValueTF{#1}{\operatorname{sd}}% {{\operatorname{sd}}{\bs{\,#1\,}}}} %!! standard error \NewDocumentCommand{\se}{g}{% \IfNoValueTF{#1}{\operatorname{se}}% {{\operatorname{se}}{\bs{\,#1\,}}}} %!! convergence symbols \newcommand{\inas}{\overset{a.s.}{\to}} \newcommand{\indist}{\overset{d}{\to}} \newcommand{\inprob}{\overset{p}{\to}} \newcommand{\inrm}{\overset{r.m.}{\to}} \newcommand{\inlp}{\overset{L_p}{\to}} \newcommand{\inlt}{\overset{L_2}{\to}} \newcommand{\inlo}{\overset{L_1}{\to}} \newcommand{\eqdist}{\stackrel{d}{=}} \newcommand{\indep}{\perp\!\!\!\!\perp} \DeclareMathOperator{\plim}{plim} %!! iid symbols \newcommand{\iid}{\mathbin{\overset{iid}{\sim}}} %-- letters %!! Greek letters \def\a{\alpha} \def\b{\beta} \def\c{\chi} \def\d{\delta} \def\D{\Delta} \def\uD{\upDelta} \def\e{\epsilon} \def\ve{\varepsilon} \def\f{\phi} \def\vf{\varphi} \def\F{\Phi} \def\g{\gamma} \def\G{\Gamma} \def\h{\eta} \def\k{\kappa} \def\l{\lambda} \def\L{\Lambda} \def\m{\mu} \def\n{\nu} \def\o{\omega} \def\O{\Omega} \def\vp{\varpi} \def\p{\psi} \def\r{\rho} \def\s{\sigma} \def\vs{\varsigma} \def\S{\Sigma} \def\t{\theta} \def\T{\Theta} \def\vt{\vartheta} \def\U{\Upsilon} \def\x{\xi} \def\X{\Xi} \def\z{\zeta} %!! blackboard letters \def\R{\mathbb{R}} \def\N{\mathbb{N}} \def\Z{\mathbb{Z}} \def\Q{\mathbb{Q}} \def\C{\mathbb{C}} \def\I{\mathbb{I}} %!! caligraphic letters \def\Ac{\mathcal{A}} \def\Bc{\mathcal{B}} \def\Cc{\mathcal{C}} \def\Dc{\mathcal{D}} \def\Ec{\mathcal{E}} \def\Fc{\mathcal{F}} \def\Gc{\mathcal{G}} \def\Hc{\mathcal{H}} \def\Ic{\mathcal{I}} \def\Jc{\mathcal{J}} \def\Kc{\mathcal{K}} \def\Lc{\mathcal{L}} \def\Mc{\mathcal{M}} \def\Nc{\mathcal{N}} \def\Oc{\mathcal{O}} \def\Pc{\mathcal{P}} \def\Qc{\mathcal{Q}} \def\Rc{\mathcal{R}} \def\Sc{\mathcal{S}} \def\Tc{\mathcal{T}} \def\Uc{\mathcal{U}} \def\Vc{\mathcal{V}} \def\Wc{\mathcal{W}} \def\Xc{\mathcal{X}} \def\Yc{\mathcal{Y}} \def\Zc{\mathcal{Z}} %!! boldsymbol letters \def\bdsa{\boldsymbol{a}} \def\bdsb{\boldsymbol{b}} \def\bdsc{\boldsymbol{c}} \def\bdsd{\boldsymbol{d}} \def\bdse{\boldsymbol{e}} \def\bdsf{\boldsymbol{f}} \def\bdsg{\boldsymbol{g}} \def\bdsh{\boldsymbol{h}} \def\bdsi{\boldsymbol{i}} \def\bdsj{\boldsymbol{j}} \def\bdsk{\boldsymbol{k}} \def\bdsl{\boldsymbol{l}} \def\bdsm{\boldsymbol{m}} \def\bdsn{\boldsymbol{n}} \def\bdso{\boldsymbol{o}} \def\bdsp{\boldsymbol{p}} \def\bdsq{\boldsymbol{q}} \def\bdsr{\boldsymbol{r}} \def\bdss{\boldsymbol{s}} \def\bdst{\boldsymbol{t}} \def\bdsu{\boldsymbol{u}} \def\bdsv{\boldsymbol{v}} \def\bdsw{\boldsymbol{w}} \def\bdsx{\boldsymbol{x}} \def\bdsy{\boldsymbol{y}} \def\bdsz{\boldsymbol{z}} %!! boldsymbol letters \def\bdsA{\boldsymbol{A}} \def\bdsB{\boldsymbol{B}} \def\bdsC{\boldsymbol{C}} \def\bdsD{\boldsymbol{D}} \def\bdsE{\boldsymbol{E}} \def\bdsF{\boldsymbol{F}} \def\bdsG{\boldsymbol{G}} \def\bdsH{\boldsymbol{H}} \def\bdsI{\boldsymbol{I}} \def\bdsJ{\boldsymbol{J}} \def\bdsK{\boldsymbol{K}} \def\bdsL{\boldsymbol{L}} \def\bdsM{\boldsymbol{M}} \def\bdsN{\boldsymbol{N}} \def\bdsO{\boldsymbol{O}} \def\bdsP{\boldsymbol{P}} \def\bdsQ{\boldsymbol{Q}} \def\bdsR{\boldsymbol{R}} \def\bdsS{\boldsymbol{S}} \def\bdsT{\boldsymbol{T}} \def\bdsU{\boldsymbol{U}} \def\bdsV{\boldsymbol{V}} \def\bdsW{\boldsymbol{W}} \def\bdsX{\boldsymbol{X}} \def\bdsY{\boldsymbol{Y}} \def\bdsZ{\boldsymbol{Z}} %!! boldsymbol letters \def\Ab{\boldsymbol{A}} \def\Bb{\boldsymbol{B}} \def\Cb{\boldsymbol{C}} \def\Db{\boldsymbol{D}} \def\Eb{\boldsymbol{E}} \def\Fb{\boldsymbol{F}} \def\Gb{\boldsymbol{G}} \def\Hb{\boldsymbol{H}} \def\Ib{\boldsymbol{I}} \def\Jb{\boldsymbol{J}} \def\Kb{\boldsymbol{K}} \def\Lb{\boldsymbol{L}} \def\Mb{\boldsymbol{M}} \def\Nb{\boldsymbol{N}} \def\Ob{\boldsymbol{O}} \def\Pb{\boldsymbol{P}} \def\Qb{\boldsymbol{Q}} \def\Rb{\boldsymbol{R}} \def\Sb{\boldsymbol{S}} \def\Tb{\boldsymbol{T}} \def\Ub{\boldsymbol{U}} \def\Vb{\boldsymbol{V}} \def\Wb{\boldsymbol{W}} \def\Xb{\boldsymbol{X}} \def\Yb{\boldsymbol{Y}} \def\Zb{\boldsymbol{Z}} %!! underlined letters (for vectors) \newcommand{\ua}{\undl{a}} \newcommand{\ub}{\undl{b}} \newcommand{\uc}{\undl{c}} \newcommand{\ux}{\undl{x}} \newcommand{\uy}{\undl{y}} \newcommand{\uz}{\undl{z}} \newcommand{\uX}{\undl{X}} \newcommand{\uQ}{\undl{Q}} \newcommand{\uU}{\undl{U}} \newcommand{\uV}{\undl{V}} %!! underlined greek letters (for vectors) \newcommand{\uga}{\undl{\alpha}} \newcommand{\ugb}{\undl{\beta}} \newcommand{\ugc}{\undl{\chi}} \newcommand{\ugd}{\undl{\delta}} \newcommand{\ugD}{\undl{\Delta}} \newcommand{\uguD}{\undl{\upDelta}} \newcommand{\uge}{\undl{\epsilon}} \newcommand{\ugve}{\undl{\varepsilon}} \newcommand{\ugf}{\undl{\phi}} \newcommand{\ugvf}{\undl{\varphi}} \newcommand{\ugF}{\undl{\Phi}} \newcommand{\ugg}{\undl{\gamma}} \newcommand{\ugh}{\undl{\eta}} \newcommand{\ugl}{\undl{\lambda}} \newcommand{\ugm}{\undl{\mu}} \newcommand{\ugn}{\undl{\nu}} \newcommand{\ugo}{\undl{\omega}} \newcommand{\ugO}{\undl{\Omega}} \newcommand{\ugvp}{\undl{\varpi}} \newcommand{\ugp}{\undl{\psi}} \newcommand{\ugr}{\undl{\rho}} \newcommand{\ugs}{\undl{\sigma}} \newcommand{\ugvs}{\undl{\varsigma}} \newcommand{\ugS}{\undl{\Sigma}} \newcommand{\ugt}{\undl{\theta}} \newcommand{\ugT}{\undl{\Theta}} \newcommand{\ugvt}{\undl{\vartheta}} \newcommand{\ugx}{\undl{\xi}} \newcommand{\ugz}{\undl{\zeta}}">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/programming/latex-notes/t03-math-package/" title="Template: Abbreviated math commands - My economics study notes" /><link rel="prev" type="text/html" href="http://localhost:1313/programming/latex-notes/t04-ref-style/" title="Template: Controlling reference styles" /><link rel="next" type="text/html" href="http://localhost:1313/programming/stata-notes/03-multi-panel-reg-table/" title="Regression tables: Prodcing a multiple-panel regression table" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/programming/latex-notes/t03-math-package/index.md" title="Template: Abbreviated math commands - My economics study notes"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Template: Abbreviated math commands",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/programming\/latex-notes\/t03-math-package\/"
+    },"genre": "posts","wordcount":  699 ,
+    "url": "http:\/\/localhost:1313\/programming\/latex-notes\/t03-math-package\/","datePublished": "2025-12-23T00:00:00+00:00","dateModified": "2025-12-23T00:00:00+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Econ Notes"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-instant-intensity="viewport" data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="My economics study notes"><span class="header-title-text">My economics study notes</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item has-children">
+              <a class="menu-link" href="/programming/" title="Programming">Programming</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/programming/general-notes" title="General">General</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/latex-notes" title="LaTex">LaTex</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/stata-notes" title="Stata">Stata</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/python-notes" title="Python">Python</a>
+                      </li></ul></li><li class="menu-item">
+              <a class="menu-link" href="/papers/">Papers</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/">Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="Search titles or contents ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" role="button" aria-label="Switch Theme" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="My economics study notes"><span class="header-title-text">My economics study notes</span></a><span class="header-subtitle"></span></div>
+      <div class="theme-switch" role="button" aria-label="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></div>
+      <div class="menu-toggle" id="menu-toggle-mobile" role="button" aria-labelledby="menu-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="Search titles or contents ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              Cancel
+            </a>
+          </li><li class="menu-item"><span class="nested-item">
+                  <a class="menu-link" href="/programming/" title="Programming">Programming</a>
+                  <i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </span>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/programming/general-notes" title="General">General</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/latex-notes" title="LaTex">LaTex</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/stata-notes" title="Stata">Stata</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/python-notes" title="Python">Python</a>
+                      </li></ul></li><li class="menu-item"><a class="menu-link" href="/papers/">Papers</a></li><li class="menu-item"><a class="menu-link" href="/tags/">Tags</a></li><li class="menu-item menu-system"></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Template: Abbreviated Math Commands</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img class="avatar" src='/images/avatar.jpg' srcset="/images/avatar_hu_5b898b8be61ed39c.webp 16w, /images/avatar_hu_ca195cd6a158f98b.webp 24w, /images/avatar_hu_7e7bf4d51c461d26.webp 32w" alt="Econ Notes" height="16" width="16">&nbsp;Econ Notes</span></span></div><div class="post-meta-line"><span title="published on 2025-12-23 00:00:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-12-23">2025-12-23</time></span>&nbsp;</div>
+    </div><div class="content" id="content"><div class="code-block highlight" data-mode="classic" data-copyable="true" name="math.sty"><div class="chroma">
+<div class="code-header language-latex"><span class="code-title" data-name="math.sty"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="3" style="--fi-max-shown-lines:100;--fi-line-digit:3;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">  1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">  2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">  3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">  4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">  5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6">  6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7">  7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8">  8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9">  9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10"> 10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11"> 11</a>
+</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12"> 12</a>
+</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13"> 13</a>
+</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14"> 14</a>
+</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15"> 15</a>
+</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16"> 16</a>
+</span><span class="lnt" id="hl-0-17"><a class="lnlinks" href="#hl-0-17"> 17</a>
+</span><span class="lnt" id="hl-0-18"><a class="lnlinks" href="#hl-0-18"> 18</a>
+</span><span class="lnt" id="hl-0-19"><a class="lnlinks" href="#hl-0-19"> 19</a>
+</span><span class="lnt" id="hl-0-20"><a class="lnlinks" href="#hl-0-20"> 20</a>
+</span><span class="lnt" id="hl-0-21"><a class="lnlinks" href="#hl-0-21"> 21</a>
+</span><span class="lnt" id="hl-0-22"><a class="lnlinks" href="#hl-0-22"> 22</a>
+</span><span class="lnt" id="hl-0-23"><a class="lnlinks" href="#hl-0-23"> 23</a>
+</span><span class="lnt" id="hl-0-24"><a class="lnlinks" href="#hl-0-24"> 24</a>
+</span><span class="lnt" id="hl-0-25"><a class="lnlinks" href="#hl-0-25"> 25</a>
+</span><span class="lnt" id="hl-0-26"><a class="lnlinks" href="#hl-0-26"> 26</a>
+</span><span class="lnt" id="hl-0-27"><a class="lnlinks" href="#hl-0-27"> 27</a>
+</span><span class="lnt" id="hl-0-28"><a class="lnlinks" href="#hl-0-28"> 28</a>
+</span><span class="lnt" id="hl-0-29"><a class="lnlinks" href="#hl-0-29"> 29</a>
+</span><span class="lnt" id="hl-0-30"><a class="lnlinks" href="#hl-0-30"> 30</a>
+</span><span class="lnt" id="hl-0-31"><a class="lnlinks" href="#hl-0-31"> 31</a>
+</span><span class="lnt" id="hl-0-32"><a class="lnlinks" href="#hl-0-32"> 32</a>
+</span><span class="lnt" id="hl-0-33"><a class="lnlinks" href="#hl-0-33"> 33</a>
+</span><span class="lnt" id="hl-0-34"><a class="lnlinks" href="#hl-0-34"> 34</a>
+</span><span class="lnt" id="hl-0-35"><a class="lnlinks" href="#hl-0-35"> 35</a>
+</span><span class="lnt" id="hl-0-36"><a class="lnlinks" href="#hl-0-36"> 36</a>
+</span><span class="lnt" id="hl-0-37"><a class="lnlinks" href="#hl-0-37"> 37</a>
+</span><span class="lnt" id="hl-0-38"><a class="lnlinks" href="#hl-0-38"> 38</a>
+</span><span class="lnt" id="hl-0-39"><a class="lnlinks" href="#hl-0-39"> 39</a>
+</span><span class="lnt" id="hl-0-40"><a class="lnlinks" href="#hl-0-40"> 40</a>
+</span><span class="lnt" id="hl-0-41"><a class="lnlinks" href="#hl-0-41"> 41</a>
+</span><span class="lnt" id="hl-0-42"><a class="lnlinks" href="#hl-0-42"> 42</a>
+</span><span class="lnt" id="hl-0-43"><a class="lnlinks" href="#hl-0-43"> 43</a>
+</span><span class="lnt" id="hl-0-44"><a class="lnlinks" href="#hl-0-44"> 44</a>
+</span><span class="lnt" id="hl-0-45"><a class="lnlinks" href="#hl-0-45"> 45</a>
+</span><span class="lnt" id="hl-0-46"><a class="lnlinks" href="#hl-0-46"> 46</a>
+</span><span class="lnt" id="hl-0-47"><a class="lnlinks" href="#hl-0-47"> 47</a>
+</span><span class="lnt" id="hl-0-48"><a class="lnlinks" href="#hl-0-48"> 48</a>
+</span><span class="lnt" id="hl-0-49"><a class="lnlinks" href="#hl-0-49"> 49</a>
+</span><span class="lnt" id="hl-0-50"><a class="lnlinks" href="#hl-0-50"> 50</a>
+</span><span class="lnt" id="hl-0-51"><a class="lnlinks" href="#hl-0-51"> 51</a>
+</span><span class="lnt" id="hl-0-52"><a class="lnlinks" href="#hl-0-52"> 52</a>
+</span><span class="lnt" id="hl-0-53"><a class="lnlinks" href="#hl-0-53"> 53</a>
+</span><span class="lnt" id="hl-0-54"><a class="lnlinks" href="#hl-0-54"> 54</a>
+</span><span class="lnt" id="hl-0-55"><a class="lnlinks" href="#hl-0-55"> 55</a>
+</span><span class="lnt" id="hl-0-56"><a class="lnlinks" href="#hl-0-56"> 56</a>
+</span><span class="lnt" id="hl-0-57"><a class="lnlinks" href="#hl-0-57"> 57</a>
+</span><span class="lnt" id="hl-0-58"><a class="lnlinks" href="#hl-0-58"> 58</a>
+</span><span class="lnt" id="hl-0-59"><a class="lnlinks" href="#hl-0-59"> 59</a>
+</span><span class="lnt" id="hl-0-60"><a class="lnlinks" href="#hl-0-60"> 60</a>
+</span><span class="lnt" id="hl-0-61"><a class="lnlinks" href="#hl-0-61"> 61</a>
+</span><span class="lnt" id="hl-0-62"><a class="lnlinks" href="#hl-0-62"> 62</a>
+</span><span class="lnt" id="hl-0-63"><a class="lnlinks" href="#hl-0-63"> 63</a>
+</span><span class="lnt" id="hl-0-64"><a class="lnlinks" href="#hl-0-64"> 64</a>
+</span><span class="lnt" id="hl-0-65"><a class="lnlinks" href="#hl-0-65"> 65</a>
+</span><span class="lnt" id="hl-0-66"><a class="lnlinks" href="#hl-0-66"> 66</a>
+</span><span class="lnt" id="hl-0-67"><a class="lnlinks" href="#hl-0-67"> 67</a>
+</span><span class="lnt" id="hl-0-68"><a class="lnlinks" href="#hl-0-68"> 68</a>
+</span><span class="lnt" id="hl-0-69"><a class="lnlinks" href="#hl-0-69"> 69</a>
+</span><span class="lnt" id="hl-0-70"><a class="lnlinks" href="#hl-0-70"> 70</a>
+</span><span class="lnt" id="hl-0-71"><a class="lnlinks" href="#hl-0-71"> 71</a>
+</span><span class="lnt" id="hl-0-72"><a class="lnlinks" href="#hl-0-72"> 72</a>
+</span><span class="lnt" id="hl-0-73"><a class="lnlinks" href="#hl-0-73"> 73</a>
+</span><span class="lnt" id="hl-0-74"><a class="lnlinks" href="#hl-0-74"> 74</a>
+</span><span class="lnt" id="hl-0-75"><a class="lnlinks" href="#hl-0-75"> 75</a>
+</span><span class="lnt" id="hl-0-76"><a class="lnlinks" href="#hl-0-76"> 76</a>
+</span><span class="lnt" id="hl-0-77"><a class="lnlinks" href="#hl-0-77"> 77</a>
+</span><span class="lnt" id="hl-0-78"><a class="lnlinks" href="#hl-0-78"> 78</a>
+</span><span class="lnt" id="hl-0-79"><a class="lnlinks" href="#hl-0-79"> 79</a>
+</span><span class="lnt" id="hl-0-80"><a class="lnlinks" href="#hl-0-80"> 80</a>
+</span><span class="lnt" id="hl-0-81"><a class="lnlinks" href="#hl-0-81"> 81</a>
+</span><span class="lnt" id="hl-0-82"><a class="lnlinks" href="#hl-0-82"> 82</a>
+</span><span class="lnt" id="hl-0-83"><a class="lnlinks" href="#hl-0-83"> 83</a>
+</span><span class="lnt" id="hl-0-84"><a class="lnlinks" href="#hl-0-84"> 84</a>
+</span><span class="lnt" id="hl-0-85"><a class="lnlinks" href="#hl-0-85"> 85</a>
+</span><span class="lnt" id="hl-0-86"><a class="lnlinks" href="#hl-0-86"> 86</a>
+</span><span class="lnt" id="hl-0-87"><a class="lnlinks" href="#hl-0-87"> 87</a>
+</span><span class="lnt" id="hl-0-88"><a class="lnlinks" href="#hl-0-88"> 88</a>
+</span><span class="lnt" id="hl-0-89"><a class="lnlinks" href="#hl-0-89"> 89</a>
+</span><span class="lnt" id="hl-0-90"><a class="lnlinks" href="#hl-0-90"> 90</a>
+</span><span class="lnt" id="hl-0-91"><a class="lnlinks" href="#hl-0-91"> 91</a>
+</span><span class="lnt" id="hl-0-92"><a class="lnlinks" href="#hl-0-92"> 92</a>
+</span><span class="lnt" id="hl-0-93"><a class="lnlinks" href="#hl-0-93"> 93</a>
+</span><span class="lnt" id="hl-0-94"><a class="lnlinks" href="#hl-0-94"> 94</a>
+</span><span class="lnt" id="hl-0-95"><a class="lnlinks" href="#hl-0-95"> 95</a>
+</span><span class="lnt" id="hl-0-96"><a class="lnlinks" href="#hl-0-96"> 96</a>
+</span><span class="lnt" id="hl-0-97"><a class="lnlinks" href="#hl-0-97"> 97</a>
+</span><span class="lnt" id="hl-0-98"><a class="lnlinks" href="#hl-0-98"> 98</a>
+</span><span class="lnt" id="hl-0-99"><a class="lnlinks" href="#hl-0-99"> 99</a>
+</span><span class="lnt" id="hl-0-100"><a class="lnlinks" href="#hl-0-100">100</a>
+</span><span class="lnt" id="hl-0-101"><a class="lnlinks" href="#hl-0-101">101</a>
+</span><span class="lnt" id="hl-0-102"><a class="lnlinks" href="#hl-0-102">102</a>
+</span><span class="lnt" id="hl-0-103"><a class="lnlinks" href="#hl-0-103">103</a>
+</span><span class="lnt" id="hl-0-104"><a class="lnlinks" href="#hl-0-104">104</a>
+</span><span class="lnt" id="hl-0-105"><a class="lnlinks" href="#hl-0-105">105</a>
+</span><span class="lnt" id="hl-0-106"><a class="lnlinks" href="#hl-0-106">106</a>
+</span><span class="lnt" id="hl-0-107"><a class="lnlinks" href="#hl-0-107">107</a>
+</span><span class="lnt" id="hl-0-108"><a class="lnlinks" href="#hl-0-108">108</a>
+</span><span class="lnt" id="hl-0-109"><a class="lnlinks" href="#hl-0-109">109</a>
+</span><span class="lnt" id="hl-0-110"><a class="lnlinks" href="#hl-0-110">110</a>
+</span><span class="lnt" id="hl-0-111"><a class="lnlinks" href="#hl-0-111">111</a>
+</span><span class="lnt" id="hl-0-112"><a class="lnlinks" href="#hl-0-112">112</a>
+</span><span class="lnt" id="hl-0-113"><a class="lnlinks" href="#hl-0-113">113</a>
+</span><span class="lnt" id="hl-0-114"><a class="lnlinks" href="#hl-0-114">114</a>
+</span><span class="lnt" id="hl-0-115"><a class="lnlinks" href="#hl-0-115">115</a>
+</span><span class="lnt" id="hl-0-116"><a class="lnlinks" href="#hl-0-116">116</a>
+</span><span class="lnt" id="hl-0-117"><a class="lnlinks" href="#hl-0-117">117</a>
+</span><span class="lnt" id="hl-0-118"><a class="lnlinks" href="#hl-0-118">118</a>
+</span><span class="lnt" id="hl-0-119"><a class="lnlinks" href="#hl-0-119">119</a>
+</span><span class="lnt" id="hl-0-120"><a class="lnlinks" href="#hl-0-120">120</a>
+</span><span class="lnt" id="hl-0-121"><a class="lnlinks" href="#hl-0-121">121</a>
+</span><span class="lnt" id="hl-0-122"><a class="lnlinks" href="#hl-0-122">122</a>
+</span><span class="lnt" id="hl-0-123"><a class="lnlinks" href="#hl-0-123">123</a>
+</span><span class="lnt" id="hl-0-124"><a class="lnlinks" href="#hl-0-124">124</a>
+</span><span class="lnt" id="hl-0-125"><a class="lnlinks" href="#hl-0-125">125</a>
+</span><span class="lnt" id="hl-0-126"><a class="lnlinks" href="#hl-0-126">126</a>
+</span><span class="lnt" id="hl-0-127"><a class="lnlinks" href="#hl-0-127">127</a>
+</span><span class="lnt" id="hl-0-128"><a class="lnlinks" href="#hl-0-128">128</a>
+</span><span class="lnt" id="hl-0-129"><a class="lnlinks" href="#hl-0-129">129</a>
+</span><span class="lnt" id="hl-0-130"><a class="lnlinks" href="#hl-0-130">130</a>
+</span><span class="lnt" id="hl-0-131"><a class="lnlinks" href="#hl-0-131">131</a>
+</span><span class="lnt" id="hl-0-132"><a class="lnlinks" href="#hl-0-132">132</a>
+</span><span class="lnt" id="hl-0-133"><a class="lnlinks" href="#hl-0-133">133</a>
+</span><span class="lnt" id="hl-0-134"><a class="lnlinks" href="#hl-0-134">134</a>
+</span><span class="lnt" id="hl-0-135"><a class="lnlinks" href="#hl-0-135">135</a>
+</span><span class="lnt" id="hl-0-136"><a class="lnlinks" href="#hl-0-136">136</a>
+</span><span class="lnt" id="hl-0-137"><a class="lnlinks" href="#hl-0-137">137</a>
+</span><span class="lnt" id="hl-0-138"><a class="lnlinks" href="#hl-0-138">138</a>
+</span><span class="lnt" id="hl-0-139"><a class="lnlinks" href="#hl-0-139">139</a>
+</span><span class="lnt" id="hl-0-140"><a class="lnlinks" href="#hl-0-140">140</a>
+</span><span class="lnt" id="hl-0-141"><a class="lnlinks" href="#hl-0-141">141</a>
+</span><span class="lnt" id="hl-0-142"><a class="lnlinks" href="#hl-0-142">142</a>
+</span><span class="lnt" id="hl-0-143"><a class="lnlinks" href="#hl-0-143">143</a>
+</span><span class="lnt" id="hl-0-144"><a class="lnlinks" href="#hl-0-144">144</a>
+</span><span class="lnt" id="hl-0-145"><a class="lnlinks" href="#hl-0-145">145</a>
+</span><span class="lnt" id="hl-0-146"><a class="lnlinks" href="#hl-0-146">146</a>
+</span><span class="lnt" id="hl-0-147"><a class="lnlinks" href="#hl-0-147">147</a>
+</span><span class="lnt" id="hl-0-148"><a class="lnlinks" href="#hl-0-148">148</a>
+</span><span class="lnt" id="hl-0-149"><a class="lnlinks" href="#hl-0-149">149</a>
+</span><span class="lnt" id="hl-0-150"><a class="lnlinks" href="#hl-0-150">150</a>
+</span><span class="lnt" id="hl-0-151"><a class="lnlinks" href="#hl-0-151">151</a>
+</span><span class="lnt" id="hl-0-152"><a class="lnlinks" href="#hl-0-152">152</a>
+</span><span class="lnt" id="hl-0-153"><a class="lnlinks" href="#hl-0-153">153</a>
+</span><span class="lnt" id="hl-0-154"><a class="lnlinks" href="#hl-0-154">154</a>
+</span><span class="lnt" id="hl-0-155"><a class="lnlinks" href="#hl-0-155">155</a>
+</span><span class="lnt" id="hl-0-156"><a class="lnlinks" href="#hl-0-156">156</a>
+</span><span class="lnt" id="hl-0-157"><a class="lnlinks" href="#hl-0-157">157</a>
+</span><span class="lnt" id="hl-0-158"><a class="lnlinks" href="#hl-0-158">158</a>
+</span><span class="lnt" id="hl-0-159"><a class="lnlinks" href="#hl-0-159">159</a>
+</span><span class="lnt" id="hl-0-160"><a class="lnlinks" href="#hl-0-160">160</a>
+</span><span class="lnt" id="hl-0-161"><a class="lnlinks" href="#hl-0-161">161</a>
+</span><span class="lnt" id="hl-0-162"><a class="lnlinks" href="#hl-0-162">162</a>
+</span><span class="lnt" id="hl-0-163"><a class="lnlinks" href="#hl-0-163">163</a>
+</span><span class="lnt" id="hl-0-164"><a class="lnlinks" href="#hl-0-164">164</a>
+</span><span class="lnt" id="hl-0-165"><a class="lnlinks" href="#hl-0-165">165</a>
+</span><span class="lnt" id="hl-0-166"><a class="lnlinks" href="#hl-0-166">166</a>
+</span><span class="lnt" id="hl-0-167"><a class="lnlinks" href="#hl-0-167">167</a>
+</span><span class="lnt" id="hl-0-168"><a class="lnlinks" href="#hl-0-168">168</a>
+</span><span class="lnt" id="hl-0-169"><a class="lnlinks" href="#hl-0-169">169</a>
+</span><span class="lnt" id="hl-0-170"><a class="lnlinks" href="#hl-0-170">170</a>
+</span><span class="lnt" id="hl-0-171"><a class="lnlinks" href="#hl-0-171">171</a>
+</span><span class="lnt" id="hl-0-172"><a class="lnlinks" href="#hl-0-172">172</a>
+</span><span class="lnt" id="hl-0-173"><a class="lnlinks" href="#hl-0-173">173</a>
+</span><span class="lnt" id="hl-0-174"><a class="lnlinks" href="#hl-0-174">174</a>
+</span><span class="lnt" id="hl-0-175"><a class="lnlinks" href="#hl-0-175">175</a>
+</span><span class="lnt" id="hl-0-176"><a class="lnlinks" href="#hl-0-176">176</a>
+</span><span class="lnt" id="hl-0-177"><a class="lnlinks" href="#hl-0-177">177</a>
+</span><span class="lnt" id="hl-0-178"><a class="lnlinks" href="#hl-0-178">178</a>
+</span><span class="lnt" id="hl-0-179"><a class="lnlinks" href="#hl-0-179">179</a>
+</span><span class="lnt" id="hl-0-180"><a class="lnlinks" href="#hl-0-180">180</a>
+</span><span class="lnt" id="hl-0-181"><a class="lnlinks" href="#hl-0-181">181</a>
+</span><span class="lnt" id="hl-0-182"><a class="lnlinks" href="#hl-0-182">182</a>
+</span><span class="lnt" id="hl-0-183"><a class="lnlinks" href="#hl-0-183">183</a>
+</span><span class="lnt" id="hl-0-184"><a class="lnlinks" href="#hl-0-184">184</a>
+</span><span class="lnt" id="hl-0-185"><a class="lnlinks" href="#hl-0-185">185</a>
+</span><span class="lnt" id="hl-0-186"><a class="lnlinks" href="#hl-0-186">186</a>
+</span><span class="lnt" id="hl-0-187"><a class="lnlinks" href="#hl-0-187">187</a>
+</span><span class="lnt" id="hl-0-188"><a class="lnlinks" href="#hl-0-188">188</a>
+</span><span class="lnt" id="hl-0-189"><a class="lnlinks" href="#hl-0-189">189</a>
+</span><span class="lnt" id="hl-0-190"><a class="lnlinks" href="#hl-0-190">190</a>
+</span><span class="lnt" id="hl-0-191"><a class="lnlinks" href="#hl-0-191">191</a>
+</span><span class="lnt" id="hl-0-192"><a class="lnlinks" href="#hl-0-192">192</a>
+</span><span class="lnt" id="hl-0-193"><a class="lnlinks" href="#hl-0-193">193</a>
+</span><span class="lnt" id="hl-0-194"><a class="lnlinks" href="#hl-0-194">194</a>
+</span><span class="lnt" id="hl-0-195"><a class="lnlinks" href="#hl-0-195">195</a>
+</span><span class="lnt" id="hl-0-196"><a class="lnlinks" href="#hl-0-196">196</a>
+</span><span class="lnt" id="hl-0-197"><a class="lnlinks" href="#hl-0-197">197</a>
+</span><span class="lnt" id="hl-0-198"><a class="lnlinks" href="#hl-0-198">198</a>
+</span><span class="lnt" id="hl-0-199"><a class="lnlinks" href="#hl-0-199">199</a>
+</span><span class="lnt" id="hl-0-200"><a class="lnlinks" href="#hl-0-200">200</a>
+</span><span class="lnt" id="hl-0-201"><a class="lnlinks" href="#hl-0-201">201</a>
+</span><span class="lnt" id="hl-0-202"><a class="lnlinks" href="#hl-0-202">202</a>
+</span><span class="lnt" id="hl-0-203"><a class="lnlinks" href="#hl-0-203">203</a>
+</span><span class="lnt" id="hl-0-204"><a class="lnlinks" href="#hl-0-204">204</a>
+</span><span class="lnt" id="hl-0-205"><a class="lnlinks" href="#hl-0-205">205</a>
+</span><span class="lnt" id="hl-0-206"><a class="lnlinks" href="#hl-0-206">206</a>
+</span><span class="lnt" id="hl-0-207"><a class="lnlinks" href="#hl-0-207">207</a>
+</span><span class="lnt" id="hl-0-208"><a class="lnlinks" href="#hl-0-208">208</a>
+</span><span class="lnt" id="hl-0-209"><a class="lnlinks" href="#hl-0-209">209</a>
+</span><span class="lnt" id="hl-0-210"><a class="lnlinks" href="#hl-0-210">210</a>
+</span><span class="lnt" id="hl-0-211"><a class="lnlinks" href="#hl-0-211">211</a>
+</span><span class="lnt" id="hl-0-212"><a class="lnlinks" href="#hl-0-212">212</a>
+</span><span class="lnt" id="hl-0-213"><a class="lnlinks" href="#hl-0-213">213</a>
+</span><span class="lnt" id="hl-0-214"><a class="lnlinks" href="#hl-0-214">214</a>
+</span><span class="lnt" id="hl-0-215"><a class="lnlinks" href="#hl-0-215">215</a>
+</span><span class="lnt" id="hl-0-216"><a class="lnlinks" href="#hl-0-216">216</a>
+</span><span class="lnt" id="hl-0-217"><a class="lnlinks" href="#hl-0-217">217</a>
+</span><span class="lnt" id="hl-0-218"><a class="lnlinks" href="#hl-0-218">218</a>
+</span><span class="lnt" id="hl-0-219"><a class="lnlinks" href="#hl-0-219">219</a>
+</span><span class="lnt" id="hl-0-220"><a class="lnlinks" href="#hl-0-220">220</a>
+</span><span class="lnt" id="hl-0-221"><a class="lnlinks" href="#hl-0-221">221</a>
+</span><span class="lnt" id="hl-0-222"><a class="lnlinks" href="#hl-0-222">222</a>
+</span><span class="lnt" id="hl-0-223"><a class="lnlinks" href="#hl-0-223">223</a>
+</span><span class="lnt" id="hl-0-224"><a class="lnlinks" href="#hl-0-224">224</a>
+</span><span class="lnt" id="hl-0-225"><a class="lnlinks" href="#hl-0-225">225</a>
+</span><span class="lnt" id="hl-0-226"><a class="lnlinks" href="#hl-0-226">226</a>
+</span><span class="lnt" id="hl-0-227"><a class="lnlinks" href="#hl-0-227">227</a>
+</span><span class="lnt" id="hl-0-228"><a class="lnlinks" href="#hl-0-228">228</a>
+</span><span class="lnt" id="hl-0-229"><a class="lnlinks" href="#hl-0-229">229</a>
+</span><span class="lnt" id="hl-0-230"><a class="lnlinks" href="#hl-0-230">230</a>
+</span><span class="lnt" id="hl-0-231"><a class="lnlinks" href="#hl-0-231">231</a>
+</span><span class="lnt" id="hl-0-232"><a class="lnlinks" href="#hl-0-232">232</a>
+</span><span class="lnt" id="hl-0-233"><a class="lnlinks" href="#hl-0-233">233</a>
+</span><span class="lnt" id="hl-0-234"><a class="lnlinks" href="#hl-0-234">234</a>
+</span><span class="lnt" id="hl-0-235"><a class="lnlinks" href="#hl-0-235">235</a>
+</span><span class="lnt" id="hl-0-236"><a class="lnlinks" href="#hl-0-236">236</a>
+</span><span class="lnt" id="hl-0-237"><a class="lnlinks" href="#hl-0-237">237</a>
+</span><span class="lnt" id="hl-0-238"><a class="lnlinks" href="#hl-0-238">238</a>
+</span><span class="lnt" id="hl-0-239"><a class="lnlinks" href="#hl-0-239">239</a>
+</span><span class="lnt" id="hl-0-240"><a class="lnlinks" href="#hl-0-240">240</a>
+</span><span class="lnt" id="hl-0-241"><a class="lnlinks" href="#hl-0-241">241</a>
+</span><span class="lnt" id="hl-0-242"><a class="lnlinks" href="#hl-0-242">242</a>
+</span><span class="lnt" id="hl-0-243"><a class="lnlinks" href="#hl-0-243">243</a>
+</span><span class="lnt" id="hl-0-244"><a class="lnlinks" href="#hl-0-244">244</a>
+</span><span class="lnt" id="hl-0-245"><a class="lnlinks" href="#hl-0-245">245</a>
+</span><span class="lnt" id="hl-0-246"><a class="lnlinks" href="#hl-0-246">246</a>
+</span><span class="lnt" id="hl-0-247"><a class="lnlinks" href="#hl-0-247">247</a>
+</span><span class="lnt" id="hl-0-248"><a class="lnlinks" href="#hl-0-248">248</a>
+</span><span class="lnt" id="hl-0-249"><a class="lnlinks" href="#hl-0-249">249</a>
+</span><span class="lnt" id="hl-0-250"><a class="lnlinks" href="#hl-0-250">250</a>
+</span><span class="lnt" id="hl-0-251"><a class="lnlinks" href="#hl-0-251">251</a>
+</span><span class="lnt" id="hl-0-252"><a class="lnlinks" href="#hl-0-252">252</a>
+</span><span class="lnt" id="hl-0-253"><a class="lnlinks" href="#hl-0-253">253</a>
+</span><span class="lnt" id="hl-0-254"><a class="lnlinks" href="#hl-0-254">254</a>
+</span><span class="lnt" id="hl-0-255"><a class="lnlinks" href="#hl-0-255">255</a>
+</span><span class="lnt" id="hl-0-256"><a class="lnlinks" href="#hl-0-256">256</a>
+</span><span class="lnt" id="hl-0-257"><a class="lnlinks" href="#hl-0-257">257</a>
+</span><span class="lnt" id="hl-0-258"><a class="lnlinks" href="#hl-0-258">258</a>
+</span><span class="lnt" id="hl-0-259"><a class="lnlinks" href="#hl-0-259">259</a>
+</span><span class="lnt" id="hl-0-260"><a class="lnlinks" href="#hl-0-260">260</a>
+</span><span class="lnt" id="hl-0-261"><a class="lnlinks" href="#hl-0-261">261</a>
+</span><span class="lnt" id="hl-0-262"><a class="lnlinks" href="#hl-0-262">262</a>
+</span><span class="lnt" id="hl-0-263"><a class="lnlinks" href="#hl-0-263">263</a>
+</span><span class="lnt" id="hl-0-264"><a class="lnlinks" href="#hl-0-264">264</a>
+</span><span class="lnt" id="hl-0-265"><a class="lnlinks" href="#hl-0-265">265</a>
+</span><span class="lnt" id="hl-0-266"><a class="lnlinks" href="#hl-0-266">266</a>
+</span><span class="lnt" id="hl-0-267"><a class="lnlinks" href="#hl-0-267">267</a>
+</span><span class="lnt" id="hl-0-268"><a class="lnlinks" href="#hl-0-268">268</a>
+</span><span class="lnt" id="hl-0-269"><a class="lnlinks" href="#hl-0-269">269</a>
+</span><span class="lnt" id="hl-0-270"><a class="lnlinks" href="#hl-0-270">270</a>
+</span><span class="lnt" id="hl-0-271"><a class="lnlinks" href="#hl-0-271">271</a>
+</span><span class="lnt" id="hl-0-272"><a class="lnlinks" href="#hl-0-272">272</a>
+</span><span class="lnt" id="hl-0-273"><a class="lnlinks" href="#hl-0-273">273</a>
+</span><span class="lnt" id="hl-0-274"><a class="lnlinks" href="#hl-0-274">274</a>
+</span><span class="lnt" id="hl-0-275"><a class="lnlinks" href="#hl-0-275">275</a>
+</span><span class="lnt" id="hl-0-276"><a class="lnlinks" href="#hl-0-276">276</a>
+</span><span class="lnt" id="hl-0-277"><a class="lnlinks" href="#hl-0-277">277</a>
+</span><span class="lnt" id="hl-0-278"><a class="lnlinks" href="#hl-0-278">278</a>
+</span><span class="lnt" id="hl-0-279"><a class="lnlinks" href="#hl-0-279">279</a>
+</span><span class="lnt" id="hl-0-280"><a class="lnlinks" href="#hl-0-280">280</a>
+</span><span class="lnt" id="hl-0-281"><a class="lnlinks" href="#hl-0-281">281</a>
+</span><span class="lnt" id="hl-0-282"><a class="lnlinks" href="#hl-0-282">282</a>
+</span><span class="lnt" id="hl-0-283"><a class="lnlinks" href="#hl-0-283">283</a>
+</span><span class="lnt" id="hl-0-284"><a class="lnlinks" href="#hl-0-284">284</a>
+</span><span class="lnt" id="hl-0-285"><a class="lnlinks" href="#hl-0-285">285</a>
+</span><span class="lnt" id="hl-0-286"><a class="lnlinks" href="#hl-0-286">286</a>
+</span><span class="lnt" id="hl-0-287"><a class="lnlinks" href="#hl-0-287">287</a>
+</span><span class="lnt" id="hl-0-288"><a class="lnlinks" href="#hl-0-288">288</a>
+</span><span class="lnt" id="hl-0-289"><a class="lnlinks" href="#hl-0-289">289</a>
+</span><span class="lnt" id="hl-0-290"><a class="lnlinks" href="#hl-0-290">290</a>
+</span><span class="lnt" id="hl-0-291"><a class="lnlinks" href="#hl-0-291">291</a>
+</span><span class="lnt" id="hl-0-292"><a class="lnlinks" href="#hl-0-292">292</a>
+</span><span class="lnt" id="hl-0-293"><a class="lnlinks" href="#hl-0-293">293</a>
+</span><span class="lnt" id="hl-0-294"><a class="lnlinks" href="#hl-0-294">294</a>
+</span><span class="lnt" id="hl-0-295"><a class="lnlinks" href="#hl-0-295">295</a>
+</span><span class="lnt" id="hl-0-296"><a class="lnlinks" href="#hl-0-296">296</a>
+</span><span class="lnt" id="hl-0-297"><a class="lnlinks" href="#hl-0-297">297</a>
+</span><span class="lnt" id="hl-0-298"><a class="lnlinks" href="#hl-0-298">298</a>
+</span><span class="lnt" id="hl-0-299"><a class="lnlinks" href="#hl-0-299">299</a>
+</span><span class="lnt" id="hl-0-300"><a class="lnlinks" href="#hl-0-300">300</a>
+</span><span class="lnt" id="hl-0-301"><a class="lnlinks" href="#hl-0-301">301</a>
+</span><span class="lnt" id="hl-0-302"><a class="lnlinks" href="#hl-0-302">302</a>
+</span><span class="lnt" id="hl-0-303"><a class="lnlinks" href="#hl-0-303">303</a>
+</span><span class="lnt" id="hl-0-304"><a class="lnlinks" href="#hl-0-304">304</a>
+</span><span class="lnt" id="hl-0-305"><a class="lnlinks" href="#hl-0-305">305</a>
+</span><span class="lnt" id="hl-0-306"><a class="lnlinks" href="#hl-0-306">306</a>
+</span><span class="lnt" id="hl-0-307"><a class="lnlinks" href="#hl-0-307">307</a>
+</span><span class="lnt" id="hl-0-308"><a class="lnlinks" href="#hl-0-308">308</a>
+</span><span class="lnt" id="hl-0-309"><a class="lnlinks" href="#hl-0-309">309</a>
+</span><span class="lnt" id="hl-0-310"><a class="lnlinks" href="#hl-0-310">310</a>
+</span><span class="lnt" id="hl-0-311"><a class="lnlinks" href="#hl-0-311">311</a>
+</span><span class="lnt" id="hl-0-312"><a class="lnlinks" href="#hl-0-312">312</a>
+</span><span class="lnt" id="hl-0-313"><a class="lnlinks" href="#hl-0-313">313</a>
+</span><span class="lnt" id="hl-0-314"><a class="lnlinks" href="#hl-0-314">314</a>
+</span><span class="lnt" id="hl-0-315"><a class="lnlinks" href="#hl-0-315">315</a>
+</span><span class="lnt" id="hl-0-316"><a class="lnlinks" href="#hl-0-316">316</a>
+</span><span class="lnt" id="hl-0-317"><a class="lnlinks" href="#hl-0-317">317</a>
+</span><span class="lnt" id="hl-0-318"><a class="lnlinks" href="#hl-0-318">318</a>
+</span><span class="lnt" id="hl-0-319"><a class="lnlinks" href="#hl-0-319">319</a>
+</span><span class="lnt" id="hl-0-320"><a class="lnlinks" href="#hl-0-320">320</a>
+</span><span class="lnt" id="hl-0-321"><a class="lnlinks" href="#hl-0-321">321</a>
+</span><span class="lnt" id="hl-0-322"><a class="lnlinks" href="#hl-0-322">322</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="c">%-- useful commands
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! adjust space for brackets specified with \left and \right
+</span></span></span><span class="line"><span class="cl"><span class="k">\usepackage</span><span class="nb">{</span>mleftright<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\mleftright</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! brackets
+</span></span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\bc</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\left\lbrace</span> #1 <span class="k">\right\rbrace</span><span class="nb">}</span> 
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\bp</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\left</span>( #1 <span class="k">\right</span>)<span class="nb">}</span> 
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\of</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\left</span>( #1 <span class="k">\right</span>)<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\bs</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\left</span><span class="na">[ #1 \right]</span><span class="nb">}</span> 
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\abs</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\left\lvert</span> #1 <span class="k">\right\rvert</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\norm</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\left\lVert</span> #1 <span class="k">\right\rVert</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\floor</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\left\lfloor</span> #1 <span class="k">\right\rfloor</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! accents
+</span></span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ol</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\overline</span><span class="nb">{</span>#1<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\undl</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\underline</span><span class="nb">{</span>#1<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\wh</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\widehat</span><span class="nb">{</span>#1<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\wt</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\widetilde</span><span class="nb">{</span>#1<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\bds</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>#1<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\pr</span><span class="nb">}{</span><span class="k">\prime</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! convergence symbols
+</span></span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\cvginf</span><span class="nb">}</span>[1]<span class="nb">{{</span>#1<span class="nb">}</span> <span class="k">\rightarrow</span> <span class="k">\infty</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\cvg</span><span class="nb">}</span>[2]<span class="nb">{{</span>#1<span class="nb">}</span> <span class="k">\rightarrow</span> <span class="nb">{</span>#2<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! derivative symbols
+</span></span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\pdfrac</span><span class="nb">}</span>[2]<span class="nb">{</span><span class="k">\frac</span><span class="nb">{</span><span class="k">\partial\;</span> <span class="nb">{</span>#1<span class="nb">}}{</span><span class="k">\partial\;</span> <span class="nb">{</span>#2<span class="nb">}}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\fdfrac</span><span class="nb">}</span>[2]<span class="nb">{</span><span class="k">\frac</span><span class="nb">{</span>d <span class="nb">{</span>#1<span class="nb">}}{</span>d <span class="nb">{</span>#2<span class="nb">}}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%-- operators
+</span></span></span><span class="line"><span class="cl"><span class="k">\usepackage</span><span class="nb">{</span>xparse<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! logarithm
+</span></span></span><span class="line"><span class="cl"><span class="k">\let\oldln\ln</span>
+</span></span><span class="line"><span class="cl"><span class="k">\RenewDocumentCommand</span><span class="nb">{</span><span class="k">\ln</span><span class="nb">}{</span>g<span class="nb">}{</span><span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span><span class="k">\oldln</span><span class="nb">}{{</span><span class="k">\oldln</span><span class="nb">}{</span><span class="k">\bp</span><span class="nb">{</span>#1<span class="nb">}}}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! exponential
+</span></span></span><span class="line"><span class="cl"><span class="k">\let\oldexp\exp</span>
+</span></span><span class="line"><span class="cl"><span class="k">\RenewDocumentCommand</span><span class="nb">{</span><span class="k">\exp</span><span class="nb">}{</span>g<span class="nb">}{</span><span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span><span class="k">\oldexp</span><span class="nb">}{{</span><span class="k">\oldexp</span><span class="nb">}{</span><span class="k">\bp</span><span class="nb">{</span>#1<span class="nb">}}}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! indicator
+</span></span></span><span class="line"><span class="cl"><span class="k">\NewDocumentCommand</span><span class="nb">{</span><span class="k">\ind</span><span class="nb">}{</span>g<span class="nb">}{</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span><span class="k">\operatorname</span><span class="nb">{</span><span class="k">\mathbb</span><span class="nb">{</span>I<span class="nb">}}}</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="nb">{</span><span class="k">\mathbb</span><span class="nb">{</span>I<span class="nb">}{</span><span class="k">\bp</span><span class="nb">{</span>#1<span class="nb">}}}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! trace
+</span></span></span><span class="line"><span class="cl"><span class="k">\NewDocumentCommand</span><span class="nb">{</span><span class="k">\tr</span><span class="nb">}{</span>g<span class="nb">}{</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span><span class="k">\operatorname</span><span class="nb">{</span>tr<span class="nb">}}</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="nb">{{</span><span class="k">\operatorname</span><span class="nb">{</span>tr<span class="nb">}}{</span><span class="k">\bp</span><span class="nb">{</span>#1<span class="nb">}}}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! maximum
+</span></span></span><span class="line"><span class="cl"><span class="k">\let\oldmax\max</span>
+</span></span><span class="line"><span class="cl"><span class="k">\RenewDocumentCommand</span><span class="nb">{</span><span class="k">\max</span><span class="nb">}{</span>o g<span class="nb">}{</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="k">\IfNoValueTF</span><span class="nb">{</span>#2<span class="nb">}{</span><span class="k">\oldmax\IfValueT</span><span class="nb">{</span>#1<span class="nb">}{_{</span>#1<span class="nb">}}}</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="nb">{{</span><span class="k">\oldmax\IfValueT</span><span class="nb">{</span>#1<span class="nb">}{_{</span>#1<span class="nb">}}}{</span><span class="k">\bc</span><span class="nb">{</span>#2<span class="nb">}}}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! argmax
+</span></span></span><span class="line"><span class="cl"><span class="k">\DeclareMathOperator*</span><span class="nb">{</span><span class="k">\argmax</span><span class="nb">}{</span>argmax<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! minimum
+</span></span></span><span class="line"><span class="cl"><span class="k">\let\oldmin\min</span>
+</span></span><span class="line"><span class="cl"><span class="k">\RenewDocumentCommand</span><span class="nb">{</span><span class="k">\min</span><span class="nb">}{</span>o g<span class="nb">}{</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="k">\IfNoValueTF</span><span class="nb">{</span>#2<span class="nb">}{</span><span class="k">\oldmin\IfValueT</span><span class="nb">{</span>#1<span class="nb">}{_{</span>#1<span class="nb">}}}</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="nb">{{</span><span class="k">\oldmin\IfValueT</span><span class="nb">{</span>#1<span class="nb">}{_{</span>#1<span class="nb">}}}{</span><span class="k">\bc</span><span class="nb">{</span>#2<span class="nb">}}}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! argmin
+</span></span></span><span class="line"><span class="cl"><span class="k">\DeclareMathOperator*</span><span class="nb">{</span><span class="k">\argmin</span><span class="nb">}{</span>argmin<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%-- probabilities
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! expectation
+</span></span></span><span class="line"><span class="cl"><span class="k">\NewDocumentCommand</span><span class="nb">{</span><span class="k">\E</span><span class="nb">}{</span>o g<span class="nb">}{</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="k">\IfNoValueTF</span><span class="nb">{</span>#2<span class="nb">}{</span><span class="k">\operatorname</span><span class="nb">{</span><span class="k">\mathbb</span><span class="nb">{</span>E<span class="nb">}}</span><span class="k">\IfValueT</span><span class="nb">{</span>#1<span class="nb">}{_{</span>#1<span class="nb">}}}</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="nb">{</span><span class="k">\mathbb</span><span class="nb">{</span>E<span class="nb">}</span><span class="k">\IfValueT</span><span class="nb">{</span>#1<span class="nb">}{_{</span>#1<span class="nb">}}{</span><span class="k">\bs</span><span class="nb">{</span><span class="k">\,</span>#2<span class="k">\,</span><span class="nb">}}</span><span class="k">\,</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! probability
+</span></span></span><span class="line"><span class="cl"><span class="k">\RenewDocumentCommand</span><span class="nb">{</span><span class="k">\P</span><span class="nb">}{</span>o g<span class="nb">}{</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="k">\IfNoValueTF</span><span class="nb">{</span>#2<span class="nb">}{</span><span class="k">\operatorname</span><span class="nb">{</span><span class="k">\mathbb</span><span class="nb">{</span>P<span class="nb">}}</span><span class="k">\IfValueT</span><span class="nb">{</span>#1<span class="nb">}{_{</span>#1<span class="nb">}}}</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="nb">{</span><span class="k">\mathbb</span><span class="nb">{</span>P<span class="nb">}</span><span class="k">\IfValueT</span><span class="nb">{</span>#1<span class="nb">}{_{</span>#1<span class="nb">}}{</span><span class="k">\bs</span><span class="nb">{</span><span class="k">\,</span>#2<span class="k">\,</span><span class="nb">}}</span><span class="k">\,</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! variance
+</span></span></span><span class="line"><span class="cl"><span class="k">\NewDocumentCommand</span><span class="nb">{</span><span class="k">\var</span><span class="nb">}{</span>g<span class="nb">}{</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span><span class="k">\operatorname</span><span class="nb">{</span>var<span class="nb">}}</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="nb">{{</span><span class="k">\operatorname</span><span class="nb">{</span>var<span class="nb">}}{</span><span class="k">\bs</span><span class="nb">{</span><span class="k">\,</span>#1<span class="k">\,</span><span class="nb">}}}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! covariance
+</span></span></span><span class="line"><span class="cl"><span class="k">\NewDocumentCommand</span><span class="nb">{</span><span class="k">\cov</span><span class="nb">}{</span>g<span class="nb">}{</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span><span class="k">\operatorname</span><span class="nb">{</span>cov<span class="nb">}}</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="nb">{{</span><span class="k">\operatorname</span><span class="nb">{</span>cov<span class="nb">}}{</span><span class="k">\bs</span><span class="nb">{</span><span class="k">\,</span>#1<span class="k">\,</span><span class="nb">}}}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! correlation
+</span></span></span><span class="line"><span class="cl"><span class="k">\NewDocumentCommand</span><span class="nb">{</span><span class="k">\corr</span><span class="nb">}{</span>g<span class="nb">}{</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span><span class="k">\operatorname</span><span class="nb">{</span>corr<span class="nb">}}</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="nb">{{</span><span class="k">\operatorname</span><span class="nb">{</span>corr<span class="nb">}}{</span><span class="k">\bs</span><span class="nb">{</span><span class="k">\,</span>#1<span class="k">\,</span><span class="nb">}}}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! standard deviation
+</span></span></span><span class="line"><span class="cl"><span class="k">\NewDocumentCommand</span><span class="nb">{</span><span class="k">\sd</span><span class="nb">}{</span>g<span class="nb">}{</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span><span class="k">\operatorname</span><span class="nb">{</span>sd<span class="nb">}}</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="nb">{{</span><span class="k">\operatorname</span><span class="nb">{</span>sd<span class="nb">}}{</span><span class="k">\bs</span><span class="nb">{</span><span class="k">\,</span>#1<span class="k">\,</span><span class="nb">}}}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! standard error
+</span></span></span><span class="line"><span class="cl"><span class="k">\NewDocumentCommand</span><span class="nb">{</span><span class="k">\se</span><span class="nb">}{</span>g<span class="nb">}{</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span><span class="k">\operatorname</span><span class="nb">{</span>se<span class="nb">}}</span><span class="c">%
+</span></span></span><span class="line"><span class="cl"><span class="nb">{{</span><span class="k">\operatorname</span><span class="nb">{</span>se<span class="nb">}}{</span><span class="k">\bs</span><span class="nb">{</span><span class="k">\,</span>#1<span class="k">\,</span><span class="nb">}}}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! convergence symbols
+</span></span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\inas</span><span class="nb">}{</span><span class="k">\overset</span><span class="nb">{</span>a.s.<span class="nb">}{</span><span class="k">\to</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\indist</span><span class="nb">}{</span><span class="k">\overset</span><span class="nb">{</span>d<span class="nb">}{</span><span class="k">\to</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\inprob</span><span class="nb">}{</span><span class="k">\overset</span><span class="nb">{</span>p<span class="nb">}{</span><span class="k">\to</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\inrm</span><span class="nb">}{</span><span class="k">\overset</span><span class="nb">{</span>r.m.<span class="nb">}{</span><span class="k">\to</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\inlp</span><span class="nb">}{</span><span class="k">\overset</span><span class="nb">{</span>L<span class="nb">_</span>p<span class="nb">}{</span><span class="k">\to</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\inlt</span><span class="nb">}{</span><span class="k">\overset</span><span class="nb">{</span>L<span class="nb">_</span>2<span class="nb">}{</span><span class="k">\to</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\inlo</span><span class="nb">}{</span><span class="k">\overset</span><span class="nb">{</span>L<span class="nb">_</span>1<span class="nb">}{</span><span class="k">\to</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\eqdist</span><span class="nb">}{</span><span class="k">\stackrel</span><span class="nb">{</span>d<span class="nb">}{</span>=<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\indep</span><span class="nb">}{</span><span class="k">\perp\!\!\!\!\perp</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\DeclareMathOperator</span><span class="nb">{</span><span class="k">\plim</span><span class="nb">}{</span>plim<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! iid symbols
+</span></span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\iid</span><span class="nb">}{</span><span class="k">\mathbin</span><span class="nb">{</span><span class="k">\overset</span><span class="nb">{</span>iid<span class="nb">}{</span><span class="k">\sim</span><span class="nb">}}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%-- letters
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! Greek letters
+</span></span></span><span class="line"><span class="cl"><span class="k">\def\a</span><span class="nb">{</span><span class="k">\alpha</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\b</span><span class="nb">{</span><span class="k">\beta</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\c</span><span class="nb">{</span><span class="k">\chi</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\d</span><span class="nb">{</span><span class="k">\delta</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\D</span><span class="nb">{</span><span class="k">\Delta</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\uD</span><span class="nb">{</span><span class="k">\upDelta</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\e</span><span class="nb">{</span><span class="k">\epsilon</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\ve</span><span class="nb">{</span><span class="k">\varepsilon</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\f</span><span class="nb">{</span><span class="k">\phi</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\vf</span><span class="nb">{</span><span class="k">\varphi</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\F</span><span class="nb">{</span><span class="k">\Phi</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\g</span><span class="nb">{</span><span class="k">\gamma</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\G</span><span class="nb">{</span><span class="k">\Gamma</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\h</span><span class="nb">{</span><span class="k">\eta</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\k</span><span class="nb">{</span><span class="k">\kappa</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\l</span><span class="nb">{</span><span class="k">\lambda</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\L</span><span class="nb">{</span><span class="k">\Lambda</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\m</span><span class="nb">{</span><span class="k">\mu</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\n</span><span class="nb">{</span><span class="k">\nu</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\o</span><span class="nb">{</span><span class="k">\omega</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\O</span><span class="nb">{</span><span class="k">\Omega</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\vp</span><span class="nb">{</span><span class="k">\varpi</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\p</span><span class="nb">{</span><span class="k">\psi</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\r</span><span class="nb">{</span><span class="k">\rho</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\s</span><span class="nb">{</span><span class="k">\sigma</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\vs</span><span class="nb">{</span><span class="k">\varsigma</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\S</span><span class="nb">{</span><span class="k">\Sigma</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\t</span><span class="nb">{</span><span class="k">\theta</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\T</span><span class="nb">{</span><span class="k">\Theta</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\vt</span><span class="nb">{</span><span class="k">\vartheta</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\U</span><span class="nb">{</span><span class="k">\Upsilon</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\x</span><span class="nb">{</span><span class="k">\xi</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\X</span><span class="nb">{</span><span class="k">\Xi</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\z</span><span class="nb">{</span><span class="k">\zeta</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! blackboard letters
+</span></span></span><span class="line"><span class="cl"><span class="k">\def\R</span><span class="nb">{</span><span class="k">\mathbb</span><span class="nb">{</span>R<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\N</span><span class="nb">{</span><span class="k">\mathbb</span><span class="nb">{</span>N<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Z</span><span class="nb">{</span><span class="k">\mathbb</span><span class="nb">{</span>Z<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Q</span><span class="nb">{</span><span class="k">\mathbb</span><span class="nb">{</span>Q<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\C</span><span class="nb">{</span><span class="k">\mathbb</span><span class="nb">{</span>C<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\I</span><span class="nb">{</span><span class="k">\mathbb</span><span class="nb">{</span>I<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! caligraphic letters
+</span></span></span><span class="line"><span class="cl"><span class="k">\def\Ac</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>A<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Bc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>B<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Cc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>C<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Dc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>D<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Ec</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>E<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Fc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>F<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Gc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>G<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Hc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>H<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Ic</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>I<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Jc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>J<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Kc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>K<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Lc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>L<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Mc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>M<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Nc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>N<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Oc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>O<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Pc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>P<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Qc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>Q<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Rc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>R<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Sc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>S<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Tc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>T<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Uc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>U<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Vc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>V<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Wc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>W<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Xc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>X<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Yc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>Y<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Zc</span><span class="nb">{</span><span class="k">\mathcal</span><span class="nb">{</span>Z<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! boldsymbol letters
+</span></span></span><span class="line"><span class="cl"><span class="k">\def\bdsa</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>a<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>b<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsc</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>c<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsd</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>d<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdse</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>e<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsf</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>f<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsg</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>g<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsh</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>h<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsi</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>i<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsj</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>j<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsk</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>k<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsl</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>l<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsm</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>m<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsn</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>n<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdso</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>o<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsp</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>p<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsq</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>q<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsr</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>r<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdss</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>s<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdst</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>t<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsu</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>u<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsv</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>v<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsw</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>w<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsx</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>x<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsy</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>y<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsz</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>z<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! boldsymbol letters
+</span></span></span><span class="line"><span class="cl"><span class="k">\def\bdsA</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>A<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsB</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>B<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsC</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>C<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsD</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>D<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsE</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>E<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsF</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>F<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsG</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>G<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsH</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>H<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsI</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>I<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsJ</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>J<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsK</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>K<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsL</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>L<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsM</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>M<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsN</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>N<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsO</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>O<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsP</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>P<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsQ</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>Q<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsR</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>R<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsS</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>S<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsT</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>T<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsU</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>U<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsV</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>V<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsW</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>W<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsX</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>X<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsY</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>Y<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\bdsZ</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>Z<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! boldsymbol letters
+</span></span></span><span class="line"><span class="cl"><span class="k">\def\Ab</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>A<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Bb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>B<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Cb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>C<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Db</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>D<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Eb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>E<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Fb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>F<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Gb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>G<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Hb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>H<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Ib</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>I<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Jb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>J<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Kb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>K<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Lb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>L<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Mb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>M<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Nb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>N<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Ob</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>O<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Pb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>P<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Qb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>Q<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Rb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>R<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Sb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>S<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Tb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>T<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Ub</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>U<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Vb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>V<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Wb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>W<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Xb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>X<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Yb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>Y<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\def\Zb</span><span class="nb">{</span><span class="k">\boldsymbol</span><span class="nb">{</span>Z<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! underlined letters (for vectors)
+</span></span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ua</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span>a<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ub</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span>b<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\uc</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span>c<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ux</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span>x<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\uy</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span>y<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\uz</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span>z<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\uX</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span>X<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\uQ</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span>Q<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\uU</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span>U<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\uV</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span>V<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%!! underlined greek letters (for vectors)
+</span></span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\uga</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\alpha</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugb</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\beta</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugc</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\chi</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugd</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\delta</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugD</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\Delta</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\uguD</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\upDelta</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\uge</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\epsilon</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugve</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\varepsilon</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugf</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\phi</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugvf</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\varphi</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugF</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\Phi</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugg</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\gamma</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugh</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\eta</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugl</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\lambda</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugm</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\mu</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugn</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\nu</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugo</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\omega</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugO</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\Omega</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugvp</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\varpi</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugp</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\psi</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugr</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\rho</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugs</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\sigma</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugvs</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\varsigma</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugS</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\Sigma</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugt</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\theta</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugT</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\Theta</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugvt</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\vartheta</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugx</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\xi</span><span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ugz</span><span class="nb">}{</span><span class="k">\undl</span><span class="nb">{</span><span class="k">\zeta</span><span class="nb">}}</span></span></span></code></pre></td></tr></table></div><div class="code-expand-btn" aria-label="Expand or collapse code block" role="button"><i class="fa-solid fa-angles-down" aria-hidden="true"></i></div>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod"><span title="Updated on 2025-12-23 00:00:00">Updated on 2025-12-23&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/programming/latex-notes/t03-math-package/index.md" title="Read Markdown" class="link-to-markdown">Read Markdown</a></span></div>
+        <div class="post-info-share">
+          <span></span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"></section>
+    <section><span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div><div class="post-nav"></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.153.0">Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.1">FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2026</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">Econ Notes</a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons"><div class="fixed-button back-to-top animate__faster d-none" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">This website works best with JavaScript enabled.</div>
+  </noscript>
+</div><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/js/config/c5c17eaeee05b7c8cfb7b989c6a10b77.js" defer></script><script src="/js/theme.min.js" defer></script></body>
+</html>

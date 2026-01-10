@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Template: Math Environments - My economics study notes</title><meta name="author" content="Econ Notes">
+<meta name="description" content="1. A basic snippet1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 \usepackage[most]{tcolorbox} \tcbuselibrary{skins, breakable} %-- theorem environment %!! theorem counter \newcounter{theorem} \renewcommand{\thetheorem}{\arabic{chapter}.\arabic{theorem}} %!! theorem box style \tcbset{ theoremstyle/.style={ breakable, colback=gray!15, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=MyRed, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! theorem environment with name \NewDocumentEnvironment{theorem}{o}{ \refstepcounter{theorem} \IfNoValueTF{#1}{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem.}] }{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } \usepackage{chngcntr} \counterwithin{theorem}{section} \counterwithin{equation}{section} 2. Multiple environments with separate numbering1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 \usepackage[most]{tcolorbox} \tcbuselibrary{skins, breakable} %-- assumption environment %!! assumption counter \newcounter{assumption} \renewcommand{\theassumption}{\arabic{assumption}} %!! assumption box style \tcbset{ assumptionstyle/.style={ breakable, colback=gray!15, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=MyOrange, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! assumption environment with name \NewDocumentEnvironment{assumption}{o}{ \refstepcounter{assumption} \IfNoValueTF{#1}{ \begin{tcolorbox}[assumptionstyle={Assumption \theassumption.}] }{ \begin{tcolorbox}[assumptionstyle={Assumption \theassumption. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } %-- theorem environment %!! theorem counter \newcounter{theorem} \renewcommand{\thetheorem}{\arabic{theorem}} %!! theorem box style \tcbset{ theoremstyle/.style={ breakable, colback=gray!15, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=MyRed, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! theorem environment with name \NewDocumentEnvironment{theorem}{o}{ \refstepcounter{theorem} \IfNoValueTF{#1}{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem.}] }{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } %-- remark environment %!! remark counter \newcounter{remark} \renewcommand{\theremark}{\arabic{remark}} %!! remark box style \tcbset{ remarkstyle/.style={ breakable, colback=white, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=black, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! remark environment with name \NewDocumentEnvironment{remark}{o}{ \refstepcounter{remark} \IfNoValueTF{#1}{ \begin{tcolorbox}[remarkstyle={Remark \theremark.}] }{ \begin{tcolorbox}[remarkstyle={Remark \theremark. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } %-- notation environment %!! notation counter \newcounter{notation} \renewcommand{\thenotation}{\arabic{notation}} %!! notation box style \tcbset{ notationstyle/.style={ breakable, colback=white, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=black, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! notation environment with name \NewDocumentEnvironment{notation}{o}{ \refstepcounter{notation} \IfNoValueTF{#1}{ \begin{tcolorbox}[notationstyle={Notations.}] }{ \begin{tcolorbox}[notationstyle={Notations. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } ">
+  <meta itemprop="name" content="Template: Math environments">
+  <meta itemprop="description" content="1. A basic snippet1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 \usepackage[most]{tcolorbox} \tcbuselibrary{skins, breakable} %-- theorem environment %!! theorem counter \newcounter{theorem} \renewcommand{\thetheorem}{\arabic{chapter}.\arabic{theorem}} %!! theorem box style \tcbset{ theoremstyle/.style={ breakable, colback=gray!15, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=MyRed, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! theorem environment with name \NewDocumentEnvironment{theorem}{o}{ \refstepcounter{theorem} \IfNoValueTF{#1}{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem.}] }{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } \usepackage{chngcntr} \counterwithin{theorem}{section} \counterwithin{equation}{section} 2. Multiple environments with separate numbering1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 \usepackage[most]{tcolorbox} \tcbuselibrary{skins, breakable} %-- assumption environment %!! assumption counter \newcounter{assumption} \renewcommand{\theassumption}{\arabic{assumption}} %!! assumption box style \tcbset{ assumptionstyle/.style={ breakable, colback=gray!15, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=MyOrange, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! assumption environment with name \NewDocumentEnvironment{assumption}{o}{ \refstepcounter{assumption} \IfNoValueTF{#1}{ \begin{tcolorbox}[assumptionstyle={Assumption \theassumption.}] }{ \begin{tcolorbox}[assumptionstyle={Assumption \theassumption. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } %-- theorem environment %!! theorem counter \newcounter{theorem} \renewcommand{\thetheorem}{\arabic{theorem}} %!! theorem box style \tcbset{ theoremstyle/.style={ breakable, colback=gray!15, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=MyRed, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! theorem environment with name \NewDocumentEnvironment{theorem}{o}{ \refstepcounter{theorem} \IfNoValueTF{#1}{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem.}] }{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } %-- remark environment %!! remark counter \newcounter{remark} \renewcommand{\theremark}{\arabic{remark}} %!! remark box style \tcbset{ remarkstyle/.style={ breakable, colback=white, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=black, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! remark environment with name \NewDocumentEnvironment{remark}{o}{ \refstepcounter{remark} \IfNoValueTF{#1}{ \begin{tcolorbox}[remarkstyle={Remark \theremark.}] }{ \begin{tcolorbox}[remarkstyle={Remark \theremark. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } %-- notation environment %!! notation counter \newcounter{notation} \renewcommand{\thenotation}{\arabic{notation}} %!! notation box style \tcbset{ notationstyle/.style={ breakable, colback=white, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=black, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! notation environment with name \NewDocumentEnvironment{notation}{o}{ \refstepcounter{notation} \IfNoValueTF{#1}{ \begin{tcolorbox}[notationstyle={Notations.}] }{ \begin{tcolorbox}[notationstyle={Notations. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} }">
+  <meta itemprop="datePublished" content="2025-12-21T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-12-21T00:00:00+00:00">
+  <meta itemprop="wordCount" content="525"><meta property="og:url" content="http://localhost:1313/programming/latex-notes/s01-math-environment/">
+  <meta property="og:site_name" content="My economics study notes">
+  <meta property="og:title" content="Template: Math environments">
+  <meta property="og:description" content="1. A basic snippet1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 \usepackage[most]{tcolorbox} \tcbuselibrary{skins, breakable} %-- theorem environment %!! theorem counter \newcounter{theorem} \renewcommand{\thetheorem}{\arabic{chapter}.\arabic{theorem}} %!! theorem box style \tcbset{ theoremstyle/.style={ breakable, colback=gray!15, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=MyRed, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! theorem environment with name \NewDocumentEnvironment{theorem}{o}{ \refstepcounter{theorem} \IfNoValueTF{#1}{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem.}] }{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } \usepackage{chngcntr} \counterwithin{theorem}{section} \counterwithin{equation}{section} 2. Multiple environments with separate numbering1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 \usepackage[most]{tcolorbox} \tcbuselibrary{skins, breakable} %-- assumption environment %!! assumption counter \newcounter{assumption} \renewcommand{\theassumption}{\arabic{assumption}} %!! assumption box style \tcbset{ assumptionstyle/.style={ breakable, colback=gray!15, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=MyOrange, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! assumption environment with name \NewDocumentEnvironment{assumption}{o}{ \refstepcounter{assumption} \IfNoValueTF{#1}{ \begin{tcolorbox}[assumptionstyle={Assumption \theassumption.}] }{ \begin{tcolorbox}[assumptionstyle={Assumption \theassumption. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } %-- theorem environment %!! theorem counter \newcounter{theorem} \renewcommand{\thetheorem}{\arabic{theorem}} %!! theorem box style \tcbset{ theoremstyle/.style={ breakable, colback=gray!15, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=MyRed, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! theorem environment with name \NewDocumentEnvironment{theorem}{o}{ \refstepcounter{theorem} \IfNoValueTF{#1}{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem.}] }{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } %-- remark environment %!! remark counter \newcounter{remark} \renewcommand{\theremark}{\arabic{remark}} %!! remark box style \tcbset{ remarkstyle/.style={ breakable, colback=white, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=black, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! remark environment with name \NewDocumentEnvironment{remark}{o}{ \refstepcounter{remark} \IfNoValueTF{#1}{ \begin{tcolorbox}[remarkstyle={Remark \theremark.}] }{ \begin{tcolorbox}[remarkstyle={Remark \theremark. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } %-- notation environment %!! notation counter \newcounter{notation} \renewcommand{\thenotation}{\arabic{notation}} %!! notation box style \tcbset{ notationstyle/.style={ breakable, colback=white, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=black, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! notation environment with name \NewDocumentEnvironment{notation}{o}{ \refstepcounter{notation} \IfNoValueTF{#1}{ \begin{tcolorbox}[notationstyle={Notations.}] }{ \begin{tcolorbox}[notationstyle={Notations. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} }">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="programming">
+    <meta property="article:published_time" content="2025-12-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-21T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Template: Math environments">
+  <meta name="twitter:description" content="1. A basic snippet1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 \usepackage[most]{tcolorbox} \tcbuselibrary{skins, breakable} %-- theorem environment %!! theorem counter \newcounter{theorem} \renewcommand{\thetheorem}{\arabic{chapter}.\arabic{theorem}} %!! theorem box style \tcbset{ theoremstyle/.style={ breakable, colback=gray!15, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=MyRed, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! theorem environment with name \NewDocumentEnvironment{theorem}{o}{ \refstepcounter{theorem} \IfNoValueTF{#1}{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem.}] }{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } \usepackage{chngcntr} \counterwithin{theorem}{section} \counterwithin{equation}{section} 2. Multiple environments with separate numbering1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 \usepackage[most]{tcolorbox} \tcbuselibrary{skins, breakable} %-- assumption environment %!! assumption counter \newcounter{assumption} \renewcommand{\theassumption}{\arabic{assumption}} %!! assumption box style \tcbset{ assumptionstyle/.style={ breakable, colback=gray!15, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=MyOrange, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! assumption environment with name \NewDocumentEnvironment{assumption}{o}{ \refstepcounter{assumption} \IfNoValueTF{#1}{ \begin{tcolorbox}[assumptionstyle={Assumption \theassumption.}] }{ \begin{tcolorbox}[assumptionstyle={Assumption \theassumption. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } %-- theorem environment %!! theorem counter \newcounter{theorem} \renewcommand{\thetheorem}{\arabic{theorem}} %!! theorem box style \tcbset{ theoremstyle/.style={ breakable, colback=gray!15, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=MyRed, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! theorem environment with name \NewDocumentEnvironment{theorem}{o}{ \refstepcounter{theorem} \IfNoValueTF{#1}{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem.}] }{ \begin{tcolorbox}[theoremstyle={Theorem \thetheorem. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } %-- remark environment %!! remark counter \newcounter{remark} \renewcommand{\theremark}{\arabic{remark}} %!! remark box style \tcbset{ remarkstyle/.style={ breakable, colback=white, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=black, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! remark environment with name \NewDocumentEnvironment{remark}{o}{ \refstepcounter{remark} \IfNoValueTF{#1}{ \begin{tcolorbox}[remarkstyle={Remark \theremark.}] }{ \begin{tcolorbox}[remarkstyle={Remark \theremark. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} } %-- notation environment %!! notation counter \newcounter{notation} \renewcommand{\thenotation}{\arabic{notation}} %!! notation box style \tcbset{ notationstyle/.style={ breakable, colback=white, colframe=black, colbacktitle=gray!15, coltitle=black, coltext=black, fonttitle=\bfseries, title={#1}, enhanced, attach boxed title to top left={yshift=-2mm, xshift=2mm}, boxed title style={ colframe=black, arc=1mm, outer arc=1.5mm, boxrule=0.5mm, }, overlay={}, } } %!! notation environment with name \NewDocumentEnvironment{notation}{o}{ \refstepcounter{notation} \IfNoValueTF{#1}{ \begin{tcolorbox}[notationstyle={Notations.}] }{ \begin{tcolorbox}[notationstyle={Notations. #1}] } \setlength{\parindent}{10pt} }{ \end{tcolorbox} }">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/programming/latex-notes/s01-math-environment/" title="Template: Math environments - My economics study notes" /><link rel="prev" type="text/html" href="http://localhost:1313/programming/general-notes/v02-shortcuts/" title="VSCode: Keyboard shortcuts" /><link rel="next" type="text/html" href="http://localhost:1313/programming/stata-notes/04-add-stats/" title="Regression tables: Adding more statistics" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/programming/latex-notes/s01-math-environment/index.md" title="Template: Math environments - My economics study notes"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Template: Math environments",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/programming\/latex-notes\/s01-math-environment\/"
+    },"genre": "posts","wordcount":  525 ,
+    "url": "http:\/\/localhost:1313\/programming\/latex-notes\/s01-math-environment\/","datePublished": "2025-12-21T00:00:00+00:00","dateModified": "2025-12-21T00:00:00+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Econ Notes"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-instant-intensity="viewport" data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="My economics study notes"><span class="header-title-text">My economics study notes</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item has-children">
+              <a class="menu-link" href="/programming/" title="Programming">Programming</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/programming/general-notes" title="General">General</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/latex-notes" title="LaTex">LaTex</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/stata-notes" title="Stata">Stata</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/python-notes" title="Python">Python</a>
+                      </li></ul></li><li class="menu-item">
+              <a class="menu-link" href="/papers/">Papers</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/">Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="Search titles or contents ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" role="button" aria-label="Switch Theme" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="My economics study notes"><span class="header-title-text">My economics study notes</span></a><span class="header-subtitle"></span></div>
+      <div class="theme-switch" role="button" aria-label="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></div>
+      <div class="menu-toggle" id="menu-toggle-mobile" role="button" aria-labelledby="menu-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="Search titles or contents ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              Cancel
+            </a>
+          </li><li class="menu-item"><span class="nested-item">
+                  <a class="menu-link" href="/programming/" title="Programming">Programming</a>
+                  <i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </span>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/programming/general-notes" title="General">General</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/latex-notes" title="LaTex">LaTex</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/stata-notes" title="Stata">Stata</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/python-notes" title="Python">Python</a>
+                      </li></ul></li><li class="menu-item"><a class="menu-link" href="/papers/">Papers</a></li><li class="menu-item"><a class="menu-link" href="/tags/">Tags</a></li><li class="menu-item menu-system"></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Template: Math Environments</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img class="avatar" src='/images/avatar.jpg' srcset="/images/avatar_hu_5b898b8be61ed39c.webp 16w, /images/avatar_hu_ca195cd6a158f98b.webp 24w, /images/avatar_hu_7e7bf4d51c461d26.webp 32w" alt="Econ Notes" height="16" width="16">&nbsp;Econ Notes</span></span></div><div class="post-meta-line"><span title="published on 2025-12-21 00:00:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-12-21">2025-12-21</time></span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#a-basic-snippet">A basic snippet</a></li>
+    <li><a href="#multiple-environments-with-separate-numbering">Multiple environments with separate numbering</a></li>
+  </ol>
+</nav></div>
+      </div><div class="content" id="content"><h2 class="heading-element" id="a-basic-snippet"><span>1. A basic snippet</span>
+  <a href="#a-basic-snippet" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-latex"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="2" style="--fi-max-shown-lines:100;--fi-line-digit:2;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12">12</a>
+</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13">13</a>
+</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14">14</a>
+</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15">15</a>
+</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16">16</a>
+</span><span class="lnt" id="hl-0-17"><a class="lnlinks" href="#hl-0-17">17</a>
+</span><span class="lnt" id="hl-0-18"><a class="lnlinks" href="#hl-0-18">18</a>
+</span><span class="lnt" id="hl-0-19"><a class="lnlinks" href="#hl-0-19">19</a>
+</span><span class="lnt" id="hl-0-20"><a class="lnlinks" href="#hl-0-20">20</a>
+</span><span class="lnt" id="hl-0-21"><a class="lnlinks" href="#hl-0-21">21</a>
+</span><span class="lnt" id="hl-0-22"><a class="lnlinks" href="#hl-0-22">22</a>
+</span><span class="lnt" id="hl-0-23"><a class="lnlinks" href="#hl-0-23">23</a>
+</span><span class="lnt" id="hl-0-24"><a class="lnlinks" href="#hl-0-24">24</a>
+</span><span class="lnt" id="hl-0-25"><a class="lnlinks" href="#hl-0-25">25</a>
+</span><span class="lnt" id="hl-0-26"><a class="lnlinks" href="#hl-0-26">26</a>
+</span><span class="lnt" id="hl-0-27"><a class="lnlinks" href="#hl-0-27">27</a>
+</span><span class="lnt" id="hl-0-28"><a class="lnlinks" href="#hl-0-28">28</a>
+</span><span class="lnt" id="hl-0-29"><a class="lnlinks" href="#hl-0-29">29</a>
+</span><span class="lnt" id="hl-0-30"><a class="lnlinks" href="#hl-0-30">30</a>
+</span><span class="lnt" id="hl-0-31"><a class="lnlinks" href="#hl-0-31">31</a>
+</span><span class="lnt" id="hl-0-32"><a class="lnlinks" href="#hl-0-32">32</a>
+</span><span class="lnt" id="hl-0-33"><a class="lnlinks" href="#hl-0-33">33</a>
+</span><span class="lnt" id="hl-0-34"><a class="lnlinks" href="#hl-0-34">34</a>
+</span><span class="lnt" id="hl-0-35"><a class="lnlinks" href="#hl-0-35">35</a>
+</span><span class="lnt" id="hl-0-36"><a class="lnlinks" href="#hl-0-36">36</a>
+</span><span class="lnt" id="hl-0-37"><a class="lnlinks" href="#hl-0-37">37</a>
+</span><span class="lnt" id="hl-0-38"><a class="lnlinks" href="#hl-0-38">38</a>
+</span><span class="lnt" id="hl-0-39"><a class="lnlinks" href="#hl-0-39">39</a>
+</span><span class="lnt" id="hl-0-40"><a class="lnlinks" href="#hl-0-40">40</a>
+</span><span class="lnt" id="hl-0-41"><a class="lnlinks" href="#hl-0-41">41</a>
+</span><span class="lnt" id="hl-0-42"><a class="lnlinks" href="#hl-0-42">42</a>
+</span><span class="lnt" id="hl-0-43"><a class="lnlinks" href="#hl-0-43">43</a>
+</span><span class="lnt" id="hl-0-44"><a class="lnlinks" href="#hl-0-44">44</a>
+</span><span class="lnt" id="hl-0-45"><a class="lnlinks" href="#hl-0-45">45</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\usepackage</span><span class="na">[most]</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\tcbuselibrary</span><span class="nb">{</span>skins, breakable<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%-- theorem environment
+</span></span></span><span class="line"><span class="cl"><span class="c">%!! theorem counter
+</span></span></span><span class="line"><span class="cl"><span class="k">\newcounter</span><span class="nb">{</span>theorem<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\thetheorem</span><span class="nb">}{</span><span class="k">\arabic</span><span class="nb">{</span>chapter<span class="nb">}</span>.<span class="k">\arabic</span><span class="nb">{</span>theorem<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="c">%!! theorem box style
+</span></span></span><span class="line"><span class="cl"><span class="k">\tcbset</span><span class="nb">{</span>
+</span></span><span class="line"><span class="cl">    theoremstyle/.style=<span class="nb">{</span>
+</span></span><span class="line"><span class="cl">    breakable,
+</span></span><span class="line"><span class="cl">    colback=gray!15,
+</span></span><span class="line"><span class="cl">    colframe=black,
+</span></span><span class="line"><span class="cl">    colbacktitle=gray!15,
+</span></span><span class="line"><span class="cl">    coltitle=black,
+</span></span><span class="line"><span class="cl">    coltext=MyRed,
+</span></span><span class="line"><span class="cl">    fonttitle=<span class="k">\bfseries</span>,
+</span></span><span class="line"><span class="cl">    title=<span class="nb">{</span>#1<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    enhanced,
+</span></span><span class="line"><span class="cl">    attach boxed title to top left=<span class="nb">{</span>yshift=-2mm, xshift=2mm<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    boxed title style=<span class="nb">{</span>
+</span></span><span class="line"><span class="cl">        colframe=black,
+</span></span><span class="line"><span class="cl">        arc=1mm,
+</span></span><span class="line"><span class="cl">        outer arc=1.5mm,
+</span></span><span class="line"><span class="cl">        boxrule=0.5mm,
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    overlay=<span class="nb">{}</span>,
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">%!! theorem environment with name
+</span></span></span><span class="line"><span class="cl"><span class="k">\NewDocumentEnvironment</span><span class="nb">{</span>theorem<span class="nb">}{</span>o<span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\refstepcounter</span><span class="nb">{</span>theorem<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>[theoremstyle=<span class="nb">{</span>Theorem <span class="k">\thetheorem</span>.<span class="nb">}</span>]
+</span></span><span class="line"><span class="cl">    <span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>[theoremstyle=<span class="nb">{</span>Theorem <span class="k">\thetheorem</span>. #1<span class="nb">}</span>]
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>10pt<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\end</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">\usepackage</span><span class="nb">{</span>chngcntr<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\counterwithin</span><span class="nb">{</span>theorem<span class="nb">}{</span>section<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\counterwithin</span><span class="nb">{</span>equation<span class="nb">}{</span>section<span class="nb">}</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><h2 class="heading-element" id="multiple-environments-with-separate-numbering"><span>2. Multiple environments with separate numbering</span>
+  <a href="#multiple-environments-with-separate-numbering" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-latex"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="3" style="--fi-max-shown-lines:100;--fi-line-digit:3;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">  1</a>
+</span><span class="lnt" id="hl-1-2"><a class="lnlinks" href="#hl-1-2">  2</a>
+</span><span class="lnt" id="hl-1-3"><a class="lnlinks" href="#hl-1-3">  3</a>
+</span><span class="lnt" id="hl-1-4"><a class="lnlinks" href="#hl-1-4">  4</a>
+</span><span class="lnt" id="hl-1-5"><a class="lnlinks" href="#hl-1-5">  5</a>
+</span><span class="lnt" id="hl-1-6"><a class="lnlinks" href="#hl-1-6">  6</a>
+</span><span class="lnt" id="hl-1-7"><a class="lnlinks" href="#hl-1-7">  7</a>
+</span><span class="lnt" id="hl-1-8"><a class="lnlinks" href="#hl-1-8">  8</a>
+</span><span class="lnt" id="hl-1-9"><a class="lnlinks" href="#hl-1-9">  9</a>
+</span><span class="lnt" id="hl-1-10"><a class="lnlinks" href="#hl-1-10"> 10</a>
+</span><span class="lnt" id="hl-1-11"><a class="lnlinks" href="#hl-1-11"> 11</a>
+</span><span class="lnt" id="hl-1-12"><a class="lnlinks" href="#hl-1-12"> 12</a>
+</span><span class="lnt" id="hl-1-13"><a class="lnlinks" href="#hl-1-13"> 13</a>
+</span><span class="lnt" id="hl-1-14"><a class="lnlinks" href="#hl-1-14"> 14</a>
+</span><span class="lnt" id="hl-1-15"><a class="lnlinks" href="#hl-1-15"> 15</a>
+</span><span class="lnt" id="hl-1-16"><a class="lnlinks" href="#hl-1-16"> 16</a>
+</span><span class="lnt" id="hl-1-17"><a class="lnlinks" href="#hl-1-17"> 17</a>
+</span><span class="lnt" id="hl-1-18"><a class="lnlinks" href="#hl-1-18"> 18</a>
+</span><span class="lnt" id="hl-1-19"><a class="lnlinks" href="#hl-1-19"> 19</a>
+</span><span class="lnt" id="hl-1-20"><a class="lnlinks" href="#hl-1-20"> 20</a>
+</span><span class="lnt" id="hl-1-21"><a class="lnlinks" href="#hl-1-21"> 21</a>
+</span><span class="lnt" id="hl-1-22"><a class="lnlinks" href="#hl-1-22"> 22</a>
+</span><span class="lnt" id="hl-1-23"><a class="lnlinks" href="#hl-1-23"> 23</a>
+</span><span class="lnt" id="hl-1-24"><a class="lnlinks" href="#hl-1-24"> 24</a>
+</span><span class="lnt" id="hl-1-25"><a class="lnlinks" href="#hl-1-25"> 25</a>
+</span><span class="lnt" id="hl-1-26"><a class="lnlinks" href="#hl-1-26"> 26</a>
+</span><span class="lnt" id="hl-1-27"><a class="lnlinks" href="#hl-1-27"> 27</a>
+</span><span class="lnt" id="hl-1-28"><a class="lnlinks" href="#hl-1-28"> 28</a>
+</span><span class="lnt" id="hl-1-29"><a class="lnlinks" href="#hl-1-29"> 29</a>
+</span><span class="lnt" id="hl-1-30"><a class="lnlinks" href="#hl-1-30"> 30</a>
+</span><span class="lnt" id="hl-1-31"><a class="lnlinks" href="#hl-1-31"> 31</a>
+</span><span class="lnt" id="hl-1-32"><a class="lnlinks" href="#hl-1-32"> 32</a>
+</span><span class="lnt" id="hl-1-33"><a class="lnlinks" href="#hl-1-33"> 33</a>
+</span><span class="lnt" id="hl-1-34"><a class="lnlinks" href="#hl-1-34"> 34</a>
+</span><span class="lnt" id="hl-1-35"><a class="lnlinks" href="#hl-1-35"> 35</a>
+</span><span class="lnt" id="hl-1-36"><a class="lnlinks" href="#hl-1-36"> 36</a>
+</span><span class="lnt" id="hl-1-37"><a class="lnlinks" href="#hl-1-37"> 37</a>
+</span><span class="lnt" id="hl-1-38"><a class="lnlinks" href="#hl-1-38"> 38</a>
+</span><span class="lnt" id="hl-1-39"><a class="lnlinks" href="#hl-1-39"> 39</a>
+</span><span class="lnt" id="hl-1-40"><a class="lnlinks" href="#hl-1-40"> 40</a>
+</span><span class="lnt" id="hl-1-41"><a class="lnlinks" href="#hl-1-41"> 41</a>
+</span><span class="lnt" id="hl-1-42"><a class="lnlinks" href="#hl-1-42"> 42</a>
+</span><span class="lnt" id="hl-1-43"><a class="lnlinks" href="#hl-1-43"> 43</a>
+</span><span class="lnt" id="hl-1-44"><a class="lnlinks" href="#hl-1-44"> 44</a>
+</span><span class="lnt" id="hl-1-45"><a class="lnlinks" href="#hl-1-45"> 45</a>
+</span><span class="lnt" id="hl-1-46"><a class="lnlinks" href="#hl-1-46"> 46</a>
+</span><span class="lnt" id="hl-1-47"><a class="lnlinks" href="#hl-1-47"> 47</a>
+</span><span class="lnt" id="hl-1-48"><a class="lnlinks" href="#hl-1-48"> 48</a>
+</span><span class="lnt" id="hl-1-49"><a class="lnlinks" href="#hl-1-49"> 49</a>
+</span><span class="lnt" id="hl-1-50"><a class="lnlinks" href="#hl-1-50"> 50</a>
+</span><span class="lnt" id="hl-1-51"><a class="lnlinks" href="#hl-1-51"> 51</a>
+</span><span class="lnt" id="hl-1-52"><a class="lnlinks" href="#hl-1-52"> 52</a>
+</span><span class="lnt" id="hl-1-53"><a class="lnlinks" href="#hl-1-53"> 53</a>
+</span><span class="lnt" id="hl-1-54"><a class="lnlinks" href="#hl-1-54"> 54</a>
+</span><span class="lnt" id="hl-1-55"><a class="lnlinks" href="#hl-1-55"> 55</a>
+</span><span class="lnt" id="hl-1-56"><a class="lnlinks" href="#hl-1-56"> 56</a>
+</span><span class="lnt" id="hl-1-57"><a class="lnlinks" href="#hl-1-57"> 57</a>
+</span><span class="lnt" id="hl-1-58"><a class="lnlinks" href="#hl-1-58"> 58</a>
+</span><span class="lnt" id="hl-1-59"><a class="lnlinks" href="#hl-1-59"> 59</a>
+</span><span class="lnt" id="hl-1-60"><a class="lnlinks" href="#hl-1-60"> 60</a>
+</span><span class="lnt" id="hl-1-61"><a class="lnlinks" href="#hl-1-61"> 61</a>
+</span><span class="lnt" id="hl-1-62"><a class="lnlinks" href="#hl-1-62"> 62</a>
+</span><span class="lnt" id="hl-1-63"><a class="lnlinks" href="#hl-1-63"> 63</a>
+</span><span class="lnt" id="hl-1-64"><a class="lnlinks" href="#hl-1-64"> 64</a>
+</span><span class="lnt" id="hl-1-65"><a class="lnlinks" href="#hl-1-65"> 65</a>
+</span><span class="lnt" id="hl-1-66"><a class="lnlinks" href="#hl-1-66"> 66</a>
+</span><span class="lnt" id="hl-1-67"><a class="lnlinks" href="#hl-1-67"> 67</a>
+</span><span class="lnt" id="hl-1-68"><a class="lnlinks" href="#hl-1-68"> 68</a>
+</span><span class="lnt" id="hl-1-69"><a class="lnlinks" href="#hl-1-69"> 69</a>
+</span><span class="lnt" id="hl-1-70"><a class="lnlinks" href="#hl-1-70"> 70</a>
+</span><span class="lnt" id="hl-1-71"><a class="lnlinks" href="#hl-1-71"> 71</a>
+</span><span class="lnt" id="hl-1-72"><a class="lnlinks" href="#hl-1-72"> 72</a>
+</span><span class="lnt" id="hl-1-73"><a class="lnlinks" href="#hl-1-73"> 73</a>
+</span><span class="lnt" id="hl-1-74"><a class="lnlinks" href="#hl-1-74"> 74</a>
+</span><span class="lnt" id="hl-1-75"><a class="lnlinks" href="#hl-1-75"> 75</a>
+</span><span class="lnt" id="hl-1-76"><a class="lnlinks" href="#hl-1-76"> 76</a>
+</span><span class="lnt" id="hl-1-77"><a class="lnlinks" href="#hl-1-77"> 77</a>
+</span><span class="lnt" id="hl-1-78"><a class="lnlinks" href="#hl-1-78"> 78</a>
+</span><span class="lnt" id="hl-1-79"><a class="lnlinks" href="#hl-1-79"> 79</a>
+</span><span class="lnt" id="hl-1-80"><a class="lnlinks" href="#hl-1-80"> 80</a>
+</span><span class="lnt" id="hl-1-81"><a class="lnlinks" href="#hl-1-81"> 81</a>
+</span><span class="lnt" id="hl-1-82"><a class="lnlinks" href="#hl-1-82"> 82</a>
+</span><span class="lnt" id="hl-1-83"><a class="lnlinks" href="#hl-1-83"> 83</a>
+</span><span class="lnt" id="hl-1-84"><a class="lnlinks" href="#hl-1-84"> 84</a>
+</span><span class="lnt" id="hl-1-85"><a class="lnlinks" href="#hl-1-85"> 85</a>
+</span><span class="lnt" id="hl-1-86"><a class="lnlinks" href="#hl-1-86"> 86</a>
+</span><span class="lnt" id="hl-1-87"><a class="lnlinks" href="#hl-1-87"> 87</a>
+</span><span class="lnt" id="hl-1-88"><a class="lnlinks" href="#hl-1-88"> 88</a>
+</span><span class="lnt" id="hl-1-89"><a class="lnlinks" href="#hl-1-89"> 89</a>
+</span><span class="lnt" id="hl-1-90"><a class="lnlinks" href="#hl-1-90"> 90</a>
+</span><span class="lnt" id="hl-1-91"><a class="lnlinks" href="#hl-1-91"> 91</a>
+</span><span class="lnt" id="hl-1-92"><a class="lnlinks" href="#hl-1-92"> 92</a>
+</span><span class="lnt" id="hl-1-93"><a class="lnlinks" href="#hl-1-93"> 93</a>
+</span><span class="lnt" id="hl-1-94"><a class="lnlinks" href="#hl-1-94"> 94</a>
+</span><span class="lnt" id="hl-1-95"><a class="lnlinks" href="#hl-1-95"> 95</a>
+</span><span class="lnt" id="hl-1-96"><a class="lnlinks" href="#hl-1-96"> 96</a>
+</span><span class="lnt" id="hl-1-97"><a class="lnlinks" href="#hl-1-97"> 97</a>
+</span><span class="lnt" id="hl-1-98"><a class="lnlinks" href="#hl-1-98"> 98</a>
+</span><span class="lnt" id="hl-1-99"><a class="lnlinks" href="#hl-1-99"> 99</a>
+</span><span class="lnt" id="hl-1-100"><a class="lnlinks" href="#hl-1-100">100</a>
+</span><span class="lnt" id="hl-1-101"><a class="lnlinks" href="#hl-1-101">101</a>
+</span><span class="lnt" id="hl-1-102"><a class="lnlinks" href="#hl-1-102">102</a>
+</span><span class="lnt" id="hl-1-103"><a class="lnlinks" href="#hl-1-103">103</a>
+</span><span class="lnt" id="hl-1-104"><a class="lnlinks" href="#hl-1-104">104</a>
+</span><span class="lnt" id="hl-1-105"><a class="lnlinks" href="#hl-1-105">105</a>
+</span><span class="lnt" id="hl-1-106"><a class="lnlinks" href="#hl-1-106">106</a>
+</span><span class="lnt" id="hl-1-107"><a class="lnlinks" href="#hl-1-107">107</a>
+</span><span class="lnt" id="hl-1-108"><a class="lnlinks" href="#hl-1-108">108</a>
+</span><span class="lnt" id="hl-1-109"><a class="lnlinks" href="#hl-1-109">109</a>
+</span><span class="lnt" id="hl-1-110"><a class="lnlinks" href="#hl-1-110">110</a>
+</span><span class="lnt" id="hl-1-111"><a class="lnlinks" href="#hl-1-111">111</a>
+</span><span class="lnt" id="hl-1-112"><a class="lnlinks" href="#hl-1-112">112</a>
+</span><span class="lnt" id="hl-1-113"><a class="lnlinks" href="#hl-1-113">113</a>
+</span><span class="lnt" id="hl-1-114"><a class="lnlinks" href="#hl-1-114">114</a>
+</span><span class="lnt" id="hl-1-115"><a class="lnlinks" href="#hl-1-115">115</a>
+</span><span class="lnt" id="hl-1-116"><a class="lnlinks" href="#hl-1-116">116</a>
+</span><span class="lnt" id="hl-1-117"><a class="lnlinks" href="#hl-1-117">117</a>
+</span><span class="lnt" id="hl-1-118"><a class="lnlinks" href="#hl-1-118">118</a>
+</span><span class="lnt" id="hl-1-119"><a class="lnlinks" href="#hl-1-119">119</a>
+</span><span class="lnt" id="hl-1-120"><a class="lnlinks" href="#hl-1-120">120</a>
+</span><span class="lnt" id="hl-1-121"><a class="lnlinks" href="#hl-1-121">121</a>
+</span><span class="lnt" id="hl-1-122"><a class="lnlinks" href="#hl-1-122">122</a>
+</span><span class="lnt" id="hl-1-123"><a class="lnlinks" href="#hl-1-123">123</a>
+</span><span class="lnt" id="hl-1-124"><a class="lnlinks" href="#hl-1-124">124</a>
+</span><span class="lnt" id="hl-1-125"><a class="lnlinks" href="#hl-1-125">125</a>
+</span><span class="lnt" id="hl-1-126"><a class="lnlinks" href="#hl-1-126">126</a>
+</span><span class="lnt" id="hl-1-127"><a class="lnlinks" href="#hl-1-127">127</a>
+</span><span class="lnt" id="hl-1-128"><a class="lnlinks" href="#hl-1-128">128</a>
+</span><span class="lnt" id="hl-1-129"><a class="lnlinks" href="#hl-1-129">129</a>
+</span><span class="lnt" id="hl-1-130"><a class="lnlinks" href="#hl-1-130">130</a>
+</span><span class="lnt" id="hl-1-131"><a class="lnlinks" href="#hl-1-131">131</a>
+</span><span class="lnt" id="hl-1-132"><a class="lnlinks" href="#hl-1-132">132</a>
+</span><span class="lnt" id="hl-1-133"><a class="lnlinks" href="#hl-1-133">133</a>
+</span><span class="lnt" id="hl-1-134"><a class="lnlinks" href="#hl-1-134">134</a>
+</span><span class="lnt" id="hl-1-135"><a class="lnlinks" href="#hl-1-135">135</a>
+</span><span class="lnt" id="hl-1-136"><a class="lnlinks" href="#hl-1-136">136</a>
+</span><span class="lnt" id="hl-1-137"><a class="lnlinks" href="#hl-1-137">137</a>
+</span><span class="lnt" id="hl-1-138"><a class="lnlinks" href="#hl-1-138">138</a>
+</span><span class="lnt" id="hl-1-139"><a class="lnlinks" href="#hl-1-139">139</a>
+</span><span class="lnt" id="hl-1-140"><a class="lnlinks" href="#hl-1-140">140</a>
+</span><span class="lnt" id="hl-1-141"><a class="lnlinks" href="#hl-1-141">141</a>
+</span><span class="lnt" id="hl-1-142"><a class="lnlinks" href="#hl-1-142">142</a>
+</span><span class="lnt" id="hl-1-143"><a class="lnlinks" href="#hl-1-143">143</a>
+</span><span class="lnt" id="hl-1-144"><a class="lnlinks" href="#hl-1-144">144</a>
+</span><span class="lnt" id="hl-1-145"><a class="lnlinks" href="#hl-1-145">145</a>
+</span><span class="lnt" id="hl-1-146"><a class="lnlinks" href="#hl-1-146">146</a>
+</span><span class="lnt" id="hl-1-147"><a class="lnlinks" href="#hl-1-147">147</a>
+</span><span class="lnt" id="hl-1-148"><a class="lnlinks" href="#hl-1-148">148</a>
+</span><span class="lnt" id="hl-1-149"><a class="lnlinks" href="#hl-1-149">149</a>
+</span><span class="lnt" id="hl-1-150"><a class="lnlinks" href="#hl-1-150">150</a>
+</span><span class="lnt" id="hl-1-151"><a class="lnlinks" href="#hl-1-151">151</a>
+</span><span class="lnt" id="hl-1-152"><a class="lnlinks" href="#hl-1-152">152</a>
+</span><span class="lnt" id="hl-1-153"><a class="lnlinks" href="#hl-1-153">153</a>
+</span><span class="lnt" id="hl-1-154"><a class="lnlinks" href="#hl-1-154">154</a>
+</span><span class="lnt" id="hl-1-155"><a class="lnlinks" href="#hl-1-155">155</a>
+</span><span class="lnt" id="hl-1-156"><a class="lnlinks" href="#hl-1-156">156</a>
+</span><span class="lnt" id="hl-1-157"><a class="lnlinks" href="#hl-1-157">157</a>
+</span><span class="lnt" id="hl-1-158"><a class="lnlinks" href="#hl-1-158">158</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\usepackage</span><span class="na">[most]</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\tcbuselibrary</span><span class="nb">{</span>skins, breakable<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%-- assumption environment
+</span></span></span><span class="line"><span class="cl"><span class="c">%!! assumption counter
+</span></span></span><span class="line"><span class="cl"><span class="k">\newcounter</span><span class="nb">{</span>assumption<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\theassumption</span><span class="nb">}{</span><span class="k">\arabic</span><span class="nb">{</span>assumption<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="c">%!! assumption box style
+</span></span></span><span class="line"><span class="cl"><span class="k">\tcbset</span><span class="nb">{</span>
+</span></span><span class="line"><span class="cl">    assumptionstyle/.style=<span class="nb">{</span>
+</span></span><span class="line"><span class="cl">    breakable,
+</span></span><span class="line"><span class="cl">    colback=gray!15,
+</span></span><span class="line"><span class="cl">    colframe=black,
+</span></span><span class="line"><span class="cl">    colbacktitle=gray!15,
+</span></span><span class="line"><span class="cl">    coltitle=black,
+</span></span><span class="line"><span class="cl">    coltext=MyOrange,
+</span></span><span class="line"><span class="cl">    fonttitle=<span class="k">\bfseries</span>,
+</span></span><span class="line"><span class="cl">    title=<span class="nb">{</span>#1<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    enhanced,
+</span></span><span class="line"><span class="cl">    attach boxed title to top left=<span class="nb">{</span>yshift=-2mm, xshift=2mm<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    boxed title style=<span class="nb">{</span>
+</span></span><span class="line"><span class="cl">        colframe=black,
+</span></span><span class="line"><span class="cl">        arc=1mm,
+</span></span><span class="line"><span class="cl">        outer arc=1.5mm,
+</span></span><span class="line"><span class="cl">        boxrule=0.5mm,
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    overlay=<span class="nb">{}</span>,
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">%!! assumption environment with name
+</span></span></span><span class="line"><span class="cl"><span class="k">\NewDocumentEnvironment</span><span class="nb">{</span>assumption<span class="nb">}{</span>o<span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\refstepcounter</span><span class="nb">{</span>assumption<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>[assumptionstyle=<span class="nb">{</span>Assumption <span class="k">\theassumption</span>.<span class="nb">}</span>]
+</span></span><span class="line"><span class="cl">    <span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>[assumptionstyle=<span class="nb">{</span>Assumption <span class="k">\theassumption</span>. #1<span class="nb">}</span>]
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>10pt<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\end</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%-- theorem environment
+</span></span></span><span class="line"><span class="cl"><span class="c">%!! theorem counter
+</span></span></span><span class="line"><span class="cl"><span class="k">\newcounter</span><span class="nb">{</span>theorem<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\thetheorem</span><span class="nb">}{</span><span class="k">\arabic</span><span class="nb">{</span>theorem<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="c">%!! theorem box style
+</span></span></span><span class="line"><span class="cl"><span class="k">\tcbset</span><span class="nb">{</span>
+</span></span><span class="line"><span class="cl">    theoremstyle/.style=<span class="nb">{</span>
+</span></span><span class="line"><span class="cl">    breakable,
+</span></span><span class="line"><span class="cl">    colback=gray!15,
+</span></span><span class="line"><span class="cl">    colframe=black,
+</span></span><span class="line"><span class="cl">    colbacktitle=gray!15,
+</span></span><span class="line"><span class="cl">    coltitle=black,
+</span></span><span class="line"><span class="cl">    coltext=MyRed,
+</span></span><span class="line"><span class="cl">    fonttitle=<span class="k">\bfseries</span>,
+</span></span><span class="line"><span class="cl">    title=<span class="nb">{</span>#1<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    enhanced,
+</span></span><span class="line"><span class="cl">    attach boxed title to top left=<span class="nb">{</span>yshift=-2mm, xshift=2mm<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    boxed title style=<span class="nb">{</span>
+</span></span><span class="line"><span class="cl">        colframe=black,
+</span></span><span class="line"><span class="cl">        arc=1mm,
+</span></span><span class="line"><span class="cl">        outer arc=1.5mm,
+</span></span><span class="line"><span class="cl">        boxrule=0.5mm,
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    overlay=<span class="nb">{}</span>,
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">%!! theorem environment with name
+</span></span></span><span class="line"><span class="cl"><span class="k">\NewDocumentEnvironment</span><span class="nb">{</span>theorem<span class="nb">}{</span>o<span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\refstepcounter</span><span class="nb">{</span>theorem<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>[theoremstyle=<span class="nb">{</span>Theorem <span class="k">\thetheorem</span>.<span class="nb">}</span>]
+</span></span><span class="line"><span class="cl">    <span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>[theoremstyle=<span class="nb">{</span>Theorem <span class="k">\thetheorem</span>. #1<span class="nb">}</span>]
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>10pt<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\end</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%-- remark environment
+</span></span></span><span class="line"><span class="cl"><span class="c">%!! remark counter
+</span></span></span><span class="line"><span class="cl"><span class="k">\newcounter</span><span class="nb">{</span>remark<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\theremark</span><span class="nb">}{</span><span class="k">\arabic</span><span class="nb">{</span>remark<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="c">%!! remark box style
+</span></span></span><span class="line"><span class="cl"><span class="k">\tcbset</span><span class="nb">{</span>
+</span></span><span class="line"><span class="cl">    remarkstyle/.style=<span class="nb">{</span>
+</span></span><span class="line"><span class="cl">    breakable,
+</span></span><span class="line"><span class="cl">    colback=white,
+</span></span><span class="line"><span class="cl">    colframe=black,
+</span></span><span class="line"><span class="cl">    colbacktitle=gray!15,
+</span></span><span class="line"><span class="cl">    coltitle=black,
+</span></span><span class="line"><span class="cl">    coltext=black,
+</span></span><span class="line"><span class="cl">    fonttitle=<span class="k">\bfseries</span>,
+</span></span><span class="line"><span class="cl">    title=<span class="nb">{</span>#1<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    enhanced,
+</span></span><span class="line"><span class="cl">    attach boxed title to top left=<span class="nb">{</span>yshift=-2mm, xshift=2mm<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    boxed title style=<span class="nb">{</span>
+</span></span><span class="line"><span class="cl">        colframe=black,
+</span></span><span class="line"><span class="cl">        arc=1mm,
+</span></span><span class="line"><span class="cl">        outer arc=1.5mm,
+</span></span><span class="line"><span class="cl">        boxrule=0.5mm,
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    overlay=<span class="nb">{}</span>,
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">%!! remark environment with name
+</span></span></span><span class="line"><span class="cl"><span class="k">\NewDocumentEnvironment</span><span class="nb">{</span>remark<span class="nb">}{</span>o<span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\refstepcounter</span><span class="nb">{</span>remark<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>[remarkstyle=<span class="nb">{</span>Remark <span class="k">\theremark</span>.<span class="nb">}</span>]
+</span></span><span class="line"><span class="cl">    <span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>[remarkstyle=<span class="nb">{</span>Remark <span class="k">\theremark</span>. #1<span class="nb">}</span>]
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>10pt<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\end</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">%-- notation environment
+</span></span></span><span class="line"><span class="cl"><span class="c">%!! notation counter
+</span></span></span><span class="line"><span class="cl"><span class="k">\newcounter</span><span class="nb">{</span>notation<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\thenotation</span><span class="nb">}{</span><span class="k">\arabic</span><span class="nb">{</span>notation<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl"><span class="c">%!! notation box style
+</span></span></span><span class="line"><span class="cl"><span class="k">\tcbset</span><span class="nb">{</span>
+</span></span><span class="line"><span class="cl">    notationstyle/.style=<span class="nb">{</span>
+</span></span><span class="line"><span class="cl">    breakable,
+</span></span><span class="line"><span class="cl">    colback=white,
+</span></span><span class="line"><span class="cl">    colframe=black,
+</span></span><span class="line"><span class="cl">    colbacktitle=gray!15,
+</span></span><span class="line"><span class="cl">    coltitle=black,
+</span></span><span class="line"><span class="cl">    coltext=black,
+</span></span><span class="line"><span class="cl">    fonttitle=<span class="k">\bfseries</span>,
+</span></span><span class="line"><span class="cl">    title=<span class="nb">{</span>#1<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    enhanced,
+</span></span><span class="line"><span class="cl">    attach boxed title to top left=<span class="nb">{</span>yshift=-2mm, xshift=2mm<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    boxed title style=<span class="nb">{</span>
+</span></span><span class="line"><span class="cl">        colframe=black,
+</span></span><span class="line"><span class="cl">        arc=1mm,
+</span></span><span class="line"><span class="cl">        outer arc=1.5mm,
+</span></span><span class="line"><span class="cl">        boxrule=0.5mm,
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">    overlay=<span class="nb">{}</span>,
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">%!! notation environment with name
+</span></span></span><span class="line"><span class="cl"><span class="k">\NewDocumentEnvironment</span><span class="nb">{</span>notation<span class="nb">}{</span>o<span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\refstepcounter</span><span class="nb">{</span>notation<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\IfNoValueTF</span><span class="nb">{</span>#1<span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>[notationstyle=<span class="nb">{</span>Notations.<span class="nb">}</span>]
+</span></span><span class="line"><span class="cl">    <span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>[notationstyle=<span class="nb">{</span>Notations. #1<span class="nb">}</span>]
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\setlength</span><span class="nb">{</span><span class="k">\parindent</span><span class="nb">}{</span>10pt<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\end</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}</span></span></span></code></pre></td></tr></table></div><div class="code-expand-btn" aria-label="Expand or collapse code block" role="button"><i class="fa-solid fa-angles-down" aria-hidden="true"></i></div>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod"><span title="Updated on 2025-12-21 00:00:00">Updated on 2025-12-21&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/programming/latex-notes/s01-math-environment/index.md" title="Read Markdown" class="link-to-markdown">Read Markdown</a></span></div>
+        <div class="post-info-share">
+          <span></span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"></section>
+    <section><span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div><div class="post-nav"></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside><dialog id="toc-dialog" aria-labelledby="toc-dialog-title" role="dialog">
+      <div class="toc">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content" id="toc-content-drawer"><nav >
+  <ol>
+    <li><a href="#a-basic-snippet">A basic snippet</a></li>
+    <li><a href="#multiple-environments-with-separate-numbering">Multiple environments with separate numbering</a></li>
+  </ol>
+</nav></div>
+      </div>
+    </dialog></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.153.0">Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.1">FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2026</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">Econ Notes</a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons"><div class="fixed-button back-to-top animate__faster d-none" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i></div><div id="toc-drawer-button" class="fixed-button toc-drawer-button d-none" role="button" aria-label="Contents"><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">This website works best with JavaScript enabled.</div>
+  </noscript>
+</div><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/js/config/0ebe63efe14e1666ee73ef0e7dbef45e.js" defer></script><script src="/js/theme.min.js" defer></script></body>
+</html>

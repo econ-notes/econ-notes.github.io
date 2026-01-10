@@ -1,0 +1,15 @@
+# Collective Decisions and Competitive Markets
+
+
+## Abstract 
+In a general equilibrium model, we allow for households with several, typically heterogeneous, members; households that make (efficient) collective consumption decisions where different households may use different collective decision mechanisms; yet households that operate within a competitive market environment. The interaction of two allocation mechanisms, collective decisions and competitive markets, is investigated, with a focus on the efficiency properties and decentralization possibilities of the dual allocation mechanism.
+
+
+Tags: ["Macro", "Markets", "Households", "ToRead"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-restud/restud-2001/015-gersbachcollectivedecisionscompetitive2001/  
+

@@ -1,0 +1,15 @@
+# Constitutional Rules of Exclusion in Jurisdiction Formation
+
+
+## Abstract 
+The rules under which jurisdictions (nations, provinces) can deny immigration or expel residents are generally governed by a constitution, but there do not exist either positive or normative analyses to suggest what types of exclusion rules are best. We stylize this problem by suggesting four constitutional rules of admission: free mobility, admission by majority vote, admission by unanimous consent, admission by a demand threshold for public goods. In a simple model we characterize the equilibria that result from these rules, and provide a positive theory for which constitutional rules will be chosen.
+
+
+Tags: ["Political Econ", "Public Goods"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-restud/restud-2001/017-jehielconstitutionalrulesexclusion2001/  
+

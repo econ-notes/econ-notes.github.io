@@ -1,0 +1,15 @@
+# Sequential Screening
+
+
+## Abstract 
+We study price discrimination where consumers know at the time of contracting only the distribution of their valuations but subsequently learn their actual valuations. Consumers are sequentially screened, as in a menu of refund contracts. Initial valuation uncertainty can differ in terms of first-order stochastic dominance or mean-preserving-spread. In both cases, optimal mechanisms depend on informativeness of consumers' initial knowledge about their valuations, not on uncertainty that affects all consumers. It can be optimal to "subsidize" consumers with smaller valuation uncertainty through low refund to reduce the rent to those who face greater uncertainty and purchase more "flexible" contracts.
+
+
+Tags: ["Theory IO", "Information"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-restud/restud-2000/032-courtysequentialscreening2000/  
+

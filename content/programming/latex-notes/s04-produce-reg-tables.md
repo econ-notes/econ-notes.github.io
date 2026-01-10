@@ -95,3 +95,21 @@ At the very start of each panel, use the following command to add a panel title.
 ```latex
 \addlinespace[5pt] \multicolumn{5}{l}{{\bf Panel (a): Extensive margin}} \\ [5pt]
 ```
+
+## More customization on the table
+
+Suppose we want to manually adjust the space between two columns for a table. This usually happens because the table has too few columns. We can do adjustments when specifying the `tabular` environment. See the attached table as an example.
+
+```latex
+\begin{tabular}{l@{\hskip 1.5in}l@{\hskip 1.5in}l}
+    \toprule\toprule
+    $\E\bs{Y_{it}}$ & $i=A$ & $i=B$ \\
+    \midrule
+    $t=1$ & $\a_A$ & $\a_B$ \\
+    $t=2$ & $\a_A + \b_2 + \tau_{A2}$ & $\a_B + \b_2$ \\
+    $t=3$ & $\a_A + \b_3 + \tau_{A3}$ & $\a_B + \b_3 + \tau_{B3}$ \\
+    \midrule 
+    Event time & $E_A = 2$ & $E_B = 3$ \\ 
+    \bottomrule\bottomrule
+\end{tabular}
+```

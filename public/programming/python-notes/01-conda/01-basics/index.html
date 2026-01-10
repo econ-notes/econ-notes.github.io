@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>01. Conda Basics - My economics study notes</title><meta name="author" content="Econ Notes">
+<meta name="description" content="1. 0. ResourcesGood tutorial: https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/ Official user guide to conda: https://docs.conda.io/projects/conda/en/latest/user-guide/index.html 2. 1. Working with environments2.1. 1.1. Creating and activating an environmentIn the following commands, I create a new virtual environment and install some basic packages related to data management and visualization.
+">
+  <meta itemprop="name" content="01. Conda basics">
+  <meta itemprop="description" content="1. 0. ResourcesGood tutorial: https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/ Official user guide to conda: https://docs.conda.io/projects/conda/en/latest/user-guide/index.html 2. 1. Working with environments2.1. 1.1. Creating and activating an environmentIn the following commands, I create a new virtual environment and install some basic packages related to data management and visualization.">
+  <meta itemprop="datePublished" content="2025-12-20T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-12-20T00:00:00+00:00">
+  <meta itemprop="wordCount" content="629"><meta property="og:url" content="http://localhost:1313/programming/python-notes/01-conda/01-basics/">
+  <meta property="og:site_name" content="My economics study notes">
+  <meta property="og:title" content="01. Conda basics">
+  <meta property="og:description" content="1. 0. ResourcesGood tutorial: https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/ Official user guide to conda: https://docs.conda.io/projects/conda/en/latest/user-guide/index.html 2. 1. Working with environments2.1. 1.1. Creating and activating an environmentIn the following commands, I create a new virtual environment and install some basic packages related to data management and visualization.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="programming">
+    <meta property="article:published_time" content="2025-12-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-20T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="01. Conda basics">
+  <meta name="twitter:description" content="1. 0. ResourcesGood tutorial: https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/ Official user guide to conda: https://docs.conda.io/projects/conda/en/latest/user-guide/index.html 2. 1. Working with environments2.1. 1.1. Creating and activating an environmentIn the following commands, I create a new virtual environment and install some basic packages related to data management and visualization.">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/programming/python-notes/01-conda/01-basics/" title="01. Conda basics - My economics study notes" /><link rel="prev" type="text/html" href="http://localhost:1313/programming/python-notes/01-conda/02-useful-commands/" title="02. Frequently used environment-related conda commands" /><link rel="next" type="text/html" href="http://localhost:1313/programming/general-notes/v02-shortcuts/" title="VSCode: Keyboard shortcuts" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/programming/python-notes/01-conda/01-basics/index.md" title="01. Conda basics - My economics study notes"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "01. Conda basics",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/programming\/python-notes\/01-conda\/01-basics\/"
+    },"genre": "posts","wordcount":  629 ,
+    "url": "http:\/\/localhost:1313\/programming\/python-notes\/01-conda\/01-basics\/","datePublished": "2025-12-20T00:00:00+00:00","dateModified": "2025-12-20T00:00:00+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Econ Notes"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-instant-intensity="viewport" data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="My economics study notes"><span class="header-title-text">My economics study notes</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item has-children">
+              <a class="menu-link" href="/programming/" title="Programming">Programming</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/programming/general-notes" title="General">General</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/latex-notes" title="LaTex">LaTex</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/stata-notes" title="Stata">Stata</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/python-notes" title="Python">Python</a>
+                      </li></ul></li><li class="menu-item">
+              <a class="menu-link" href="/papers/">Papers</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/">Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="Search titles or contents ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" role="button" aria-label="Switch Theme" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="My economics study notes"><span class="header-title-text">My economics study notes</span></a><span class="header-subtitle"></span></div>
+      <div class="theme-switch" role="button" aria-label="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></div>
+      <div class="menu-toggle" id="menu-toggle-mobile" role="button" aria-labelledby="menu-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="Search titles or contents ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              Cancel
+            </a>
+          </li><li class="menu-item"><span class="nested-item">
+                  <a class="menu-link" href="/programming/" title="Programming">Programming</a>
+                  <i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </span>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/programming/general-notes" title="General">General</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/latex-notes" title="LaTex">LaTex</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/stata-notes" title="Stata">Stata</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/python-notes" title="Python">Python</a>
+                      </li></ul></li><li class="menu-item"><a class="menu-link" href="/papers/">Papers</a></li><li class="menu-item"><a class="menu-link" href="/tags/">Tags</a></li><li class="menu-item menu-system"></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>01. Conda Basics</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img class="avatar" src='/images/avatar.jpg' srcset="/images/avatar_hu_5b898b8be61ed39c.webp 16w, /images/avatar_hu_ca195cd6a158f98b.webp 24w, /images/avatar_hu_7e7bf4d51c461d26.webp 32w" alt="Econ Notes" height="16" width="16">&nbsp;Econ Notes</span></span></div><div class="post-meta-line"><span title="published on 2025-12-20 00:00:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-12-20">2025-12-20</time></span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#0-resources">0. Resources</a></li>
+    <li><a href="#1-working-with-environments">1. Working with environments</a>
+      <ol>
+        <li><a href="#11-creating-and-activating-an-environment">1.1. Creating and activating an environment</a></li>
+        <li><a href="#12-listing-existing-environments-and-the-contents-of-an-environment">1.2. Listing existing environments and the contents of an environment</a></li>
+        <li><a href="#13-deleting-entire-environments">1.3. Deleting entire environments</a></li>
+        <li><a href="#14-sharing-environments">1.4. Sharing environments</a></li>
+        <li><a href="#15-creating-a-new-environment-from-an-environmentyml-file">1.5. Creating a new environment from an <code>environment.yml</code> file</a></li>
+      </ol>
+    </li>
+    <li><a href="#2-installing-packages">2. Installing packages</a>
+      <ol>
+        <li><a href="#21-from-the-conda-forge-channel">2.1 .From the <code>conda-forge</code> channel</a></li>
+        <li><a href="#22-using-pip">2.2. Using <code>pip</code></a></li>
+      </ol>
+    </li>
+  </ol>
+</nav></div>
+      </div><div class="content" id="content"><h2 class="heading-element" id="0-resources"><span>1. 0. Resources</span>
+  <a href="#0-resources" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ol>
+<li>Good tutorial: <a href="https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/" target="_blank" rel="external nofollow noopener noreferrer">https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/</a></li>
+<li>Official user guide to conda: <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/index.html" target="_blank" rel="external nofollow noopener noreferrer">https://docs.conda.io/projects/conda/en/latest/user-guide/index.html</a></li>
+</ol>
+<h2 class="heading-element" id="1-working-with-environments"><span>2. 1. Working with environments</span>
+  <a href="#1-working-with-environments" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 class="heading-element" id="11-creating-and-activating-an-environment"><span>2.1. 1.1. Creating and activating an environment</span>
+  <a href="#11-creating-and-activating-an-environment" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>In the following commands, I create a new virtual environment and install some basic packages related to data management and visualization.</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-powershell"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="1" style="--fi-max-shown-lines:100;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">create</span> <span class="p">-</span><span class="n">-name</span> <span class="n">project_name</span> <span class="p">-</span><span class="n">-channel</span> <span class="nb">conda-forge</span> <span class="n">python</span><span class="p">=</span><span class="mf">3.12</span> <span class="n">pip</span><span class="p">=</span><span class="mf">25.1</span> <span class="n">ipython</span><span class="p">=</span><span class="mf">9.4</span> <span class="n">jupyter</span><span class="p">=</span><span class="mf">1.1</span><span class="p">.</span><span class="py">1</span> <span class="n">numpy</span><span class="p">=</span><span class="mf">2.3</span><span class="p">.</span><span class="py">2</span> <span class="n">scipy</span><span class="p">=</span><span class="mf">1.16</span> <span class="n">pandas</span><span class="p">=</span><span class="mf">2.3</span><span class="p">.</span><span class="py">1</span> <span class="n">polars</span><span class="p">=</span><span class="mf">1.32</span><span class="p">.</span><span class="py">0</span> <span class="n">matplotlib</span><span class="p">=</span><span class="mf">3.10</span><span class="p">.</span><span class="py">5</span> <span class="n">seaborn</span><span class="p">=</span><span class="mf">0.13</span><span class="p">.</span><span class="py">2</span> <span class="n">plotnine</span><span class="p">=</span><span class="mf">0.15</span><span class="p">.</span><span class="py">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">activate</span> <span class="n">project_name</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">deactivate</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>In the following commands, I specify a location (the env subfolder to the current working directory) for a new virtual environment.</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-powershell"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="1" style="--fi-max-shown-lines:100;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span><span class="lnt" id="hl-1-2"><a class="lnlinks" href="#hl-1-2">2</a>
+</span><span class="lnt" id="hl-1-3"><a class="lnlinks" href="#hl-1-3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">create</span> <span class="p">-</span><span class="n">-prefix</span> <span class="p">./</span><span class="n">env</span> <span class="p">-</span><span class="n">-channel</span> <span class="nb">conda-forge</span> <span class="n">python</span><span class="p">=</span><span class="mf">3.12</span> <span class="n">pip</span><span class="p">=</span><span class="mf">25.1</span> <span class="n">ipython</span><span class="p">=</span><span class="mf">9.4</span> <span class="n">jupyter</span><span class="p">=</span><span class="mf">1.1</span><span class="p">.</span><span class="py">1</span> <span class="n">numpy</span><span class="p">=</span><span class="mf">2.3</span><span class="p">.</span><span class="py">2</span> <span class="n">scipy</span><span class="p">=</span><span class="mf">1.16</span> <span class="n">pandas</span><span class="p">=</span><span class="mf">2.3</span><span class="p">.</span><span class="py">1</span> <span class="n">polars</span><span class="p">=</span><span class="mf">1.32</span><span class="p">.</span><span class="py">0</span> <span class="n">matplotlib</span><span class="p">=</span><span class="mf">3.10</span><span class="p">.</span><span class="py">5</span> <span class="n">seaborn</span><span class="p">=</span><span class="mf">0.13</span><span class="p">.</span><span class="py">2</span> <span class="n">plotnine</span><span class="p">=</span><span class="mf">0.15</span><span class="p">.</span><span class="py">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">activate</span> <span class="p">./</span><span class="n">env</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>It is often a good idea to specify a path to a sub-directory of your project directory when creating an environment.</p>
+<ul>
+<li>This makes it easy to tell if your project utilizes an isolated environment by including the environment as a sub-directory.</li>
+<li>This makes your project more self-contained as everything including the required software is contained in a single project directory.</li>
+<li>You can then use the same name for all your environments; if you keep all of your environments in the default <code>~/miniconda3/env/</code> folder, you’ll have to give each of them a different name.</li>
+</ul>
+<h3 class="heading-element" id="12-listing-existing-environments-and-the-contents-of-an-environment"><span>2.2. 1.2. Listing existing environments and the contents of an environment</span>
+  <a href="#12-listing-existing-environments-and-the-contents-of-an-environment" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-powershell"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="1" style="--fi-max-shown-lines:100;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-1"><a class="lnlinks" href="#hl-2-1">1</a>
+</span><span class="lnt" id="hl-2-2"><a class="lnlinks" href="#hl-2-2">2</a>
+</span><span class="lnt" id="hl-2-3"><a class="lnlinks" href="#hl-2-3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">env</span> <span class="n">list</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">list</span> <span class="p">-</span><span class="n">-name</span> <span class="n">project_name</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">list</span> <span class="p">-</span><span class="n">-prefix</span> <span class="p">./</span><span class="n">env</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><h3 class="heading-element" id="13-deleting-entire-environments"><span>2.3. 1.3. Deleting entire environments</span>
+  <a href="#13-deleting-entire-environments" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-powershell"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="1" style="--fi-max-shown-lines:100;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-1"><a class="lnlinks" href="#hl-3-1">1</a>
+</span><span class="lnt" id="hl-3-2"><a class="lnlinks" href="#hl-3-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">remove</span> <span class="p">-</span><span class="n">-name</span> <span class="n">project_name</span> <span class="p">-</span><span class="n">-all</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">remove</span> <span class="p">-</span><span class="n">-prefix</span> <span class="p">/</span><span class="n">path</span><span class="p">/</span><span class="n">to</span><span class="p">/</span><span class="n">env</span> <span class="p">-</span><span class="n">-all</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><h3 class="heading-element" id="14-sharing-environments"><span>2.4. 1.4. Sharing environments</span>
+  <a href="#14-sharing-environments" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>Step 1. Automatically generate an <code>environmen.yml</code> file.</p>
+<ul>
+<li>The <code>--from-history</code> argument makes sure that only the final packages will be listed in the file.</li>
+<li><strong>If the <code>--from-history</code> argument is not included, this exported environment file will however not consistently produce environments that are reproducible across Mac OS, Windows, and Linux.</strong></li>
+<li>The reason is, that it may include operating system specific low-level packages which cannot be used by other operating systems.</li>
+</ul>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-powershell"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="1" style="--fi-max-shown-lines:100;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-4-1"><a class="lnlinks" href="#hl-4-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">env</span> <span class="n">export</span> <span class="p">-</span><span class="n">-name</span> <span class="n">project_name</span> <span class="p">-</span><span class="n">-from-history</span> <span class="p">-</span><span class="o">-file</span> <span class="n">environment</span><span class="p">.</span><span class="n">yml</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>Step 2. Manually change the <code>environment.yml</code> file:</p>
+<ul>
+<li>Change the name of resulting environment.</li>
+<li>Change the channels of the packages.</li>
+<li>Add packages that should be installed using <code>pip</code> in the file.</li>
+</ul>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-yml"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="2" style="--fi-max-shown-lines:100;--fi-line-digit:2;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-5-1"><a class="lnlinks" href="#hl-5-1"> 1</a>
+</span><span class="lnt" id="hl-5-2"><a class="lnlinks" href="#hl-5-2"> 2</a>
+</span><span class="lnt" id="hl-5-3"><a class="lnlinks" href="#hl-5-3"> 3</a>
+</span><span class="lnt" id="hl-5-4"><a class="lnlinks" href="#hl-5-4"> 4</a>
+</span><span class="lnt" id="hl-5-5"><a class="lnlinks" href="#hl-5-5"> 5</a>
+</span><span class="lnt" id="hl-5-6"><a class="lnlinks" href="#hl-5-6"> 6</a>
+</span><span class="lnt" id="hl-5-7"><a class="lnlinks" href="#hl-5-7"> 7</a>
+</span><span class="lnt" id="hl-5-8"><a class="lnlinks" href="#hl-5-8"> 8</a>
+</span><span class="lnt" id="hl-5-9"><a class="lnlinks" href="#hl-5-9"> 9</a>
+</span><span class="lnt" id="hl-5-10"><a class="lnlinks" href="#hl-5-10">10</a>
+</span><span class="lnt" id="hl-5-11"><a class="lnlinks" href="#hl-5-11">11</a>
+</span><span class="lnt" id="hl-5-12"><a class="lnlinks" href="#hl-5-12">12</a>
+</span><span class="lnt" id="hl-5-13"><a class="lnlinks" href="#hl-5-13">13</a>
+</span><span class="lnt" id="hl-5-14"><a class="lnlinks" href="#hl-5-14">14</a>
+</span><span class="lnt" id="hl-5-15"><a class="lnlinks" href="#hl-5-15">15</a>
+</span><span class="lnt" id="hl-5-16"><a class="lnlinks" href="#hl-5-16">16</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">P4DA</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">channels</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">conda-forge</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">dependencies</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">ipython=9.4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">plotnine=0.15.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">python=3.12</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">polars=1.32.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">jupyter=1.1.1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">pandas=2.3.1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">seaborn=0.13.2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">numpy=2.3.2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">pip=25.1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">pip</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">pyfixest==0.30.2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">matplotlib=3.10.5</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><h3 class="heading-element" id="15-creating-a-new-environment-from-an-environmentyml-file"><span>2.5. 1.5. Creating a new environment from an <code>environment.yml</code> file</span>
+  <a href="#15-creating-a-new-environment-from-an-environmentyml-file" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>Rebuilding an environment from scratch.</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-powershell"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="1" style="--fi-max-shown-lines:100;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-6-1"><a class="lnlinks" href="#hl-6-1">1</a>
+</span><span class="lnt" id="hl-6-2"><a class="lnlinks" href="#hl-6-2">2</a>
+</span><span class="lnt" id="hl-6-3"><a class="lnlinks" href="#hl-6-3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="p">-</span><span class="n">-prefix</span> <span class="p">./</span><span class="n">env</span> <span class="p">-</span><span class="o">-file</span> <span class="n">environment</span><span class="p">.</span><span class="py">yml</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="p">-</span><span class="o">-file</span> <span class="n">environment</span><span class="p">.</span><span class="n">yml</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><h2 class="heading-element" id="2-installing-packages"><span>3. 2. Installing packages</span>
+  <a href="#2-installing-packages" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 class="heading-element" id="21-from-the-conda-forge-channel"><span>3.1. 2.1 .From the <code>conda-forge</code> channel</span>
+  <a href="#21-from-the-conda-forge-channel" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>It is always a good idea to install packages from the <code>conda-forge</code> channel. Make this explicitly in the commands.</li>
+<li>It is always a good idea to explicitly specify the version of the packages.</li>
+<li>To search whether the required package exists in the channel, check the following website: <a href="https://conda-forge.org/packages/" target="_blank" rel="external nofollow noopener noreferrer">https://conda-forge.org/packages/</a></li>
+</ul>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-powershell"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="1" style="--fi-max-shown-lines:100;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-7-1"><a class="lnlinks" href="#hl-7-1">1</a>
+</span><span class="lnt" id="hl-7-2"><a class="lnlinks" href="#hl-7-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">activate</span> <span class="n">project_name</span> 
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">install</span> <span class="p">-</span><span class="n">-channel</span> <span class="nb">conda-forge</span> <span class="n">scipy</span><span class="p">=</span><span class="mf">1.6</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><h3 class="heading-element" id="22-using-pip"><span>3.2. 2.2. Using <code>pip</code></span>
+  <a href="#22-using-pip" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>Important notes:
+<ul>
+<li>Pip is included in the Miniconda installer where it is used to install and manage OS specific Python packages required to setup your base Conda environment. You do not want to use this <code>pip</code> to install Python packages when using Conda environments.</li>
+<li>If you find yourself needing to install a Python package that is only available via Pip, then <strong>you should first install <code>pip</code> into your Conda environment and then use that <code>pip</code> to install the desired package</strong>.</li>
+</ul>
+</li>
+<li>Instructions:
+<ul>
+<li>Always explicitly install <code>pip</code> in every Python-based Conda environment.</li>
+<li>Always be sure your desired environment is active before installing anything using <code>pip</code>.</li>
+<li>Prefer <code>python -m pip install</code> over <code>pip install</code>; never use <code>pip</code> with the <code>--user</code> argument.</li>
+</ul>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod"><span title="Updated on 2025-12-20 00:00:00">Updated on 2025-12-20&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/programming/python-notes/01-conda/01-basics/index.md" title="Read Markdown" class="link-to-markdown">Read Markdown</a></span></div>
+        <div class="post-info-share">
+          <span></span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"></section>
+    <section><span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div><div class="post-nav"></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside><dialog id="toc-dialog" aria-labelledby="toc-dialog-title" role="dialog">
+      <div class="toc">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content" id="toc-content-drawer"><nav >
+  <ol>
+    <li><a href="#0-resources">0. Resources</a></li>
+    <li><a href="#1-working-with-environments">1. Working with environments</a>
+      <ol>
+        <li><a href="#11-creating-and-activating-an-environment">1.1. Creating and activating an environment</a></li>
+        <li><a href="#12-listing-existing-environments-and-the-contents-of-an-environment">1.2. Listing existing environments and the contents of an environment</a></li>
+        <li><a href="#13-deleting-entire-environments">1.3. Deleting entire environments</a></li>
+        <li><a href="#14-sharing-environments">1.4. Sharing environments</a></li>
+        <li><a href="#15-creating-a-new-environment-from-an-environmentyml-file">1.5. Creating a new environment from an <code>environment.yml</code> file</a></li>
+      </ol>
+    </li>
+    <li><a href="#2-installing-packages">2. Installing packages</a>
+      <ol>
+        <li><a href="#21-from-the-conda-forge-channel">2.1 .From the <code>conda-forge</code> channel</a></li>
+        <li><a href="#22-using-pip">2.2. Using <code>pip</code></a></li>
+      </ol>
+    </li>
+  </ol>
+</nav></div>
+      </div>
+    </dialog></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.153.0">Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.1">FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2026</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">Econ Notes</a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons"><div class="fixed-button back-to-top animate__faster d-none" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i></div><div id="toc-drawer-button" class="fixed-button toc-drawer-button d-none" role="button" aria-label="Contents"><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">This website works best with JavaScript enabled.</div>
+  </noscript>
+</div><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/js/config/36c693461e3bdae7c402036e1ea26567.js" defer></script><script src="/js/theme.min.js" defer></script></body>
+</html>

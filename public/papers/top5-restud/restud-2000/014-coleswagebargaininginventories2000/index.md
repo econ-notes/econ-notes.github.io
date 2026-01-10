@@ -1,0 +1,15 @@
+# Wage Bargaining, Inventories, and Union Legislation
+
+
+## Abstract 
+This paper analyses a strategic bargaining game where the firm mayor may not be able to sell out of its inventory of finished goods during a strike. Firms and the union are both risk neutral and have the same discount rate. It is shown that the wage equilibrium corresponds to the axiomatic Nash bargaining solution where the threatpoints are the agents' payoffs should bargaining continue indefinitely. We use the 1980 and 1982 Employment Acts to test this theory, interpreting that legislation change as changing the firm's threatpoint but not its bargaining power. This allows us to identify the value of the firm's threatpoint post-1982. Formal tests support the theory. Also consistent with the theory, it is found that union wages decrease with inventories after 1982, but not before, and that the union wage gap is smaller after 1982.
+
+
+Tags: ["Labor", "Union", "Bargaining", "ToRead"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-restud/restud-2000/014-coleswagebargaininginventories2000/  
+

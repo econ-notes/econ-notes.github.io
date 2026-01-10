@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python Notes - My economics study notes</title>
+    <link>http://localhost:1313/programming/python-notes/</link>
+    <description>My economics study notes</description>
+    <generator>Hugo 0.153.0 &amp; FixIt v0.4.1</generator>
+    <language>en-us</language>
+    <managingEditor>econ.learning.resources@gmail.com (Econ Notes)</managingEditor>
+    <webMaster>econ.learning.resources@gmail.com (Econ Notes)</webMaster>
+    <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/programming/python-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conda</title>
+      <link>http://localhost:1313/programming/python-notes/01-conda/</link>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/programming/python-notes/01-conda/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;./01-basics/&#34;&gt;Conda basics&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;./02-useful-commands/&#34;&gt;Useful conda commands&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tail - Tag - My economics study notes</title>
+    <link>http://localhost:1313/tags/tail/</link>
+    <description>My economics study notes</description>
+    <generator>Hugo 0.153.0 &amp; FixIt v0.4.1</generator>
+    <language>en-us</language>
+    <managingEditor>econ.learning.resources@gmail.com (Econ Notes)</managingEditor>
+    <webMaster>econ.learning.resources@gmail.com (Econ Notes)</webMaster>
+    <lastBuildDate>Tue, 04 Dec 2001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tail/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Structural Change Tests in Tail Behaviour and the Asian Crisis</title>
+      <link>http://localhost:1313/papers/top5-restud/restud-2001/027-quintosstructuralchangetests2001/</link>
+      <pubDate>Tue, 04 Dec 2001 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-restud/restud-2001/027-quintosstructuralchangetests2001/</guid>
+      <description>&lt;h2 class=&#34;heading-element&#34; id=&#34;abstract&#34;&gt;&lt;span&gt;1. Abstract&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#abstract&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;This paper explores tests of the hypothesis that the tail thickness of a distribution is constant over time. Using Hill&amp;rsquo;s conditional maximum likelihood estimator for the tail index of a distribution, tests of tail shape constancy are constructed that allow for an unknown breakpoint. The recursive test is shown to be inconsistent in one direction, and only a one-sided test is recommended. Specifically, the test can be used when the alternative hypothesis is that the tail index decreases over time. A rolling and sequential version of the test is consistent in both directions. The methods are illustrated on recent stock price data for Thailand, Malaysia and Indonesia. The period covers the recent Asian financial crisis and enables us to assess whether breakpoints in domestic asset return distributions are related to known changes in institutional arrangements in the foreign currency markets of these countries.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -42,6 +42,27 @@ In the main paper text part, set the counter, and the default title of tables. T
 \end{table}
 ```
 
+Sometimes, for a very long table, it is useful to resize the table using the height of the paper, instead of width. Notice that here we need to add the `*` mark after the `\resizebox` command. 
+
+This is because, for some reason, the baseline of the table is the the middle of the table, so that the lower half is part of the depth of the resulting TeX box. The `\resizebox` scales the box height, not the totalheight (height+depth) to the given value. To scale the totalheight, it is necessary to use the `*` version. See the [StackExchange discussion here](https://tex.stackexchange.com/questions/13809/resizing-a-table-by-textheight) for more information.
+
+```latex {hl_lines=[4]}
+\begin{table}[H]
+    \centering
+    \caption{}
+    \resizebox*{!}{1\textheight}{
+        \begin{threeparttable}
+            \input{\ResultsLocation/results.tex}
+            \begin{tablenotes}
+                \footnotesize
+                \item Notes. 
+            \end{tablenotes}
+        \end{threeparttable}
+    }
+    \label{results}
+\end{table}
+```
+
 ### Manually adding table notes
 
 ```latex

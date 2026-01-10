@@ -1,0 +1,11 @@
+---
+title: "Strategic Monetary Policy with Non-Atomistic Wage Setters"
+date: 2003-11-24
+tags: ["Monetary Policies", "Rigidities", "ToRead"]
+---
+
+## Abstract 
+Monetary policy analyses usually assume an atomistic private sector, thereby ignoring potential interactions between policy and wage-setting decisions. Yet, non-atomistic wage setters are a key feature of several industrialized economies. We study the economic consequence of non-atomistic agents and show that this qualifies previous results on the effects and desirability of a conservative central banker. In particular, the central bank aversion to inflation may have a permanent effect on structural employment, while no such effect emerges with atomistic agents.
+
+
+Tags: ["Monetary Policies", "Rigidities", "ToRead"]

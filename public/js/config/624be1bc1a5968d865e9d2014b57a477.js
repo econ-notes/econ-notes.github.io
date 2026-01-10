@@ -1,0 +1,1 @@
+window.config={"search":{"distance":1000,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":true,"isCaseSensitive":false,"location":0,"maxResultLength":50,"minMatchCharLength":5,"noResultsFound":"No results found","snippetLength":30,"threshold":0.6,"type":"fuse","useExtendedSearch":true},"version":"v0.4.1"};

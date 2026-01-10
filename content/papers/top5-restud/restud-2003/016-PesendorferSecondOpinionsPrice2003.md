@@ -1,0 +1,11 @@
+---
+title: "Second Opinions and Price Competition: Inefficiency in the Market for Expert Advice"
+date: 2003-12-15
+tags: ["Theory IO", "Competition"]
+---
+
+## Abstract 
+We consider a market in which an expert must exert costly but unobservable effort to identify the service that meets the consumer's need. In our model, experts offer competing contracts and the consumer may gather multiple opinions. We explore the incentives that a competitive sampling of prices and opinions provides for experts to exert effort and find that there is a tension between price competition and the equilibrium effort. In particular, the equilibrium fails to realize the second best welfare optimum. An intervention, that limits price competition via price control, increases welfare.
+
+
+Tags: ["Theory IO", "Competition"]

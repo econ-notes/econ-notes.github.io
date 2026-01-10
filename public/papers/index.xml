@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A Collection of Economics Papers - My economics study notes</title>
+    <link>http://localhost:1313/papers/</link>
+    <description>My economics study notes</description>
+    <generator>Hugo 0.153.0 &amp; FixIt v0.4.1</generator>
+    <language>en-us</language>
+    <managingEditor>econ.learning.resources@gmail.com (Econ Notes)</managingEditor>
+    <webMaster>econ.learning.resources@gmail.com (Econ Notes)</webMaster>
+    <lastBuildDate>Thu, 25 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/papers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Review of Economic Studies</title>
+      <link>http://localhost:1313/papers/top5-restud/</link>
+      <pubDate>Thu, 25 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-restud/</guid>
+      <description>The Review of Economic Studies</description>
+    </item>
+    <item>
+      <title>The Quarterly Journal of Economics</title>
+      <link>http://localhost:1313/papers/top5-qje/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-qje/</guid>
+      <description>The Quarterly Journal of Economics</description>
+    </item>
+    <item>
+      <title>Journal of Political Economy</title>
+      <link>http://localhost:1313/papers/top5-jpe/</link>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-jpe/</guid>
+      <description>Journal of Political Economy</description>
+    </item>
+    <item>
+      <title>Econometrica</title>
+      <link>http://localhost:1313/papers/top5-ecma/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-ecma/</guid>
+      <description>Econometrica</description>
+    </item>
+    <item>
+      <title>American Economic Review</title>
+      <link>http://localhost:1313/papers/top5-aer/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-aer/</guid>
+      <description>American Economic Review</description>
+    </item>
+    <item>
+      <title>The Economic Journal</title>
+      <link>http://localhost:1313/papers/general-ej/</link>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/general-ej/</guid>
+      <description>The Economic Journal</description>
+    </item>
+    <item>
+      <title>Review of Economics and Statistics</title>
+      <link>http://localhost:1313/papers/general-restat/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/general-restat/</guid>
+      <description>Review of Economics and Statistics</description>
+    </item>
+    <item>
+      <title>Journal of the European Economic Association</title>
+      <link>http://localhost:1313/papers/general-jeea/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/general-jeea/</guid>
+      <description>Journal of the European Economic Association</description>
+    </item>
+    <item>
+      <title>International Economic Review</title>
+      <link>http://localhost:1313/papers/general-ier/</link>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/general-ier/</guid>
+      <description>International Economic Review</description>
+    </item>
+    <item>
+      <title>Quantitative Economics</title>
+      <link>http://localhost:1313/papers/general-qe/</link>
+      <pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/general-qe/</guid>
+      <description>Quantitative Economics</description>
+    </item>
+    <item>
+      <title>American Economic Journal: Applied Economics</title>
+      <link>http://localhost:1313/papers/genearl-aejae/</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/genearl-aejae/</guid>
+      <description>American Economic Journal: Applied Economics</description>
+    </item>
+    <item>
+      <title>American Economic Journal: Economic Policy</title>
+      <link>http://localhost:1313/papers/general-aejep/</link>
+      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/general-aejep/</guid>
+      <description>American Economic Journal: Economic Policy</description>
+    </item>
+    <item>
+      <title>European Economic Review</title>
+      <link>http://localhost:1313/papers/general-eer/</link>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/general-eer/</guid>
+      <description>European Economic Review</description>
+    </item>
+    <item>
+      <title>American Economic Journal: Macroeconomics</title>
+      <link>http://localhost:1313/papers/field-aejmacro/</link>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/field-aejmacro/</guid>
+      <description>American Economic Journal: Macroeconomics</description>
+    </item>
+    <item>
+      <title>Journal of Monetary Economics</title>
+      <link>http://localhost:1313/papers/field-jme/</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/field-jme/</guid>
+      <description>Journal of Monetary Economics</description>
+    </item>
+    <item>
+      <title>Review of Economic Dynamics</title>
+      <link>http://localhost:1313/papers/field-red/</link>
+      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/field-red/</guid>
+      <description>Review of Economic Dynamics</description>
+    </item>
+    <item>
+      <title>Journal of Economic Dynamics and Control</title>
+      <link>http://localhost:1313/papers/field-jedc/</link>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/field-jedc/</guid>
+      <description>Journal of Economic Dynamics and Control</description>
+    </item>
+    <item>
+      <title>Journal of Econometrics</title>
+      <link>http://localhost:1313/papers/field-joe/</link>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/field-joe/</guid>
+      <description>Journal of Econometrics</description>
+    </item>
+    <item>
+      <title>American Economic Journal: Microeconomics</title>
+      <link>http://localhost:1313/papers/field-aejmicro/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/field-aejmicro/</guid>
+      <description>American Economic Journal: Microeconomics</description>
+    </item>
+    <item>
+      <title>The RAND Journal of Economics</title>
+      <link>http://localhost:1313/papers/field-rand/</link>
+      <pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/field-rand/</guid>
+      <description>The RAND Journal of Economics</description>
+    </item>
+    <item>
+      <title>Journal of Economic Theory</title>
+      <link>http://localhost:1313/papers/field-jet/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/field-jet/</guid>
+      <description>Journal of Economic Theory</description>
+    </item>
+    <item>
+      <title>Journal of Labor Economics</title>
+      <link>http://localhost:1313/papers/field-jole/</link>
+      <pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/field-jole/</guid>
+      <description>Journal of Labor Economics</description>
+    </item>
+    <item>
+      <title>Journal of Public Economics</title>
+      <link>http://localhost:1313/papers/field-jpube/</link>
+      <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/field-jpube/</guid>
+      <description>Journal of Public Economics</description>
+    </item>
+    <item>
+      <title>Journal of International Economics</title>
+      <link>http://localhost:1313/papers/field-jie/</link>
+      <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/field-jie/</guid>
+      <description>Journal of International Economics</description>
+    </item>
+    <item>
+      <title>Journal of Development Economics</title>
+      <link>http://localhost:1313/papers/field-jde/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/field-jde/</guid>
+      <description>Journal of Development Economics</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,15 @@
+# Nonparametric Estimation of Sample Selection Models
+
+
+## Abstract 
+Sample selection models provide an important way of accounting for economic decisions that combine discrete and continuous choices and of correcting for nonrandom sampling. Nonparametric estimators for these models are developed in this paper. These can be used for estimating shapes and important economic quantities, as in standard nonparametric regression. Endogeneity of regressors of interest is allowed for. Series estimators for these models are developed, which are useful for imposing additivity restrictions that arise from selection corrections. Convergence rates and asymptotic normality results are derived. An application to returns to schooling among Australian young females is given.
+
+
+Tags: ["Econometrics", "Sample Selection", "ToRead"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-restud/restud-2003/002-dasnonparametricestimationsample2003/  
+

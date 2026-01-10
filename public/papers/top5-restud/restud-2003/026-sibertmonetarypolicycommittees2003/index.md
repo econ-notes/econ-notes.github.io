@@ -1,0 +1,15 @@
+# Monetary Policy Committees: Individual and Collective Reputations
+
+
+## Abstract 
+This paper looks at the incentives of individual members of a monetary policy committee to gain a reputation for inflationary toughness. I show a policy maker can have more or less incentive to build a reputation when part of a group. But, group policy making leads to higher expected social welfare. Not publishing individuals' votes, raises the temptation to inflate and lowers expected social welfare. If the culture or rules of a central bank puts more weight on senior policy makers, the incentive to build a reputation is greater, but expected social welfare may be higher or lower.
+
+
+Tags: ["Reputation", "Monetary Policies"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-restud/restud-2003/026-sibertmonetarypolicycommittees2003/  
+

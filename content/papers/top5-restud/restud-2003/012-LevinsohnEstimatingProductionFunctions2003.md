@@ -1,0 +1,11 @@
+---
+title: "Estimating Production Functions Using Inputs to Control for Unobservables"
+date: 2003-12-19
+tags: ["Production Functions"]
+---
+
+## Abstract 
+We add to the methods for conditioning out serially correlated unobserved shocks to the production technology. We build on ideas first developed in Olley and Pakes (1996). They show how to use investment to control for correlation between input levels and the unobserved firm-specific productivity process. We show that intermediate inputs (those inputs which are typically subtracted out in a value-added production function) can also solve this simultaneity problem. We discuss some theoretical benefits of extending the proxy choice set in this direction and our empirical results suggest these benefits can be important.
+
+
+Tags: ["Production Functions"]

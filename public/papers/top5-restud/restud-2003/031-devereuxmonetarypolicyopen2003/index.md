@@ -1,0 +1,15 @@
+# Monetary Policy in the Open Economy Revisited: Price Setting and Exchange-Rate Flexibility
+
+
+## Abstract 
+This paper develops a welfare-based model of monetary policy in an open economy. We examine the optimal monetary policy under commitment, focusing on the nature of price adjustment in determining policy. We investigate the implications of these policies for exchange-rate flexibility. The traditional approach maintains that exchange-rate flexibility is desirable in the presence of real country-specific shocks that require adjustment in relative prices. However, in the light of empirical evidence on nominal price response to exchange-rate changes -- specifically, that there appears to be a large degree of localcurrency pricing (LCP) in industrialized countries -- the expenditure-switching role played by nominal exchange rates may be exaggerated in the traditional literature. In the presence of LCP, we find that the optimal monetary policy leads to a fixed exchange rate, even in the presence of country-specific shocks. This is true whether monetary policy is chosen cooperatively or non-cooperatively among countries.
+
+
+Tags: ["Monetary Policies", "Exchange Rates", "International Fin", "ToRead"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-restud/restud-2003/031-devereuxmonetarypolicyopen2003/  
+

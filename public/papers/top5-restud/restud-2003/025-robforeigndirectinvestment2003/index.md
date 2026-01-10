@@ -1,0 +1,15 @@
+# Foreign Direct Investment and Exports With Growing Demand
+
+
+## Abstract 
+We explore entry into a foreign market with uncertain demand growth. A multinational can serve the foreign demand by two modes, or by a combination thereof: it can export its products, or it can create productive capacity via foreign direct investment (FDI). The advantage of FDI is that it allows for lower marginal cost than exporting does. The disadvantage is that FDI is irreversible and, hence, entails the risk of creating under-utilized capacity in the case that the market turns out to be small. The presence of demand uncertainty and irreversibility gives rise to an interior solution, where the multinational, under certain conditions, both exports its products and does FDI.
+
+
+Tags: ["Firms", "Trade", "ToRead"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-restud/restud-2003/025-robforeigndirectinvestment2003/  
+

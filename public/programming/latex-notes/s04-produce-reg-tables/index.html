@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Snippets: Producing Regression Tables - My economics study notes</title><meta name="author" content="Econ Notes">
+<meta name="description" content="1. A one-panel regression table1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 \begin{tabular}{lcccc} \toprule \toprule &amp; \multicolumn{2}{c}{Full} &amp; Urban &amp; Rural \\ \cmidrule(lr){2-3} \cmidrule(lr){4-5} &amp; (1) &amp; (2) &amp; (3) &amp; (4) \\ &amp; \multicolumn{1}{c}{Work} &amp; \multicolumn{1}{c}{Retired} &amp; \multicolumn{1}{c}{Work} &amp; \multicolumn{1}{c}{Retired} \\ \midrule Mother&#39;s exposure to LLF &amp; -0.476*** &amp; -0.447** &amp; -0.445* &amp; -0.582*** \\ &amp; (0.162) &amp; (0.166) &amp; (0.247) &amp; (0.182) \\ Father&#39;s exposure to LLF &amp; &amp; -0.228 &amp; &amp; \\ &amp; &amp; (0.162) &amp; &amp; \\ \midrule Control &amp; Y &amp; Y &amp; Y &amp; Y \\ Age and Province FE &amp; Y &amp; Y &amp; Y &amp; Y \\ Province FE $\times$ Cohort Trend &amp; Y &amp; Y &amp; Y &amp; Y \\ Sample mean &amp; 3.296 &amp; 3.296 &amp; 2.962 &amp; 3.497 \\ Observations &amp; 15,301 &amp; 15,301 &amp; 5,760 &amp; 9,539 \\ \bottomrule \bottomrule \end{tabular} There are several principles I should follow:
+">
+  <meta itemprop="name" content="Snippets: Producing regression tables">
+  <meta itemprop="description" content="1. A one-panel regression table1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 \begin{tabular}{lcccc} \toprule \toprule &amp; \multicolumn{2}{c}{Full} &amp; Urban &amp; Rural \\ \cmidrule(lr){2-3} \cmidrule(lr){4-5} &amp; (1) &amp; (2) &amp; (3) &amp; (4) \\ &amp; \multicolumn{1}{c}{Work} &amp; \multicolumn{1}{c}{Retired} &amp; \multicolumn{1}{c}{Work} &amp; \multicolumn{1}{c}{Retired} \\ \midrule Mother&#39;s exposure to LLF &amp; -0.476*** &amp; -0.447** &amp; -0.445* &amp; -0.582*** \\ &amp; (0.162) &amp; (0.166) &amp; (0.247) &amp; (0.182) \\ Father&#39;s exposure to LLF &amp; &amp; -0.228 &amp; &amp; \\ &amp; &amp; (0.162) &amp; &amp; \\ \midrule Control &amp; Y &amp; Y &amp; Y &amp; Y \\ Age and Province FE &amp; Y &amp; Y &amp; Y &amp; Y \\ Province FE $\times$ Cohort Trend &amp; Y &amp; Y &amp; Y &amp; Y \\ Sample mean &amp; 3.296 &amp; 3.296 &amp; 2.962 &amp; 3.497 \\ Observations &amp; 15,301 &amp; 15,301 &amp; 5,760 &amp; 9,539 \\ \bottomrule \bottomrule \end{tabular} There are several principles I should follow:">
+  <meta itemprop="datePublished" content="2025-12-18T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-12-18T00:00:00+00:00">
+  <meta itemprop="wordCount" content="612"><meta property="og:url" content="http://localhost:1313/programming/latex-notes/s04-produce-reg-tables/">
+  <meta property="og:site_name" content="My economics study notes">
+  <meta property="og:title" content="Snippets: Producing regression tables">
+  <meta property="og:description" content="1. A one-panel regression table1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 \begin{tabular}{lcccc} \toprule \toprule &amp; \multicolumn{2}{c}{Full} &amp; Urban &amp; Rural \\ \cmidrule(lr){2-3} \cmidrule(lr){4-5} &amp; (1) &amp; (2) &amp; (3) &amp; (4) \\ &amp; \multicolumn{1}{c}{Work} &amp; \multicolumn{1}{c}{Retired} &amp; \multicolumn{1}{c}{Work} &amp; \multicolumn{1}{c}{Retired} \\ \midrule Mother&#39;s exposure to LLF &amp; -0.476*** &amp; -0.447** &amp; -0.445* &amp; -0.582*** \\ &amp; (0.162) &amp; (0.166) &amp; (0.247) &amp; (0.182) \\ Father&#39;s exposure to LLF &amp; &amp; -0.228 &amp; &amp; \\ &amp; &amp; (0.162) &amp; &amp; \\ \midrule Control &amp; Y &amp; Y &amp; Y &amp; Y \\ Age and Province FE &amp; Y &amp; Y &amp; Y &amp; Y \\ Province FE $\times$ Cohort Trend &amp; Y &amp; Y &amp; Y &amp; Y \\ Sample mean &amp; 3.296 &amp; 3.296 &amp; 2.962 &amp; 3.497 \\ Observations &amp; 15,301 &amp; 15,301 &amp; 5,760 &amp; 9,539 \\ \bottomrule \bottomrule \end{tabular} There are several principles I should follow:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="programming">
+    <meta property="article:published_time" content="2025-12-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-18T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Snippets: Producing regression tables">
+  <meta name="twitter:description" content="1. A one-panel regression table1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 \begin{tabular}{lcccc} \toprule \toprule &amp; \multicolumn{2}{c}{Full} &amp; Urban &amp; Rural \\ \cmidrule(lr){2-3} \cmidrule(lr){4-5} &amp; (1) &amp; (2) &amp; (3) &amp; (4) \\ &amp; \multicolumn{1}{c}{Work} &amp; \multicolumn{1}{c}{Retired} &amp; \multicolumn{1}{c}{Work} &amp; \multicolumn{1}{c}{Retired} \\ \midrule Mother&#39;s exposure to LLF &amp; -0.476*** &amp; -0.447** &amp; -0.445* &amp; -0.582*** \\ &amp; (0.162) &amp; (0.166) &amp; (0.247) &amp; (0.182) \\ Father&#39;s exposure to LLF &amp; &amp; -0.228 &amp; &amp; \\ &amp; &amp; (0.162) &amp; &amp; \\ \midrule Control &amp; Y &amp; Y &amp; Y &amp; Y \\ Age and Province FE &amp; Y &amp; Y &amp; Y &amp; Y \\ Province FE $\times$ Cohort Trend &amp; Y &amp; Y &amp; Y &amp; Y \\ Sample mean &amp; 3.296 &amp; 3.296 &amp; 2.962 &amp; 3.497 \\ Observations &amp; 15,301 &amp; 15,301 &amp; 5,760 &amp; 9,539 \\ \bottomrule \bottomrule \end{tabular} There are several principles I should follow:">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/programming/latex-notes/s04-produce-reg-tables/" title="Snippets: Producing regression tables - My economics study notes" /><link rel="prev" type="text/html" href="http://localhost:1313/programming/latex-notes/s05-highlight-reg-tables/" title="Snippets: Highlighting a part of regression tables" /><link rel="next" type="text/html" href="http://localhost:1313/programming/general-notes/v04-delete-zcoderunnerfile-files/" title="VSCode task: Deleting zCodeRunnerFile files" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/programming/latex-notes/s04-produce-reg-tables/index.md" title="Snippets: Producing regression tables - My economics study notes"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Snippets: Producing regression tables",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/programming\/latex-notes\/s04-produce-reg-tables\/"
+    },"genre": "posts","wordcount":  612 ,
+    "url": "http:\/\/localhost:1313\/programming\/latex-notes\/s04-produce-reg-tables\/","datePublished": "2025-12-18T00:00:00+00:00","dateModified": "2025-12-18T00:00:00+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Econ Notes"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-instant-intensity="viewport" data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="My economics study notes"><span class="header-title-text">My economics study notes</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item has-children">
+              <a class="menu-link" href="/programming/" title="Programming">Programming</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/programming/general-notes" title="General">General</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/latex-notes" title="LaTex">LaTex</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/stata-notes" title="Stata">Stata</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/python-notes" title="Python">Python</a>
+                      </li></ul></li><li class="menu-item">
+              <a class="menu-link" href="/papers/">Papers</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/">Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="Search titles or contents ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" role="button" aria-label="Switch Theme" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="My economics study notes"><span class="header-title-text">My economics study notes</span></a><span class="header-subtitle"></span></div>
+      <div class="theme-switch" role="button" aria-label="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></div>
+      <div class="menu-toggle" id="menu-toggle-mobile" role="button" aria-labelledby="menu-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="Search titles or contents ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              Cancel
+            </a>
+          </li><li class="menu-item"><span class="nested-item">
+                  <a class="menu-link" href="/programming/" title="Programming">Programming</a>
+                  <i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </span>
+                <ul class="sub-menu"><li class="menu-item">
+                        <a class="menu-link" href="/programming/general-notes" title="General">General</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/latex-notes" title="LaTex">LaTex</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/stata-notes" title="Stata">Stata</a>
+                      </li><li class="menu-item">
+                        <a class="menu-link" href="/programming/python-notes" title="Python">Python</a>
+                      </li></ul></li><li class="menu-item"><a class="menu-link" href="/papers/">Papers</a></li><li class="menu-item"><a class="menu-link" href="/tags/">Tags</a></li><li class="menu-item menu-system"></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Snippets: Producing Regression Tables</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img class="avatar" src='/images/avatar.jpg' srcset="/images/avatar_hu_5b898b8be61ed39c.webp 16w, /images/avatar_hu_ca195cd6a158f98b.webp 24w, /images/avatar_hu_7e7bf4d51c461d26.webp 32w" alt="Econ Notes" height="16" width="16">&nbsp;Econ Notes</span></span></div><div class="post-meta-line"><span title="published on 2025-12-18 00:00:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-12-18">2025-12-18</time></span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#a-one-panel-regression-table">A one-panel regression table</a></li>
+    <li><a href="#insert-the-regression-table">Insert the regression table</a></li>
+    <li><a href="#a-two-panel-regression-table">A two-panel regression table</a></li>
+    <li><a href="#more-customization-on-the-table">More customization on the table</a></li>
+  </ol>
+</nav></div>
+      </div><div class="content" id="content"><h2 class="heading-element" id="a-one-panel-regression-table"><span>1. A one-panel regression table</span>
+  <a href="#a-one-panel-regression-table" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><div class="code-block highlight" data-mode="classic" data-copyable="true" name="result.tex"><div class="chroma">
+<div class="code-header language-latex"><span class="code-title" data-name="result.tex"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="2" style="--fi-max-shown-lines:100;--fi-line-digit:2;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12">12</a>
+</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13">13</a>
+</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14">14</a>
+</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15">15</a>
+</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16">16</a>
+</span><span class="lnt" id="hl-0-17"><a class="lnlinks" href="#hl-0-17">17</a>
+</span><span class="lnt" id="hl-0-18"><a class="lnlinks" href="#hl-0-18">18</a>
+</span><span class="lnt" id="hl-0-19"><a class="lnlinks" href="#hl-0-19">19</a>
+</span><span class="lnt" id="hl-0-20"><a class="lnlinks" href="#hl-0-20">20</a>
+</span><span class="lnt" id="hl-0-21"><a class="lnlinks" href="#hl-0-21">21</a>
+</span><span class="lnt" id="hl-0-22"><a class="lnlinks" href="#hl-0-22">22</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>lcccc<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\toprule</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\toprule</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>2<span class="nb">}{</span>c<span class="nb">}{</span>Full<span class="nb">}</span>                            <span class="nb">&amp;</span> Urban                    <span class="nb">&amp;</span> Rural       <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\cmidrule</span>(lr)<span class="nb">{</span>2-3<span class="nb">}</span> <span class="k">\cmidrule</span>(lr)<span class="nb">{</span>4-5<span class="nb">}</span>            
+</span></span><span class="line"><span class="cl">    <span class="nb">&amp;</span> (1)                      <span class="nb">&amp;</span> (2)                      <span class="nb">&amp;</span> (3)                      <span class="nb">&amp;</span> (4)         <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>c<span class="nb">}{</span>Work<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>c<span class="nb">}{</span>Retired<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>c<span class="nb">}{</span>Work<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>c<span class="nb">}{</span>Retired<span class="nb">}</span> <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\midrule</span>
+</span></span><span class="line"><span class="cl">    Mother&#39;s exposure to LLF   <span class="nb">&amp;</span> -0.476***                <span class="nb">&amp;</span> -0.447** <span class="nb">&amp;</span> -0.445* <span class="nb">&amp;</span> -0.582***   <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">&amp;</span> (0.162)                  <span class="nb">&amp;</span> (0.166)  <span class="nb">&amp;</span> (0.247) <span class="nb">&amp;</span> (0.182)     <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    Father&#39;s exposure to LLF   <span class="nb">&amp;</span>                          <span class="nb">&amp;</span> -0.228   <span class="nb">&amp;</span>         <span class="nb">&amp;</span>             <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">&amp;</span>                          <span class="nb">&amp;</span> (0.162)  <span class="nb">&amp;</span>         <span class="nb">&amp;</span>             <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\midrule</span>
+</span></span><span class="line"><span class="cl">    Control                    <span class="nb">&amp;</span> Y                        <span class="nb">&amp;</span> Y        <span class="nb">&amp;</span> Y       <span class="nb">&amp;</span> Y           <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    Age and Province FE        <span class="nb">&amp;</span> Y                        <span class="nb">&amp;</span> Y        <span class="nb">&amp;</span> Y       <span class="nb">&amp;</span> Y           <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    Province FE <span class="s">$</span><span class="nv">\times</span><span class="s">$</span> Cohort Trend <span class="nb">&amp;</span> Y                        <span class="nb">&amp;</span> Y        <span class="nb">&amp;</span> Y       <span class="nb">&amp;</span> Y           <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    Sample mean                <span class="nb">&amp;</span> 3.296                    <span class="nb">&amp;</span> 3.296    <span class="nb">&amp;</span> 2.962   <span class="nb">&amp;</span> 3.497       <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    Observations               <span class="nb">&amp;</span> 15,301                   <span class="nb">&amp;</span> 15,301   <span class="nb">&amp;</span> 5,760   <span class="nb">&amp;</span> 9,539       <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\bottomrule</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\bottomrule</span>
+</span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>There are several principles I should follow:</p>
+<ul>
+<li>About the sequence of the table titles:
+<ul>
+<li>Classification information, like sample specification.</li>
+<li>Column numbers.</li>
+<li>Variable names. If the variable is too long, use the following command to split it into two rows: <code>\shortstack{Long \\ name}</code></li>
+</ul>
+</li>
+<li>The insertion of horizontal lines:
+<ul>
+<li>At the beginning of the table, use two <code>\toprule</code>.</li>
+<li>At the end of the table, use two <code>\bottomrule</code>.</li>
+<li>At all other parts of the table (especially when separating main coefficients and regression information, or when separating different panels), use <code>\midrule</code>.</li>
+<li>When adding horizontal lines with breaks between certain columns, use commands <code>\cmidrule(lr){2-3} \cmidrule(lr){4-5}</code>.</li>
+<li>Generally, <code>\hline</code> is bad for handling space.</li>
+<li>There is no need to add <code>\\</code> (line separation marks) after these horizontal lines.</li>
+</ul>
+</li>
+<li>Control vertical space between lines:
+<ul>
+<li>To control the space between current line and the previous line, use <code>\addlinespace[5pt]</code> command at the beginning of current line.</li>
+<li>To control the space between current line and the next line, use <code>[5pt]</code> after the <code>\\</code> symbol.</li>
+<li>There is no need to add <code>\\</code> (line separation marks) after specifying the vertical space.</li>
+</ul>
+</li>
+</ul>
+<h2 class="heading-element" id="insert-the-regression-table"><span>2. Insert the regression table</span>
+  <a href="#insert-the-regression-table" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Generally, there are two ways to achieve this:</p>
+<ul>
+<li>The first is to use the <code>threeparttable</code> environment.</li>
+<li>The second is to use <code>minipage</code> environment, and specify its width such that it aligns with the table width.</li>
+<li>Importantly, when using Stata-generated LaTex codes for regression tables, I should check the following two issues.
+<ul>
+<li>Make sure it only contains the <code>tabular</code> environment.</li>
+<li>Make sure it has defined the <code>sym</code> command for significance stars <code>\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}</code>.</li>
+</ul>
+</li>
+</ul>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-latex"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="2" style="--fi-max-shown-lines:100;--fi-line-digit:2;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1"> 1</a>
+</span><span class="lnt" id="hl-1-2"><a class="lnlinks" href="#hl-1-2"> 2</a>
+</span><span class="lnt" id="hl-1-3"><a class="lnlinks" href="#hl-1-3"> 3</a>
+</span><span class="lnt" id="hl-1-4"><a class="lnlinks" href="#hl-1-4"> 4</a>
+</span><span class="lnt" id="hl-1-5"><a class="lnlinks" href="#hl-1-5"> 5</a>
+</span><span class="lnt" id="hl-1-6"><a class="lnlinks" href="#hl-1-6"> 6</a>
+</span><span class="lnt" id="hl-1-7"><a class="lnlinks" href="#hl-1-7"> 7</a>
+</span><span class="lnt" id="hl-1-8"><a class="lnlinks" href="#hl-1-8"> 8</a>
+</span><span class="lnt" id="hl-1-9"><a class="lnlinks" href="#hl-1-9"> 9</a>
+</span><span class="lnt" id="hl-1-10"><a class="lnlinks" href="#hl-1-10">10</a>
+</span><span class="lnt" id="hl-1-11"><a class="lnlinks" href="#hl-1-11">11</a>
+</span><span class="lnt" id="hl-1-12"><a class="lnlinks" href="#hl-1-12">12</a>
+</span><span class="lnt" id="hl-1-13"><a class="lnlinks" href="#hl-1-13">13</a>
+</span><span class="lnt" id="hl-1-14"><a class="lnlinks" href="#hl-1-14">14</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[H]
+</span></span><span class="line"><span class="cl">    <span class="k">\centering</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\caption</span><span class="nb">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\resizebox</span><span class="nb">{</span>0.7<span class="k">\textwidth</span><span class="nb">}{</span>!<span class="nb">}{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>threeparttable<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">\input</span><span class="nb">{</span>results.tex<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">\begin</span><span class="nb">{</span>tablenotes<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">\footnotesize</span>
+</span></span><span class="line"><span class="cl">            <span class="k">\item</span> Notes. 
+</span></span><span class="line"><span class="cl">        <span class="k">\end</span><span class="nb">{</span>tablenotes<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\end</span><span class="nb">{</span>threeparttable<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\label</span><span class="nb">{</span>results<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-latex"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="2" style="--fi-max-shown-lines:100;--fi-line-digit:2;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-1"><a class="lnlinks" href="#hl-2-1"> 1</a>
+</span><span class="lnt" id="hl-2-2"><a class="lnlinks" href="#hl-2-2"> 2</a>
+</span><span class="lnt" id="hl-2-3"><a class="lnlinks" href="#hl-2-3"> 3</a>
+</span><span class="lnt" id="hl-2-4"><a class="lnlinks" href="#hl-2-4"> 4</a>
+</span><span class="lnt" id="hl-2-5"><a class="lnlinks" href="#hl-2-5"> 5</a>
+</span><span class="lnt" id="hl-2-6"><a class="lnlinks" href="#hl-2-6"> 6</a>
+</span><span class="lnt" id="hl-2-7"><a class="lnlinks" href="#hl-2-7"> 7</a>
+</span><span class="lnt" id="hl-2-8"><a class="lnlinks" href="#hl-2-8"> 8</a>
+</span><span class="lnt" id="hl-2-9"><a class="lnlinks" href="#hl-2-9"> 9</a>
+</span><span class="lnt" id="hl-2-10"><a class="lnlinks" href="#hl-2-10">10</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[H]
+</span></span><span class="line"><span class="cl">    <span class="k">\centering</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\caption</span><span class="nb">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\resizebox</span><span class="nb">{</span>0.7<span class="k">\textwidth</span><span class="nb">}{</span>!<span class="nb">}{</span><span class="k">\input</span><span class="nb">{</span>results.tex<span class="nb">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\label</span><span class="nb">{</span>results<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\begin</span><span class="nb">{</span>minipage<span class="nb">}{</span>0.7<span class="k">\textwidth</span><span class="nb">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">\vspace</span><span class="nb">{</span>5pt<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">{</span><span class="k">\footnotesize</span> Notes.<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\end</span><span class="nb">{</span>minipage<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><h2 class="heading-element" id="a-two-panel-regression-table"><span>3. A two-panel regression table</span>
+  <a href="#a-two-panel-regression-table" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>At the very start of each panel, use the following command to add a panel title.</p>
+<ul>
+<li>It is left-aligned.</li>
+<li>It is bold.</li>
+</ul>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-latex"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="1" style="--fi-max-shown-lines:100;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-1"><a class="lnlinks" href="#hl-3-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\addlinespace</span><span class="na">[5pt]</span> <span class="k">\multicolumn</span><span class="nb">{</span>5<span class="nb">}{</span>l<span class="nb">}{{</span><span class="k">\bf</span> Panel (a): Extensive margin<span class="nb">}}</span> <span class="k">\\</span> [5pt]</span></span></code></pre></td></tr></table></div>
+</div>
+</div><h2 class="heading-element" id="more-customization-on-the-table"><span>4. More customization on the table</span>
+  <a href="#more-customization-on-the-table" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Suppose we want to manually adjust the space between two columns for a table. This usually happens because the table has too few columns. We can do adjustments when specifying the <code>tabular</code> environment. See the attached table as an example.</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-latex"><span class="code-title"><i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"></i></span><span class="copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard"><i class="fa-regular fa-clone fa-fw" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="100" data-line-digit="2" style="--fi-max-shown-lines:100;--fi-line-digit:2;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-4-1"><a class="lnlinks" href="#hl-4-1"> 1</a>
+</span><span class="lnt" id="hl-4-2"><a class="lnlinks" href="#hl-4-2"> 2</a>
+</span><span class="lnt" id="hl-4-3"><a class="lnlinks" href="#hl-4-3"> 3</a>
+</span><span class="lnt" id="hl-4-4"><a class="lnlinks" href="#hl-4-4"> 4</a>
+</span><span class="lnt" id="hl-4-5"><a class="lnlinks" href="#hl-4-5"> 5</a>
+</span><span class="lnt" id="hl-4-6"><a class="lnlinks" href="#hl-4-6"> 6</a>
+</span><span class="lnt" id="hl-4-7"><a class="lnlinks" href="#hl-4-7"> 7</a>
+</span><span class="lnt" id="hl-4-8"><a class="lnlinks" href="#hl-4-8"> 8</a>
+</span><span class="lnt" id="hl-4-9"><a class="lnlinks" href="#hl-4-9"> 9</a>
+</span><span class="lnt" id="hl-4-10"><a class="lnlinks" href="#hl-4-10">10</a>
+</span><span class="lnt" id="hl-4-11"><a class="lnlinks" href="#hl-4-11">11</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>l@<span class="nb">{</span><span class="k">\hskip</span> 1.5in<span class="nb">}</span>l@<span class="nb">{</span><span class="k">\hskip</span> 1.5in<span class="nb">}</span>l<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\toprule\toprule</span>
+</span></span><span class="line"><span class="cl">    <span class="s">$</span><span class="nv">\E\bs</span><span class="nb">{Y_{it}}</span><span class="s">$</span> <span class="nb">&amp;</span> <span class="s">$</span><span class="nb">i</span><span class="o">=</span><span class="nb">A</span><span class="s">$</span> <span class="nb">&amp;</span> <span class="s">$</span><span class="nb">i</span><span class="o">=</span><span class="nb">B</span><span class="s">$</span> <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\midrule</span>
+</span></span><span class="line"><span class="cl">    <span class="s">$</span><span class="nb">t</span><span class="o">=</span><span class="m">1</span><span class="s">$</span> <span class="nb">&amp;</span> <span class="s">$</span><span class="nv">\a</span><span class="nb">_A</span><span class="s">$</span> <span class="nb">&amp;</span> <span class="s">$</span><span class="nv">\a</span><span class="nb">_B</span><span class="s">$</span> <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    <span class="s">$</span><span class="nb">t</span><span class="o">=</span><span class="m">2</span><span class="s">$</span> <span class="nb">&amp;</span> <span class="s">$</span><span class="nv">\a</span><span class="nb">_A </span><span class="o">+</span><span class="nb"> </span><span class="nv">\b</span><span class="nb">_</span><span class="m">2</span><span class="nb"> </span><span class="o">+</span><span class="nb"> </span><span class="nv">\tau</span><span class="nb">_{A</span><span class="m">2</span><span class="nb">}</span><span class="s">$</span> <span class="nb">&amp;</span> <span class="s">$</span><span class="nv">\a</span><span class="nb">_B </span><span class="o">+</span><span class="nb"> </span><span class="nv">\b</span><span class="nb">_</span><span class="m">2</span><span class="s">$</span> <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    <span class="s">$</span><span class="nb">t</span><span class="o">=</span><span class="m">3</span><span class="s">$</span> <span class="nb">&amp;</span> <span class="s">$</span><span class="nv">\a</span><span class="nb">_A </span><span class="o">+</span><span class="nb"> </span><span class="nv">\b</span><span class="nb">_</span><span class="m">3</span><span class="nb"> </span><span class="o">+</span><span class="nb"> </span><span class="nv">\tau</span><span class="nb">_{A</span><span class="m">3</span><span class="nb">}</span><span class="s">$</span> <span class="nb">&amp;</span> <span class="s">$</span><span class="nv">\a</span><span class="nb">_B </span><span class="o">+</span><span class="nb"> </span><span class="nv">\b</span><span class="nb">_</span><span class="m">3</span><span class="nb"> </span><span class="o">+</span><span class="nb"> </span><span class="nv">\tau</span><span class="nb">_{B</span><span class="m">3</span><span class="nb">}</span><span class="s">$</span> <span class="k">\\</span>
+</span></span><span class="line"><span class="cl">    <span class="k">\midrule</span> 
+</span></span><span class="line"><span class="cl">    Event time <span class="nb">&amp;</span> <span class="s">$</span><span class="nb">E_A </span><span class="o">=</span><span class="nb"> </span><span class="m">2</span><span class="s">$</span> <span class="nb">&amp;</span> <span class="s">$</span><span class="nb">E_B </span><span class="o">=</span><span class="nb"> </span><span class="m">3</span><span class="s">$</span> <span class="k">\\</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">\bottomrule\bottomrule</span>
+</span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod"><span title="Updated on 2025-12-18 00:00:00">Updated on 2025-12-18&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/programming/latex-notes/s04-produce-reg-tables/index.md" title="Read Markdown" class="link-to-markdown">Read Markdown</a></span></div>
+        <div class="post-info-share">
+          <span></span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"></section>
+    <section><span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div><div class="post-nav"></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside><dialog id="toc-dialog" aria-labelledby="toc-dialog-title" role="dialog">
+      <div class="toc">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content" id="toc-content-drawer"><nav >
+  <ol>
+    <li><a href="#a-one-panel-regression-table">A one-panel regression table</a></li>
+    <li><a href="#insert-the-regression-table">Insert the regression table</a></li>
+    <li><a href="#a-two-panel-regression-table">A two-panel regression table</a></li>
+    <li><a href="#more-customization-on-the-table">More customization on the table</a></li>
+  </ol>
+</nav></div>
+      </div>
+    </dialog></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.153.0">Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.1">FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2026</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">Econ Notes</a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons"><div class="fixed-button back-to-top animate__faster d-none" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i></div><div id="toc-drawer-button" class="fixed-button toc-drawer-button d-none" role="button" aria-label="Contents"><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">This website works best with JavaScript enabled.</div>
+  </noscript>
+</div><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/js/config/f577f5032073aebeab539e5386209578.js" defer></script><script src="/js/theme.min.js" defer></script></body>
+</html>
