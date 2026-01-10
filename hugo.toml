@@ -3,6 +3,9 @@ title = "My economics study notes"
 theme = ["FixIt"]
 languageCode = 'en-us'
 
+[params]
+  favicon = "my-favicon.jpg"
+
 [params.author]
 name = "Econ Notes"
 email = "econ.learning.resources@gmail.com"
