@@ -1,0 +1,11 @@
+---
+title: "Does Poaching Distort Training?"
+date: 2004-11-16
+tags: ["Labor Search", "ToRead"]
+---
+
+## Abstract 
+We analyse the efficiency of the labour market outcome in a competitive search equilibrium model with endogenous turnover and endogenous general human capital formation. We show that search frictions do not distort training decisions if firms and their employees are able to coordinate efficiently, for instance, by using long-term contracts. In the absence of efficient coordination devices there is too much turnover and too little investment in general training. Nonetheless, the number of training firms and the amount of training provided are constrained optimal, and training subsidies therefore reduce welfare.
+
+
+Tags: ["Labor Search", "ToRead"]

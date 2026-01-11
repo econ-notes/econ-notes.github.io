@@ -8,8 +8,15 @@
     <language>en-us</language>
     <managingEditor>econ.learning.resources@gmail.com (Econ Notes)</managingEditor>
     <webMaster>econ.learning.resources@gmail.com (Econ Notes)</webMaster>
-    <lastBuildDate>Tue, 02 Dec 2003 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Dec 2004 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/commitment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimal Lending Contracts and Firm Dynamics</title>
+      <link>http://localhost:1313/papers/top5-restud/restud-2004/013-albuquerqueoptimallendingcontracts2004/</link>
+      <pubDate>Sat, 18 Dec 2004 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-restud/restud-2004/013-albuquerqueoptimallendingcontracts2004/</guid>
+      <description>&lt;h2 class=&#34;heading-element&#34; id=&#34;abstract&#34;&gt;&lt;span&gt;1. Abstract&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#abstract&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;We develop a general model of lending in the presence of endogenous borrowing constraints. Borrowing constraints arise because borrowers face limited liability and debt repayment cannot be perfectly enforced. In the model, the dynamics of debt are closely linked with the dynamics of borrowing constraints. In fact, borrowing constraints must satisfy a dynamic consistency requirement: the value of outstanding debt restricts current access to short-term capital, but is itself determined by future access to credit. This dynamic consistency is not guaranteed in models of exogenous borrowing constraints, where the ability to raise short-term capital is limited by some prespecified function of debt. We characterize the optimal default-free contract &amp;ndash; which minimizes borrowing constraints at all histories &amp;ndash; and derive implications for firm growth, survival, leverage and debt maturity. The model is qualitatively consistent with stylized facts on the growth and survival of firms. Comparative statics with respect to technology and default constraints are derived.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Expectation Traps and Monetary Policy</title>
       <link>http://localhost:1313/papers/top5-restud/restud-2003/029-albanesiexpectationtrapsmonetary2003/</link>

@@ -1,0 +1,11 @@
+---
+title: "From Physical to Human Capital Accumulation: Inequality and the Process of Development"
+date: 2004-11-21
+tags: ["Growth", "Inequality", "ToRead"]
+---
+
+## Abstract 
+This paper develops a growth theory that captures the replacement of physical capital accumulation by human capital accumulation as a prime engine of growth along the process of development. It argues that the positive impact of inequality on the growth process was reversed in this process. In early stages of the Industrial Revolution, when physical capital accumulation was the prime source of growth, inequality stimulated development by channelling resources towards individuals with a higher propensity to save. As human capital emerged as a growth engine, equality alleviated adverse effects of credit constraints on human capital accumulation, stimulating the growth process.
+
+
+Tags: ["Growth", "Inequality", "ToRead"]

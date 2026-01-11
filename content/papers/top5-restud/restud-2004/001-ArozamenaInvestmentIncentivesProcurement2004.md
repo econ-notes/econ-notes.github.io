@@ -1,0 +1,11 @@
+---
+title: "Investment Incentives in Procurement Auctions"
+date: 2004-12-30
+tags: ["Auctions", "Investment"]
+---
+
+## Abstract 
+This paper investigates firms' incentives to invest in cost reduction in the first price sealed bid auction, a format largely used for procurement. Two central features of the model are that we allow firms to be heterogeneous and that investment is observable. We find that firms will tend to underinvest in cost reduction because they anticipate fiercer head-on competition. Using the second price auction as a benchmark, we also find that the first price auction will elicit less investment from market participants and that this is socially inefficient. These results have implications for market design when investment is important.
+
+
+Tags: ["Auctions", "Investment"]

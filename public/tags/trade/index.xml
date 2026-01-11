@@ -8,8 +8,15 @@
     <language>en-us</language>
     <managingEditor>econ.learning.resources@gmail.com (Econ Notes)</managingEditor>
     <webMaster>econ.learning.resources@gmail.com (Econ Notes)</webMaster>
-    <lastBuildDate>Tue, 23 Dec 2003 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Nov 2004 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/trade/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Balance Sheet Effects, Bailout Guarantees and Financial Crises</title>
+      <link>http://localhost:1313/papers/top5-restud/restud-2004/036-schneiderbalancesheeteffects2004/</link>
+      <pubDate>Thu, 25 Nov 2004 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-restud/restud-2004/036-schneiderbalancesheeteffects2004/</guid>
+      <description>&lt;h2 class=&#34;heading-element&#34; id=&#34;abstract&#34;&gt;&lt;span&gt;1. Abstract&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#abstract&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;This paper provides a model of boom-bust episodes in middle-income countries. It is based on sectoral differences in corporate finance: the nontradables sector is special in that it faces a contract enforceability problem and enjoys bailout guarantees. As a result, currency mismatch and borrowing constraints arise endogenously in that sector. This sectoral asymmetry allows the model to replicate the main features of observed boom-bust episodes. In particular, episodes begin with a lending boom and a real appreciation, peak in a self-fulfilling crisis during which a real depreciation coincides with widespread bankruptcies, and end in a recession and credit crunch. The nontradables sector accounts for most of the volatility in output and credit.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Patterns of Skill Premia</title>
       <link>http://localhost:1313/papers/top5-restud/restud-2003/008-acemoglupatternsskillpremia2003/</link>

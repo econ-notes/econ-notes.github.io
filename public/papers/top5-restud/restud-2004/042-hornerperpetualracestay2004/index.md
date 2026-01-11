@@ -1,0 +1,15 @@
+# A Perpetual Race to Stay Ahead
+
+
+## Abstract 
+This paper presents a model of dynamic competition between two firms that repeatedly engage in an innovative activity. The state of competition—measured by the difference between the number of innovations introduced by the firms—evolves stochastically according to their effort level. The structure of Markov perfect equilibria is identified. It is generally not true that competition is fiercest when firms are closest. Rather, firms invest under two distinct circumstances: while sufficiently ahead, to outstrip their rival and secure a durable leadership; while behind, to regain leadership and prevent the situation from worsening to the point where their rival outstrips them.
+
+
+Tags: ["Theory IO", "Innovation", "ToRead"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-restud/restud-2004/042-hornerperpetualracestay2004/  
+
