@@ -98,6 +98,8 @@ At the very start of each panel, use the following command to add a panel title.
 
 ## More customization on the table
 
+### Adding space between two columns
+
 Suppose we want to manually adjust the space between two columns for a table. This usually happens because the table has too few columns. We can do adjustments when specifying the `tabular` environment. See the attached table as an example.
 
 ```latex
@@ -111,5 +113,29 @@ Suppose we want to manually adjust the space between two columns for a table. Th
     \midrule 
     Event time & $E_A = 2$ & $E_B = 3$ \\ 
     \bottomrule\bottomrule
+\end{tabular}
+```
+
+### Adding a forced line break inside a table cell.
+
+Suppose there is some text in a table and we want to add a forced line break within a cell. Then the `makecell` package can be used.
+
+We can also specify the alignment settings in globally as follows. The first letter can be `t`, `b`, or `c` for vertical alignment, and the second letter can be `r`, `l`, or `c` for horizontal alignment.
+
+```latex
+\usepackage{makecell}
+\renewcommand{\cellalign}{cl}
+```
+
+Also, we can specify the alignment for a specific cell: `\makecell[l]{LongLine1 \\ LongLine2}`.
+```latex
+\begin{tabular}{lll}
+    \toprule
+    \toprule
+    Col1 & Col2 & Col3 \\
+    \midrule
+    Short1 & Short2 & \makecell[l]{LongLine1 \\ LongLine2} \\
+    \bottomrule
+    \bottomrule
 \end{tabular}
 ```

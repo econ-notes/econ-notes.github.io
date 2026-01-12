@@ -229,8 +229,392 @@
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
   </url>
   <url>
+    <loc>http://localhost:1313/programming/stata-notes/d01-frames/</loc>
+    <lastmod>2025-11-30T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/did/</loc>
+    <lastmod>2005-12-30T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/001-abadiesemiparametricdifferenceindifferencesestimators2005/</loc>
+    <lastmod>2005-12-30T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2005-12-30T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/toread/</loc>
+    <lastmod>2005-12-30T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/consumption/</loc>
+    <lastmod>2005-12-29T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/olg/</loc>
+    <lastmod>2005-12-29T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/002-abeloptimaltaxationwhen2005/</loc>
+    <lastmod>2005-12-29T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/tax/</loc>
+    <lastmod>2005-12-29T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/innovation/</loc>
+    <lastmod>2005-12-28T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/003-bellettinispecialintereststechnological2005/</loc>
+    <lastmod>2005-12-28T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/technology/</loc>
+    <lastmod>2005-12-28T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/004-dagsvikcompensatingvariationhicksian2005/</loc>
+    <lastmod>2005-12-27T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/discrete-choice-models/</loc>
+    <lastmod>2005-12-27T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/labor/</loc>
+    <lastmod>2005-12-26T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/005-dustmannwagesexperienceseniority2005/</loc>
+    <lastmod>2005-12-26T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/006-greenwoodenginesliberation2005/</loc>
+    <lastmod>2005-12-25T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/gender/</loc>
+    <lastmod>2005-12-25T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/households/</loc>
+    <lastmod>2005-12-25T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/007-grossmanoutsourcingglobaleconomy2005/</loc>
+    <lastmod>2005-12-24T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/trade/</loc>
+    <lastmod>2005-12-24T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/credit-imperfections/</loc>
+    <lastmod>2005-12-23T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/008-heathcotefiscalpolicyheterogeneous2005/</loc>
+    <lastmod>2005-12-23T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/reduced-form/</loc>
+    <lastmod>2005-12-22T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/009-lleras-muneyrelationshipeducationadult2005/</loc>
+    <lastmod>2005-12-22T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/monetary-policies/</loc>
+    <lastmod>2005-12-21T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/010-nakajimamoneypricesuncertainty2005/</loc>
+    <lastmod>2005-12-21T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/prices/</loc>
+    <lastmod>2005-12-21T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/011-turnermeetingscostlyparticipation2005/</loc>
+    <lastmod>2005-12-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/political-econ/</loc>
+    <lastmod>2005-12-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/regulation/</loc>
+    <lastmod>2005-12-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/environmental-econ/</loc>
+    <lastmod>2005-12-19T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/012-yuenvironmentalprotectiontheory2005/</loc>
+    <lastmod>2005-12-19T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/behavioral-econ/</loc>
+    <lastmod>2005-12-18T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/fin/</loc>
+    <lastmod>2005-12-18T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/013-biaisjudgementaloverconfidenceselfmonitoring2005/</loc>
+    <lastmod>2005-12-18T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/business-cycles/</loc>
+    <lastmod>2005-12-17T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/014-caballerocostrecessionsrevisited2005/</loc>
+    <lastmod>2005-12-17T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/015-chenmeasurementerrormodels2005/</loc>
+    <lastmod>2005-12-16T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/measurement-errors/</loc>
+    <lastmod>2005-12-16T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/016-ditellapartisansocialhappiness2005/</loc>
+    <lastmod>2005-12-15T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/labor-supply/</loc>
+    <lastmod>2005-12-14T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/lifecycle-models/</loc>
+    <lastmod>2005-12-14T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/017-frencheffectshealthwealth2005/</loc>
+    <lastmod>2005-12-14T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/018-gulrevealedpreferencetheory2005/</loc>
+    <lastmod>2005-12-13T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/time-inconsistency/</loc>
+    <lastmod>2005-12-13T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/019-halevybayesianapproachuncertainty2005/</loc>
+    <lastmod>2005-12-12T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/theory/</loc>
+    <lastmod>2005-12-12T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/adverse-selection/</loc>
+    <lastmod>2005-12-11T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/durables/</loc>
+    <lastmod>2005-12-11T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/020-hendelefficientsortingdynamic2005/</loc>
+    <lastmod>2005-12-11T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/information/</loc>
+    <lastmod>2005-12-11T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/021-honggeneralizedspectraltests2005/</loc>
+    <lastmod>2005-12-10T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/time-series/</loc>
+    <lastmod>2005-12-10T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/022-jacksonendogenousgamesmechanisms2005/</loc>
+    <lastmod>2005-12-09T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/023-perryefficientmultiunitascending2005/</loc>
+    <lastmod>2005-12-08T00:00:00+00:00</lastmod>
+  </url>
+  <url>
     <loc>http://localhost:1313/tags/auctions/</loc>
-    <lastmod>2004-12-30T00:00:00+00:00</lastmod>
+    <lastmod>2005-12-08T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/024-seidmanneffectsrightsilence2005/</loc>
+    <lastmod>2005-12-07T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/market-power/</loc>
+    <lastmod>2005-12-06T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/025-biaisstrategicliquiditysupply2005/</loc>
+    <lastmod>2005-12-06T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/education-policies/</loc>
+    <lastmod>2005-12-05T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/intergenerational-links/</loc>
+    <lastmod>2005-12-05T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/026-boldrinintergenerationalstateeducation2005/</loc>
+    <lastmod>2005-12-05T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/banks/</loc>
+    <lastmod>2005-12-04T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/027-dellaricciagrosscreditflows2005/</loc>
+    <lastmod>2005-12-04T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/028-demarzoselfregulationgovernmentoversight2005/</loc>
+    <lastmod>2005-12-03T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/exchange-rates/</loc>
+    <lastmod>2005-12-02T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/international-fin/</loc>
+    <lastmod>2005-12-02T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/029-galimonetarypolicyexchange2005/</loc>
+    <lastmod>2005-12-02T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/030-lintonconsistenttestingstochastic2005/</loc>
+    <lastmod>2005-12-01T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/econometrics/</loc>
+    <lastmod>2005-12-01T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/growth/</loc>
+    <lastmod>2005-11-30T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/031-mcgrattantaxesregulationsvalue2005/</loc>
+    <lastmod>2005-11-30T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/032-markdynamicseeminglyunrelated2005/</loc>
+    <lastmod>2005-11-29T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/033-primiceritimevaryingstructural2005/</loc>
+    <lastmod>2005-11-28T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/var/</loc>
+    <lastmod>2005-11-28T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/034-reisshouseholdelectricitydemand2005/</loc>
+    <lastmod>2005-11-27T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/structural-io/</loc>
+    <lastmod>2005-11-27T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/externalities/</loc>
+    <lastmod>2005-11-26T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/035-sandholmnegativeexternalitiesevolutionary2005/</loc>
+    <lastmod>2005-11-26T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/asset-pricing/</loc>
+    <lastmod>2005-11-25T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/036-tsionaslikelihoodevidenceasset2005/</loc>
+    <lastmod>2005-11-25T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/037-andersonmarketprovisionbroadcasting2005/</loc>
+    <lastmod>2005-11-24T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/theory-io/</loc>
+    <lastmod>2005-11-24T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/fixed-costs/</loc>
+    <lastmod>2005-11-23T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/038-bertolauncertaintyconsumerdurables2005/</loc>
+    <lastmod>2005-11-23T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/039-chewmarketsweepstakes2005/</loc>
+    <lastmod>2005-11-22T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/040-chomonotonicityrationalizabilitylarge2005/</loc>
+    <lastmod>2005-11-21T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/matching/</loc>
+    <lastmod>2005-11-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/041-damianounravellingdynamicsorting2005/</loc>
+    <lastmod>2005-11-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/spatial-econ/</loc>
+    <lastmod>2005-11-19T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/042-durantontestinglocalizationusing2005/</loc>
+    <lastmod>2005-11-19T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/043-elliottestimationtestingforecast2005/</loc>
+    <lastmod>2005-11-18T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/044-leahytimingpurchasesaggregate2005/</loc>
+    <lastmod>2005-11-17T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/045-miguelpovertywitchkilling2005/</loc>
+    <lastmod>2005-11-16T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/principal-agent/</loc>
+    <lastmod>2005-11-15T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/papers/top5-restud/restud-2005/046-szalayeconomicsclearadvice2005/</loc>
+    <lastmod>2005-11-15T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/tags/investment/</loc>
@@ -238,10 +622,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/001-arozamenainvestmentincentivesprocurement2004/</loc>
-    <lastmod>2004-12-30T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2004-12-30T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -261,10 +641,6 @@
     <lastmod>2004-12-29T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/toread/</loc>
-    <lastmod>2004-12-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/003-bertolapuretheoryjob2004/</loc>
     <lastmod>2004-12-28T00:00:00+00:00</lastmod>
   </url>
@@ -273,36 +649,12 @@
     <lastmod>2004-12-28T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/asset-pricing/</loc>
-    <lastmod>2004-12-27T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/econometrics/</loc>
-    <lastmod>2004-12-27T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/004-bossaertsfilteringreturnsunspecified2004/</loc>
     <lastmod>2004-12-27T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/005-corsettidoesonesoros2004/</loc>
     <lastmod>2004-12-26T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/fin/</loc>
-    <lastmod>2004-12-26T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/international-fin/</loc>
-    <lastmod>2004-12-26T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/olg/</loc>
-    <lastmod>2004-12-25T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/political-econ/</loc>
-    <lastmod>2004-12-25T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/006-messnervotingmajorityrules2004/</loc>
@@ -317,15 +669,7 @@
     <lastmod>2004-12-24T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/prices/</loc>
-    <lastmod>2004-12-24T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/008-persicocommitteedesignendogenous2004/</loc>
-    <lastmod>2004-12-23T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/information/</loc>
     <lastmod>2004-12-23T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -353,10 +697,6 @@
     <lastmod>2004-12-21T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/structural-io/</loc>
-    <lastmod>2004-12-20T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/011-smithsupermarketchoicesupermarket2004/</loc>
     <lastmod>2004-12-20T00:00:00+00:00</lastmod>
   </url>
@@ -373,10 +713,6 @@
     <lastmod>2004-12-18T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/credit-imperfections/</loc>
-    <lastmod>2004-12-18T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/013-albuquerqueoptimallendingcontracts2004/</loc>
     <lastmod>2004-12-18T00:00:00+00:00</lastmod>
   </url>
@@ -389,15 +725,7 @@
     <lastmod>2004-12-17T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/theory-io/</loc>
-    <lastmod>2004-12-17T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/015-baligaarmsracesnegotiations2004/</loc>
-    <lastmod>2004-12-16T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/theory/</loc>
     <lastmod>2004-12-16T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -465,14 +793,6 @@
     <lastmod>2004-12-05T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/measurement-errors/</loc>
-    <lastmod>2004-12-05T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/discrete-choice-models/</loc>
-    <lastmod>2004-12-04T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/027-blundellendogeneitysemiparametricbinary2004/</loc>
     <lastmod>2004-12-04T00:00:00+00:00</lastmod>
   </url>
@@ -501,20 +821,8 @@
     <lastmod>2004-12-01T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/intergenerational-links/</loc>
-    <lastmod>2004-12-01T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/030-denardiwealthinequalityintergenerational2004/</loc>
     <lastmod>2004-12-01T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/consumption/</loc>
-    <lastmod>2004-11-30T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/lifecycle-models/</loc>
-    <lastmod>2004-11-30T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/031-huggettprecautionarywealthaccumulation2004/</loc>
@@ -549,15 +857,7 @@
     <lastmod>2004-11-25T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/business-cycles/</loc>
-    <lastmod>2004-11-25T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/tags/sectors/</loc>
-    <lastmod>2004-11-25T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/trade/</loc>
     <lastmod>2004-11-25T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -581,10 +881,6 @@
     <lastmod>2004-11-21T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/growth/</loc>
-    <lastmod>2004-11-21T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/041-hollifieldempiricalanalysislimit2004/</loc>
     <lastmod>2004-11-20T00:00:00+00:00</lastmod>
   </url>
@@ -597,20 +893,12 @@
     <lastmod>2004-11-19T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/innovation/</loc>
-    <lastmod>2004-11-19T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/tags/consumer-search/</loc>
     <lastmod>2004-11-18T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/043-janssenstrategicpricingconsumer2004/</loc>
     <lastmod>2004-11-18T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/principal-agent/</loc>
-    <lastmod>2004-11-17T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/044-martimortagencycostinternal2004/</loc>
@@ -633,19 +921,11 @@
     <lastmod>2004-11-14T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/education-policies/</loc>
-    <lastmod>2004-11-14T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/047-sauereducationalfinancinglifetime2004/</loc>
     <lastmod>2004-11-14T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2004/048-sleetoptimaltaxationprivate2004/</loc>
-    <lastmod>2004-11-13T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/tax/</loc>
     <lastmod>2004-11-13T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -753,10 +1033,6 @@
     <lastmod>2003-12-12T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/labor-supply/</loc>
-    <lastmod>2003-12-11T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2003/020-berloffaunemploymentrisklabour2003/</loc>
     <lastmod>2003-12-11T00:00:00+00:00</lastmod>
   </url>
@@ -781,10 +1057,6 @@
     <lastmod>2003-12-07T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/labor/</loc>
-    <lastmod>2003-12-07T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2003/024-normanstatisticaldiscriminationefficiency2003/</loc>
     <lastmod>2003-12-07T00:00:00+00:00</lastmod>
   </url>
@@ -795,10 +1067,6 @@
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2003/025-robforeigndirectinvestment2003/</loc>
     <lastmod>2003-12-06T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/monetary-policies/</loc>
-    <lastmod>2003-12-05T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2003/026-sibertmonetarypolicycommittees2003/</loc>
@@ -831,10 +1099,6 @@
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2003/030-benignopricestabilityopen2003/</loc>
     <lastmod>2003-12-01T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/exchange-rates/</loc>
-    <lastmod>2003-11-30T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2003/031-devereuxmonetarypolicyopen2003/</loc>
@@ -895,10 +1159,6 @@
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2002/006-cheshertastevariationdiscrete2002/</loc>
     <lastmod>2002-12-25T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/regulation/</loc>
-    <lastmod>2002-12-24T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2002/007-faure-grimaudusingstockprice2002/</loc>
@@ -1025,15 +1285,7 @@
     <lastmod>2002-11-30T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/technology/</loc>
-    <lastmod>2002-11-30T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2002/032-fosterhouseholddivisionrural2002/</loc>
-    <lastmod>2002-11-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/households/</loc>
     <lastmod>2002-11-29T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -1043,10 +1295,6 @@
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2002/034-kesslerredistributionfiscalcompetition2002/</loc>
     <lastmod>2002-11-27T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/matching/</loc>
-    <lastmod>2002-11-26T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2002/035-legrosmonotonematchingperfect2002a/</loc>
@@ -1265,10 +1513,6 @@
     <lastmod>2000-12-24T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/fixed-costs/</loc>
-    <lastmod>2000-12-24T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2000/008-lloyd-ellisenterpriseinequalityeconomic2000/</loc>
     <lastmod>2000-12-23T00:00:00+00:00</lastmod>
   </url>
@@ -1353,15 +1597,7 @@
     <lastmod>2000-12-07T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/behavioral-econ/</loc>
-    <lastmod>2000-12-06T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2000/025-carrillostrategicignoranceselfdisciplining2000/</loc>
-    <lastmod>2000-12-06T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/time-inconsistency/</loc>
     <lastmod>2000-12-06T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -1386,10 +1622,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/papers/top5-restud/restud-2000/031-attanasioconsumerdurablesinertial2000/</loc>
-    <lastmod>2000-11-30T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/durables/</loc>
     <lastmod>2000-11-30T00:00:00+00:00</lastmod>
   </url>
   <url>

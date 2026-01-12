@@ -1,0 +1,11 @@
+---
+title: "Market Provision of Broadcasting: A Welfare Analysis"
+date: 2005-11-24
+tags: ["Theory IO"]
+---
+
+## Abstract 
+This paper presents a theory of the market provision of broadcasting and uses it to address the nature of market failure in the industry. Equilibrium advertising levels may be too low or too high, depending on the nuisance cost to viewers, the substitutability of programmes, and the expected benefits to advertisers from contacting viewers. The equilibrium amount of programming may also be below or above the socially optimal level. Perhaps surprisingly, the ability to price programming may reduce social surplus, while monopoly ownership may increase it.
+
+
+Tags: ["Theory IO"]

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Time Series - Tag - My economics study notes</title>
+    <link>http://localhost:1313/tags/time-series/</link>
+    <description>My economics study notes</description>
+    <generator>Hugo 0.153.0 &amp; FixIt v0.4.1</generator>
+    <language>en-us</language>
+    <managingEditor>econ.learning.resources@gmail.com (Econ Notes)</managingEditor>
+    <webMaster>econ.learning.resources@gmail.com (Econ Notes)</webMaster>
+    <lastBuildDate>Sat, 10 Dec 2005 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generalized Spectral Tests for Conditional Mean Models in Time Series with Conditional Heteroscedasticity of Unknown Form</title>
+      <link>http://localhost:1313/papers/top5-restud/restud-2005/021-honggeneralizedspectraltests2005/</link>
+      <pubDate>Sat, 10 Dec 2005 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-restud/restud-2005/021-honggeneralizedspectraltests2005/</guid>
+      <description>&lt;h2 class=&#34;heading-element&#34; id=&#34;abstract&#34;&gt;&lt;span&gt;1. Abstract&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#abstract&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;Economic theories in time series contexts usually have implications on and only on the conditional mean dynamics of underlying economic variables. We propose a new class of specification tests for time series conditional mean models, where the dimension of the conditioning information set may be infinite. Both linear and nonlinear conditional mean specifications are covered. The tests can detect a wide range of model misspecifications in mean while being robust to conditional heteroscedasticity and higher order time-varying moments of unknown form. They check a large number of lags, but naturally discount higher order lags, which is consistent with the stylized fact that economic behaviours are more affected by the recent past events than by the remote past events. No specific estimation method is required, and the tests have the appealing “nuisance parameter free” property that parameter estimation uncertainty has no impact on the limit distribution of the tests. A simulation study shows that it is important to take into account the impact of conditional heteroscedasticity; failure to do so will cause overrejection of a correct conditional mean model. In a horse race competition on testing linearity in mean, our tests have omnibus and robust power against a variety of alternatives relative to some existing tests. In an application, we find that after removing significant but possibly spurious autocorrelations due to nonsynchronous trading, there still exists significant predictable nonlinearity in mean for S&amp;amp;P 500 and NASDAQ daily returns.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

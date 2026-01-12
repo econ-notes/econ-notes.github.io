@@ -1,0 +1,15 @@
+# Judgemental Overconfidence, Self-Monitoring, and Trading Performance in an Experimental Financial Market
+
+
+## Abstract 
+We measure the degree of overconfidence in judgement (in the form of miscalibration, i.e. the tendency to overestimate the precision of one's information) and self-monitoring (a form of attentiveness to social cues) of 245 participants and also observe their behaviour in an experimental financial market under asymmetric information. Miscalibrated traders, underestimating the conditional uncertainty about the asset value, are expected to be especially vulnerable to the winner's curse. High self-monitors are expected to behave strategically and achieve superior results. Our empirical results show that miscalibration reduces and self-monitoring enhances trading performance. The effect of the psychological variables is strong for men but non-existent for women.
+
+
+Tags: ["Behavioral Econ", "Fin"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-restud/restud-2005/013-biaisjudgementaloverconfidenceselfmonitoring2005/  
+

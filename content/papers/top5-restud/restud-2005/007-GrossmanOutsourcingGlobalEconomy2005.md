@@ -1,0 +1,11 @@
+---
+title: "Outsourcing in a Global Economy"
+date: 2005-12-24
+tags: ["Trade", "ToRead"]
+---
+
+## Abstract 
+We study the determinants of the location of subcontracted activity in a general equilibrium model of outsourcing and trade. We model outsourcing as an activity that requires search for a partner and relationship-specific investments that are governed by incomplete contracts. The extent of international outsourcing depends inter alia on the thickness of the domestic and foreign market for input suppliers, the relative cost of searching in each market, the relative cost of customizing inputs and the nature of the contracting environment in each country.
+
+
+Tags: ["Trade", "ToRead"]

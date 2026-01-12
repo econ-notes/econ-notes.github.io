@@ -1,0 +1,15 @@
+# The Cost of Recessions Revisited: A Reverse-Liquidationist View
+
+
+## Abstract 
+The observation that liquidations are concentrated in recessions has long been the subject of controversy. One view holds that liquidations are beneficial in that they result in increased restructuring. Another view holds that this rise in restructuring is costly since liquidations are privately inefficient and essentially wasteful. This paper proposes an alternative perspective. On the basis of a combination of theory with empirical evidence on gross job flows and on financial and labour market rents, we find that, cumulatively, recessions result in reduced rather than increased restructuring, and that this is likely to be socially costly once we consider inefficiencies on both the creation and destruction margins.
+
+
+Tags: ["Business Cycles", "ToRead"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-restud/restud-2005/014-caballerocostrecessionsrevisited2005/  
+

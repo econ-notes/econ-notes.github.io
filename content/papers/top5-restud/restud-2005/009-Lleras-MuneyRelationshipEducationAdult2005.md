@@ -1,0 +1,11 @@
+---
+title: "The Relationship Between Education and Adult Mortality in the United States"
+date: 2005-12-22
+tags: ["Reduced Form"]
+---
+
+## Abstract 
+Prior research has uncovered a large and positive correlation between education and health. This paper examines whether education has a causal impact on health. I follow synthetic cohorts using successive U.S. censuses to estimate the impact of educational attainment on mortality rates. I use compulsory education laws from 1915 to 1939 as instruments for education. The results suggest that education has a causal impact on mortality, and that this effect is perhaps larger than has been previously estimated in the literature.
+
+
+Tags: ["Reduced Form"]

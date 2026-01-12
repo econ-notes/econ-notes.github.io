@@ -1,0 +1,15 @@
+# Optimal Taxation When Consumers Have Endogenous Benchmark Levels of Consumption
+
+
+## Abstract 
+I examine optimal taxes in an overlapping generations economy in which each consumer's utility depends on consumption relative to a weighted average of consumption by others (the benchmark level of consumption) as well as on the level of the consumer's own consumption. The socially optimal balanced growth path is characterized by the Modified Golden Rule and by a condition on the intergenerational allocation of consumption in each period. A competitive economy can be induced to attain the social optimum by a lump-sum pay-as-you-go social security system and a tax on capital income.
+
+
+Tags: ["Consumption", "Tax", "OLG", "ToRead"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-restud/restud-2005/002-abeloptimaltaxationwhen2005/  
+
