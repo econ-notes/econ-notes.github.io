@@ -8,8 +8,15 @@
     <language>en-us</language>
     <managingEditor>econ.learning.resources@gmail.com (Econ Notes)</managingEditor>
     <webMaster>econ.learning.resources@gmail.com (Econ Notes)</webMaster>
-    <lastBuildDate>Mon, 15 Nov 2004 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Dec 2006 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/public-goods/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Social Learning and Norms in a Public Goods Experiment with Inter-Generational Advice</title>
+      <link>http://localhost:1313/papers/top5-restud/restud-2006/013-chaudhurisociallearningnorms2006/</link>
+      <pubDate>Mon, 18 Dec 2006 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-restud/restud-2006/013-chaudhurisociallearningnorms2006/</guid>
+      <description>&lt;h2 class=&#34;heading-element&#34; id=&#34;abstract&#34;&gt;&lt;span&gt;1. Abstract&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#abstract&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;We study a linear public goods game using an inter-generational approach. Subjects in one generation leave advice for the succeeding generation via free-form messages. Such advice can be private knowledge (advice left by one player in generation $t$ is given only to his or her immediate successor in generation $t + 1$), public knowledge (advice left by players of generation $t$ is made available to all members of generation $t + 1$), and common knowledge (where the advice is not only public but is also read aloud by the experimenter). Common knowledge of advice generates a process of social learning that leads to high contributions and less free-riding. This behaviour is sustained by advice that is generally exhortative, suggesting high contributions, which in turn creates optimistic beliefs among subjects about others&amp;rsquo; contributions. We suggest that socially connected communities may achieve high contributions to a public good even in the absence of punishment for norm violators.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Efficient Mechanisms for Public Goods with Use Exclusions</title>
       <link>http://localhost:1313/papers/top5-restud/restud-2004/046-normanefficientmechanismspublic2004/</link>

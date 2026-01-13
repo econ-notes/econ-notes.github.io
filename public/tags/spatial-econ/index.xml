@@ -8,8 +8,15 @@
     <language>en-us</language>
     <managingEditor>econ.learning.resources@gmail.com (Econ Notes)</managingEditor>
     <webMaster>econ.learning.resources@gmail.com (Econ Notes)</webMaster>
-    <lastBuildDate>Sat, 19 Nov 2005 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Dec 2006 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/spatial-econ/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Are Chinese Cities Too Small?</title>
+      <link>http://localhost:1313/papers/top5-restud/restud-2006/021-auarechinesecities2006/</link>
+      <pubDate>Sun, 10 Dec 2006 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-restud/restud-2006/021-auarechinesecities2006/</guid>
+      <description>&lt;h2 class=&#34;heading-element&#34; id=&#34;abstract&#34;&gt;&lt;span&gt;1. Abstract&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#abstract&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;This paper models and estimates net urban agglomeration economies for cities. Economic models of cities postulate an inverted U shape of real income per worker against city employment, where the inverted U shifts with industrial composition across the urban hierarchy of cities. This relationship has never been estimated, in part because of data requirements. China has the necessary data and context. We find that urban agglomeration benefits are high—real incomes per worker rise sharply with increases in city size from a low level. They level out nearer the peak and then decline very slowly past the peak. We find that a large fraction of cities in China are undersized due to nationally imposed, strong migration restrictions, resulting in large income losses.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Testing for Localization Using Micro-Geographic Data</title>
       <link>http://localhost:1313/papers/top5-restud/restud-2005/042-durantontestinglocalizationusing2005/</link>
