@@ -1,4 +1,4 @@
-# On the Origins of Property Rights: Conflict and Productionin the State of Nature
+# On the Origins of Property Rights: Conflict and Production in the State of Nature
 
 
 ## Abstract 

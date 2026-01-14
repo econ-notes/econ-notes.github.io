@@ -1,4 +1,4 @@
-# Template: Math Environments
+# Template: Self-Defined Environments for Mathematics
 
 
 ## A basic snippet

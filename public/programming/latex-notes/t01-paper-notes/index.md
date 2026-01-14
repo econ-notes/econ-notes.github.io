@@ -8,14 +8,14 @@ Here is a template for making paper notes.
 
 %-- paths
 \newcommand{\CiteMathPackage}{math}
-\newcommand{\CiteReference}{References.bib}
+\newcommand{\CiteReference}{ref.bib}
 
 %-- packages
-\usepackage{setspace,geometry,fancyvrb,rotating}
+\usepackage{setspace,geometry,fancyvrb,rotating,pdflscape}
 \usepackage{marginnote,datetime,enumitem}
 \usepackage{titlesec,indentfirst}
-\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
-\usepackage{threeparttable,booktabs,adjustbox}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools,chngcntr}
+\usepackage{threeparttable,booktabs,adjustbox,makecell}
 \usepackage{graphicx,epstopdf,float,soul,subfig}
 \usepackage[toc,page]{appendix}
 
@@ -32,6 +32,7 @@ Here is a template for making paper notes.
 \setlist[enumerate,1]{topsep=0pt,leftmargin=30pt,itemsep=0pt,parsep=10pt,label=(\arabic*)}
 \setlist[enumerate,2]{topsep=0pt,leftmargin=10pt,itemsep=0pt,parsep=10pt,label=(\alph*)}
 \setlist[enumerate,3]{topsep=0pt,leftmargin=10pt,itemsep=0pt,parsep=10pt,label=(\roman*)}
+% \usepackage{Alegreya}
 % \usepackage[T1]{fontenc}
 % \usepackage{palatino}
 % \usepackage{fourier}
@@ -42,7 +43,8 @@ Here is a template for making paper notes.
 
 %-- bibliography
 \usepackage{natbib}
-\bibliographystyle{mystyle}
+% \bibliographystyle{plainnat}
+% \bibliographystyle{mystyle}
 
 %-- more customization
 \usepackage{fancybox,url,xcolor}
@@ -71,26 +73,17 @@ Here is a template for making paper notes.
 }
 
 %-- math-related setups
-% \usepackage{\CiteMathPackage}
-% \theoremstyle{definition}
-% \newtheoremstyle{definition}
-%     {20pt}        % ABOVESPACE
-%     {20pt}        % BELOWSPACE
-%     {}            % BODYFONT
-%     {}            % INDENT
-%     {\bfseries}   % HEADFONT
-%     {}            % HEADPUNCT
-%     {\newline}    % HEADSPACE
-%     {#1 #2. #3}   % NUMBER-NAME-NOTE
-% \theoremstyle{definition}
-% \newtheorem{example}{Example}
-% \newtheorem{assumption}{Assumption}
-% \newtheorem{definition}{Definition}
-% \newtheorem{theorem}{Theorem}
-% \newtheorem{lemma}[theorem]{Lemma}
-% \newtheorem{corollary}[theorem]{Corollary}
-% \newtheorem{proposition}{Proposition}
-\usepackage{chngcntr}
+%!! environments
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{assumption}{Assumption}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+%!! numbering
 \counterwithin{equation}{section}
 \renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
 
@@ -102,8 +95,13 @@ Here is a template for making paper notes.
 \maketitle
 
 
-\bibliography{\CiteReference}
 
+
+
+
+
+
+% \bibliography{\CiteReference}
 \end{document}
 ```
 

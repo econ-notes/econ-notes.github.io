@@ -1,5 +1,5 @@
 ---
-title: "On the Origins of Property Rights: Conflict and Productionin the State of Nature"
+title: "On the Origins of Property Rights: Conflict and Production in the State of Nature"
 date: 2006-12-26
 tags: ["Political Econ"]
 ---

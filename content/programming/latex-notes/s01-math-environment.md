@@ -1,5 +1,5 @@
 ---
-title: 'Template: Math environments'
+title: 'Template: Self-defined environments for mathematics'
 date: '2025-12-21'
 ---
 
