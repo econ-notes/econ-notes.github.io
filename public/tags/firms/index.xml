@@ -8,8 +8,15 @@
     <language>en-us</language>
     <managingEditor>econ.learning.resources@gmail.com (Econ Notes)</managingEditor>
     <webMaster>econ.learning.resources@gmail.com (Econ Notes)</webMaster>
-    <lastBuildDate>Mon, 17 Dec 2007 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Dec 2009 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/firms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Dynamic Model of Privatization with Endogenous Post-Privatization Performance</title>
+      <link>http://localhost:1313/papers/top5-restud/restud-2009/020-chedynamicmodelprivatization2009/</link>
+      <pubDate>Fri, 11 Dec 2009 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-restud/restud-2009/020-chedynamicmodelprivatization2009/</guid>
+      <description>&lt;h2 class=&#34;heading-element&#34; id=&#34;abstract&#34;&gt;&lt;span&gt;1. Abstract&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#abstract&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;This paper presents a dynamic model of privatization, driven by improved institutional protection of private property rights and constrained by the buyer&amp;rsquo;s financial constraints. Government ownership is more efficient than private ownership when private property rights are insecure. Improved institutional protection of property rights over time creates the need to privatize. The buyer&amp;rsquo;s financial constraints affect the timing of privatization, causing the firm&amp;rsquo;s post-privatization performance either to improve or to deteriorate in the short run. Financial constraints also have the possibility of inducing an underpricing phenomenon during privatization where the firm is priced below both what the buyer is willing to pay and the buyer&amp;rsquo;s ability to pay. Faster institutional development calls for earlier privatization, but it also has the potential to either create or exacerbate deadweight losses associated with inefficient privatization. A host of empirically testable implications are derived.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Uncertainty and Investment Dynamics</title>
       <link>http://localhost:1313/papers/top5-restud/restud-2007/014-bloomuncertaintyinvestmentdynamics2007/</link>
