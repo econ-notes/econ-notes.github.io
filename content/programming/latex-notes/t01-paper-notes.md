@@ -16,7 +16,7 @@ Here is a template for making paper notes.
 \usepackage{setspace,geometry,fancyvrb,rotating,pdflscape}
 \usepackage{marginnote,datetime,enumitem}
 \usepackage{titlesec,indentfirst}
-\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools,chngcntr}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools,chngcntr,mleftright}
 \usepackage{threeparttable,booktabs,adjustbox,makecell}
 \usepackage{graphicx,epstopdf,float,soul,subfig}
 \usepackage[toc,page]{appendix}
@@ -26,7 +26,7 @@ Here is a template for making paper notes.
 \geometry{scale=0.8}
 \vfuzz=30pt
 \hfuzz=30pt
-\titleformat{\paragraph}[runin]{\itshape}{}{}{}[.] 
+\titleformat{\paragraph}[runin]{\itshape}{}{}{}[.]
 \titlelabel{\thetitle.\;}
 \setlength{\parindent}{10pt}
 \setlength{\parskip}{10pt}
@@ -42,6 +42,7 @@ Here is a template for making paper notes.
 \usepackage[english]{babel}
 \usepackage[autostyle=true]{csquotes}
 \MakeOuterQuote{"}
+\mleftright
 
 %-- bibliography
 \usepackage{natbib}

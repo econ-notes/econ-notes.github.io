@@ -1,0 +1,15 @@
+# Economics and Identity
+
+
+## Abstract 
+This paper considers how identity, a person's sense of self, affects economic outcomes. We incorporate the psychology and sociology of identity into an economic model of behavior. In the utility function we propose, identity is associated with different social categories and how people in these categories should behave. We then construct a simple game-theoretic model showing how identity can affect individual interactions. The paper adapts these models to gender discrimination in the workplace, the economics of poverty and social exclusion, and the household division of labor. In each case, the inclusion of identity substantively changes conclusions of previous economic analysis.
+
+
+Tags: ["Theory"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-qje/qje-2000/023-akerlofeconomicsidentity2000/  
+
