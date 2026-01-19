@@ -1,0 +1,11 @@
+---
+title: "Which is the Fair Sex? Gender Differences in Altruism"
+date: 2001-12-22
+tags: ["Gender"]
+---
+
+## Abstract 
+We study gender differences in altruism by examining a modified dictator  game with varying incomes and prices. Our results indicate that the question  "which is the fair sex?" has a complicated answer -- when altruism is expensive, women are kinder, but when it is cheap, men are more altruistic. That is, we find that the male and female "demand curves for altruism" cross, and that men are more responsive to price changes. Furthermore, men are more likely to be either perfectly selfish or perfectly
+
+
+Tags: ["Gender"]
