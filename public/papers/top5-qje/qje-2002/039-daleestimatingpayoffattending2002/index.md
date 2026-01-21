@@ -1,0 +1,15 @@
+# Estimating the Payoff to Attending a More Selective College: An Application of Selection on Observables and Unobservables
+
+
+## Abstract 
+Estimates of the effect of college selectivity on earnings may be biased because elite colleges admit students, in part, based on characteristics that are related to future earnings. We matched students who applied to, and were accepted by, similar colleges to try to eliminate this bias. Using the College and Beyond data set and National Longitudinal Survey of the High School Class of 1972, we find that students who attended more selective colleges earned about the same as students of seemingly comparable ability who attended less selective schools. Children from low-income families, however, earned more if they attended selective colleges.
+
+
+Tags: ["Education", "Reduced Form"]
+
+
+---
+
+> Author: Econ Notes  
+> URL: http://localhost:1313/papers/top5-qje/qje-2002/039-daleestimatingpayoffattending2002/  
+
