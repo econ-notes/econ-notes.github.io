@@ -8,8 +8,15 @@
     <language>en-us</language>
     <managingEditor>econ.learning.resources@gmail.com (Econ Notes)</managingEditor>
     <webMaster>econ.learning.resources@gmail.com (Econ Notes)</webMaster>
-    <lastBuildDate>Wed, 24 Dec 2003 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Dec 2004 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/production-functions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Measuring Factor Adjustment Costs</title>
+      <link>http://localhost:1313/papers/top5-qje/qje-2004/024-hallmeasuringfactoradjustment2004/</link>
+      <pubDate>Tue, 07 Dec 2004 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-qje/qje-2004/024-hallmeasuringfactoradjustment2004/</guid>
+      <description>&lt;h2 class=&#34;heading-element&#34; id=&#34;abstract&#34;&gt;&lt;span&gt;1. Abstract&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#abstract&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;I estimate adjustment costs for labor and capital from the Euler equations for factor demand. For both factors, I find relatively strong evidence against substantial adjustment costs. My estimates use annual data from two-digit industries. My results support the view that rents arising from adjustment costs are relatively small and are not an important part of the explanation of the large movements of the values of corporations in relation to the reproduction costs of their capital. I investigate the potential effects of three types of specification error: (1) aggregation over time, (2) aggregation over firms with heterogeneous demand shocks, and (3) estimation of a convex adjustment-cost technology in the presence of nonconvex discrete adjustment costs. I find that the likely biases from these specification errors are relatively small.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Productivity Dynamics with Technology Choice: An Application to Automobile Assembly</title>
       <link>http://localhost:1313/papers/top5-restud/restud-2003/007-vanbiesebroeckproductivitydynamicstechnology2003/</link>
