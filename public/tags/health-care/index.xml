@@ -8,8 +8,15 @@
     <language>en-us</language>
     <managingEditor>econ.learning.resources@gmail.com (Econ Notes)</managingEditor>
     <webMaster>econ.learning.resources@gmail.com (Econ Notes)</webMaster>
-    <lastBuildDate>Sun, 30 Dec 2007 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Dec 2008 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/health-care/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First Do No Harm? Tort Reform and Birth Outcomes</title>
+      <link>http://localhost:1313/papers/top5-qje/qje-2008/018-curriefirstnoharm2008/</link>
+      <pubDate>Sat, 13 Dec 2008 00:00:00 +0000</pubDate><author>econ.learning.resources@gmail.com (Econ Notes)</author>
+      <guid>http://localhost:1313/papers/top5-qje/qje-2008/018-curriefirstnoharm2008/</guid>
+      <description>&lt;h2 class=&#34;heading-element&#34; id=&#34;abstract&#34;&gt;&lt;span&gt;1. Abstract&lt;/span&gt;&#xD;&#xA;  &lt;a href=&#34;#abstract&#34; class=&#34;heading-mark&#34;&gt;&#xD;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;In the 1980s and 1990s many states adopted tort reforms. It has been argued that these reforms have reduced the practice of defensive medicine arising from excess tort liability. We find that this does not appear to be true for a large and important class of cases &amp;ndash; childbirth in the United States. Using data from national vital statistics natality files on millions of individual births from 1989 to 2001, we ask whether specific tort reforms affect the types of procedures that are performed, and the health outcomes of mothers and their infants. We find that reform of the Joint and Several Liability rule (or the &amp;ldquo;deep pockets rule&amp;rdquo;) reduces complications of labor and procedure use, whereas caps on noneconomic damages increase them. We show that these results are consistent with a model of tort reform that explicitly allows for variations in patient condition.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The Aggregate Effects of Health Insurance: Evidence from the Introduction of Medicare</title>
       <link>http://localhost:1313/papers/top5-qje/qje-2007/001-finkelsteinaggregateeffectshealth2007/</link>
